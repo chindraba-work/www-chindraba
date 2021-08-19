@@ -1,0 +1,323 @@
+/* SPDX-License-Identifier: MIT */
+
+/***********************************************************************
+*                                                                      *
+*  This file is part of collection of scripts and files used to create *
+*  the website for Chindraba.                                          *
+*                                                                      *
+*  Copyright © 2020 - 2021  Chindraba (Ronald Lamoreaux)               *
+*                    <website@chindraba.work>                          *
+*  - All Rights Reserved                                               *
+*                                                                      *
+*  Permission is hereby granted, free of charge, to any person         *
+*  obtaining a copy of this software and associated documentation      *
+*  files (the "Software"), to deal in the Software without             *
+*  restriction, including without limitation the rights to use, copy,  *
+*  modify, merge, publish, distribute, sublicense, and/or sell copies  *
+*  of the Software, and to permit persons to whom the Software is      *
+*  furnished to do so, subject to the following conditions:            *
+*                                                                      *
+*  The above copyright notice and this permission notice shall be      *
+*  included in all copies or substantial portions of the Software.     *
+*                                                                      *
+*  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,     *
+*  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  *
+*  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND               *
+*  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS *
+*  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN  *
+*  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN   *
+*  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE    *
+*  SOFTWARE.                                                           *
+*                                                                      *
+************************************************************************/
+
+.flair-img {
+  width: 208px;
+  height: auto;
+  vertical-align: bottom;
+}
+/* Special styles for the contact form */
+:root {
+  --flair-gap: 16px;
+  --flair-margin: calc(-1 * var(--flair-gap));
+}
+#flair-grid, #flair-list {
+  display: none
+}
+#list-control:checked ~ #stack-flair #flair-grid,
+#grid-control:checked ~ #stack-flair #flair-list {
+  display: inline-block;
+}
+
+/* Common base-case */
+#stack-flair {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+#stack-flair .flair-box {
+  display: inline-flex;
+  margin: var(--flair-margin) 0 0 0;
+}
+#stack-flair, #stack-flair .flair-box {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 432px) {
+  #grid-control:checked ~ #stack-flair {
+    width: auto;
+  }
+  #grid-control:checked ~ #stack-flair .flair-box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #grid-control:checked ~ #stack-flair .flair-img {
+    width: calc(188px + 56 * ((100vw - 432px) / (542 - 432)));
+  }
+}
+@media screen and (min-width: 552px) {
+  #grid-control:checked ~ #stack-flair {
+    width: 502px;
+  }
+  #grid-control:checked ~ #stack-flair .flair-img {
+    width: 236px;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  #grid-control:checked ~ #stack-flair {
+    width: auto;
+  }
+  #grid-control:checked ~ #stack-flair .flair-img {
+    width: calc(188px + 56 * ((100vw - 660px) / (775 - 660)));
+  }
+}
+
+@media screen and (min-width: 776px) {
+  #grid-control:checked ~ #stack-flair {
+    width: auto;
+  }
+  #grid-control:checked ~ #stack-flair .flair-img {
+    width: calc(188px + 56 * ((100vw - 776px) / (978 - 776)));
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #grid-control:checked ~ #stack-flair {
+    width: auto;
+  }
+  #grid-control:checked ~ #stack-flair .flair-img {
+    width: calc(188px + 56 * ((100vw - 894px) / (1120 - 894)));
+  }
+}
+@media screen and (min-width: 1120px) {
+  #grid-control:checked ~ #stack-flair {
+    width: 748px;
+  }
+  #grid-control:checked ~ #stack-flair .flair-img {
+    width: 236px;
+  }
+}
+
+@media screen and (min-width: 1145px) {
+  #grid-control:checked ~ #stack-flair {
+    width: auto;
+  }
+  #grid-control:checked ~ #stack-flair .flair-img {
+    width: calc(188px + 56 * ((100vw - 1145px) / (1920 - 1145)));
+  }
+}
+
+
+.flair-header {
+  margin: .6em 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.flair-layout {
+  flex-grow: 1;
+  text-align: right;
+  vertical-align: middle;
+}
+.flair-box h4 {
+  margin: var(--flair-gap) 0 0 0;
+}
+#error-msg-box {
+  border-color: rgba(255,255,255,.35);
+  text-align: center;
+  padding: .3em; 
+  border-radius: var(--radius-effect);
+}
+#error-msg-box:empty {
+  display: none;
+}
+form {
+  display: grid;
+  grid-template-columns: minmax(18rem, 25rem);
+  justify-content: center;
+  align-items: start;
+}
+fieldset {
+  margin: .5rem .45rem;
+  justify-self: stretch;
+}
+legend {
+  margin: .62em auto 0;
+  padding: .2em .6em;
+}
+.field-left {
+  min-width: 18rem;
+  max-width: 25rem;
+}
+.field-right {
+  min-width: 20rem;
+}
+#contact-info,
+#contact-info div,
+#contact-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+#contact-info div {
+  padding: .2em;
+}
+#contact-info div,
+#contact-info div label {
+  border-radius: var(--radius-effect);
+}
+#contact-info div label {
+  padding: 0 .5em;
+}
+#contact-info {
+  grid-row-start: 1;
+  height: 301px;
+}
+#contact-choice {
+  grid-row-start: 2;
+  height: 320px;
+}
+#contact-entry {
+  display: flex;
+  height: 638px;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 34.375rem;
+}
+@media screen and (min-width: 60.75rem) {
+  form {
+    grid-template-columns: minmax(18rem, 25rem) minmax(20rem, 1fr);
+  }
+  #contact-entry {
+    grid-row-start: span 2;
+    grid-column-start: 2;
+  }
+}
+.btn-bar {
+  display: inline-block;
+  margin: .06em .25em .06em 0;
+  width: 100%;
+  padding: .2em;
+  text-align: center;
+}
+.btn-3d {
+  border: 2px outset var(--colors-border);
+}
+#contact-is-feedback:checked ~ form label .contact-feedback.btn-3d,
+#contact-is-bug:checked ~ form label .contact-bug.btn-3d,
+#contact-is-general:checked ~ form label .contact-general.btn-3d,
+#contact-is-shout:checked ~ form label .contact-shout.btn-3d,
+#contact-is-other:checked ~ form label .contact-other.btn-3d {
+  border-style: inset;
+}
+.btn-fade {
+  opacity: .7;
+}
+#contact-is-feedback:checked ~ form .contact-feedback.btn-fade,
+#contact-is-bug:checked ~ form .contact-bug.btn-fade,
+#contact-is-general:checked ~ form .contact-general.btn-fade,
+#contact-is-shout:checked ~ form .contact-shout.btn-fade,
+#contact-is-other:checked ~ form .contact-other.btn-fade {
+  opacity: 1;
+}
+.contact-reserved {
+  visibility: hidden;
+}
+#contact-is-other:checked ~ form .contact-other {
+  visibility: visible;
+}
+#contact-entry > input {
+  flex-grow: 0;
+}
+.contact-optional {
+  display: none;
+}
+#contact-entry > div {
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.contact-optional.contact-optional {
+  display: none;
+}
+#contact-is-feedback:checked ~ form .contact-feedback.contact-optional,
+#contact-is-bug:checked ~ form .contact-bug.contact-optional,
+#contact-is-general:checked ~ form .contact-general.contact-optional,
+#contact-is-shout:checked ~ form .contact-shout.contact-optional,
+#contact-is-other:checked ~ form .contact-other.contact-optional {
+  display: flex;
+}
+textarea {
+  flex-grow: 2;
+  width: 100%;
+  resize: none;
+  margin: .32em .32em .32em 0;
+  border-radius: var(--radius-effect);
+}
+hr {
+  width: 88%;
+}
+input, select {
+  width: 100%;
+}
+input[type="submit"], input[type="reset"] {
+  padding: .25rem;
+  font-size: 1.1em;
+}
+input[type="submit"]::before {
+  content: '\1f680\a0\a0';
+}
+input[type="reset"]::before {
+  content: '\1f6ab\a0\a0';
+}
+.invalid {
+  background-color: rgba(128,32,32,.25);
+  border-radius: var(--radius-effect);
+  border: 1px solid rgb(192,28,56);
+  color: var(--colors-onError);
+  font-weight: bold;
+  padding: .2em;
+}
+#contact-feedback-pros,
+#contact-feedback-cons {
+  height: 196px;
+}
+#contact-bug-data {
+  height: 355px;
+}
+#contact-shout-response {
+  height: 375px;
+}
+#contact-general,
+#contact-other {
+  height: 428px;
+}
+
