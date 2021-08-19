@@ -1,3 +1,10 @@
+/* From https://github.com/bestiejs/punycode.js
+ * Under the MIT License
+ * 
+ * Release v2.1.1
+ * Downloaded 2021-08-19
+ */
+
 'use strict';
 
 /** Highest positive signed 32-bit float value */
@@ -437,4 +444,6 @@ const punycode = {
 	'toUnicode': toUnicode
 };
 
-module.exports = punycode;
+/* module.exports = punycode; */
+
+/* vim: set syntax=javascript ts=4 sw=4 sts=4 et sr: */
