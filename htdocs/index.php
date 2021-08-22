@@ -81,14 +81,14 @@ print <<<EOHTML
     <input id="right-nav-control" type="checkbox" value="right-nav-open" class="hidden-control">
     <input id="settings-control" type="checkbox" value="settings-open" class="hidden-control">
     <input id="scheme-control" type="checkbox" value="scheme-open" class="hidden-control">
-    <input id="main-mode" type="radio" value="main" name="dark-mode-selector" class="hidden-control">
+    <input id="main-mode" type="radio" value="main" name="dark-mode-selector" class="hidden-control" checked="true">
     <input id="alt-mode" type="radio" value="alt" name="dark-mode-selector" class="hidden-control">
     <input id="solarized-scheme" type="radio" value="solarized" name="scheme-selector" class="hidden-control">
     <input id="freshmint-scheme" type="radio" value="freshmint" name="scheme-selector" class="hidden-control">
-    <input id="default-scheme" type="radio" value="default" name="scheme-selector" class="hidden-control">
+    <input id="default-scheme" type="radio" value="default" name="scheme-selector" class="hidden-control" checked="true">
     <input id="font-size-1" type="radio" value="1" name="font-size" class="hidden-control">
     <input id="font-size-2" type="radio" value="2" name="font-size" class="hidden-control">
-    <input id="font-size-3" type="radio" value="3" name="font-size" class="hidden-control">
+    <input id="font-size-3" type="radio" value="3" name="font-size" class="hidden-control" checked="true">
     <input id="font-size-4" type="radio" value="4" name="font-size" class="hidden-control">
     <input id="font-size-5" type="radio" value="5" name="font-size" class="hidden-control">
     <input id="font-size-6" type="radio" value="6" name="font-size" class="hidden-control">
