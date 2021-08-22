@@ -1,0 +1,231 @@
+    :root {
+/*      --solarized-base-main-page      : ; */
+/*      --solarized-base-main-onPage    : ; */
+/*      --solarized-base-main-head      : ; */
+/*      --solarized-base-main-onHead    : ; */
+/*      --solarized-base-main-foot      : ; */
+/*      --solarized-base-main-onFoot    : ; */
+/*      --solarized-base-main-menu      : ; */
+/*      --solarized-base-main-onMenu    : ; */
+/*      --solarized-base-main-ctrl      : ; */
+      --solarized-base-main-onCtrl    : #2379be;
+      --solarized-base-main-primary   : #2379be;
+/*      --solarized-base-main-onPrimary : ; */
+/*      --solarized-base-main-code      : ; */
+/*      --solarized-base-main-onCode    : ; */
+/*      --solarized-base-main-pass      : ; */
+/*      --solarized-base-main-onPass    : ; */
+/*      --solarized-base-main-error     : ; */
+      --solarized-base-main-onError   : rgba(250,250,250,.85);
+/*      --solarized-base-main-button    : ; */
+/*      --solarized-base-main-onButton  : ; */
+/*      --solarized-base-main-border    : ; */
+      --solarized-base-main-icon      : #dc322f;
+/*/*      --solarized-base-main-          : ; */
+    }
+    :root {
+      --solarized-base-dark-page      : #00212c;
+      --solarized-base-dark-onPage    : #fdf6e3;
+      --solarized-base-dark-head      : #12313b;
+      --solarized-base-dark-onHead    : #93a1a1;
+      --solarized-base-dark-foot      : #0d2c37;
+      --solarized-base-dark-onFoot    : #eee8d5;
+      --solarized-base-dark-menu      : #1c3943;
+      --solarized-base-dark-onMenu    : #839496;
+      --solarized-base-dark-ctrl      : #29454e;
+      --solarized-base-dark-onCtrl    : #f5f5f5;
+/*      --solarized-base-dark-primary   : ; */
+      --solarized-base-dark-onPrimary : #fdf6e3;
+/*      --solarized-base-dark-code      : ; */
+      --solarized-base-dark-onCode    : #ffcc00;
+/*      --solarized-base-dark-pass      : ; */
+/*      --solarized-base-dark-onPass    : ; */
+      --solarized-base-dark-error     : rgba(187,41,115,.85);
+/*      --solarized-base-dark-onError   : ; */
+/*      --solarized-base-dark-button    : ; */
+/*      --solarized-base-dark-onButton  : ; */
+      --solarized-base-dark-border    : #839496;
+/*      --solarized-base-dark-icon      : ; */
+/*      --solarized-base-dark-          : ; */
+    }
+    :root {
+      --solarized-base-lite-page      : #fdf6e3;
+      --solarized-base-lite-onPage    : #002b36;
+      --solarized-base-lite-head      : #e2dccb;
+      --solarized-base-lite-onHead    : #586e75;
+      --solarized-base-lite-foot      : #eae4d2;
+      --solarized-base-lite-onFoot    : #073642;
+      --solarized-base-lite-menu      : #d3cdbe;
+      --solarized-base-lite-onMenu    : #657b83;
+      --solarized-base-lite-ctrl      : #c0bbad;
+/*      --solarized-base-lite-onCtrl    : ; */
+/*      --solarized-base-lite-primary   : ; */
+      --solarized-base-lite-onPrimary : #002b36;
+/*      --solarized-base-lite-code      : ; */
+      --solarized-base-lite-onCode    : #41ff00;
+/*      --solarized-base-lite-pass      : ; */
+/*      --solarized-base-lite-onPass    : ; */
+      --solarized-base-lite-error     : rgba(199,28,34,.85);
+/*      --solarized-base-lite-onError   : ; */
+/*      --solarized-base-lite-button    : ; */
+/*      --solarized-base-lite-onButton  : ; */
+      --solarized-base-lite-border    : #657b83;
+/*      --solarized-base-lite-icon      : ; */
+/*      --solarized-base-lite-          : ; */
+    }
+    :root {
+      --solarized-dark-page       : var( --solarized-base-dark-page       , var( --solarized-base-main-page       , var( --default-dark-page      )));
+      --solarized-dark-onPage     : var( --solarized-base-dark-onPage     , var( --solarized-base-main-onPage     , var( --default-dark-onPage    )));
+      --solarized-dark-head       : var( --solarized-base-dark-head       , var( --solarized-base-main-head       , var( --default-dark-head      )));
+      --solarized-dark-onHead     : var( --solarized-base-dark-onHead     , var( --solarized-base-main-onHead     , var( --default-dark-onHead    )));
+      --solarized-dark-foot       : var( --solarized-base-dark-foot       , var( --solarized-base-main-foot       , var( --default-dark-foot      )));
+      --solarized-dark-onFoot     : var( --solarized-base-dark-onFoot     , var( --solarized-base-main-onFoot     , var( --default-dark-onFoot    )));
+      --solarized-dark-menu       : var( --solarized-base-dark-menu       , var( --solarized-base-main-menu       , var( --default-dark-menu      )));
+      --solarized-dark-onMenu     : var( --solarized-base-dark-onMenu     , var( --solarized-base-main-onMenu     , var( --default-dark-onMenu    )));
+      --solarized-dark-ctrl       : var( --solarized-base-dark-ctrl       , var( --solarized-base-main-ctrl       , var( --default-dark-ctrl      )));
+      --solarized-dark-onCtrl     : var( --solarized-base-dark-onCtrl     , var( --solarized-base-main-onCtrl     , var( --default-dark-onCtrl    )));
+      --solarized-dark-primary    : var( --solarized-base-dark-primary    , var( --solarized-base-main-primary    , var( --default-dark-primary   )));
+      --solarized-dark-onPrimary  : var( --solarized-base-dark-onPrimary  , var( --solarized-base-main-onPrimary  , var( --default-dark-onPrimary )));
+      --solarized-dark-code       : var( --solarized-base-dark-code       , var( --solarized-base-main-code       , var( --default-dark-code      )));
+      --solarized-dark-onCode     : var( --solarized-base-dark-onCode     , var( --solarized-base-main-onCode     , var( --default-dark-onCode    )));
+      --solarized-dark-pass       : var( --solarized-base-dark-pass       , var( --solarized-base-main-pass       , var( --default-dark-pass      )));
+      --solarized-dark-onPass     : var( --solarized-base-dark-onPass     , var( --solarized-base-main-onPass     , var( --default-dark-onPass    )));
+      --solarized-dark-error      : var( --solarized-base-dark-error      , var( --solarized-base-main-error      , var( --default-dark-error     )));
+      --solarized-dark-onError    : var( --solarized-base-dark-onError    , var( --solarized-base-main-onError    , var( --default-dark-onError   )));
+      --solarized-dark-button     : var( --solarized-base-dark-button     , var( --solarized-base-main-button     , var( --default-dark-button    )));
+      --solarized-dark-onButton   : var( --solarized-base-dark-onButton   , var( --solarized-base-main-onButton   , var( --default-dark-onButton  )));
+      --solarized-dark-border     : var( --solarized-base-dark-border     , var( --solarized-base-main-border     , var( --default-dark-border    )));
+      --solarized-dark-icon       : var( --solarized-base-dark-icon       , var( --solarized-base-main-icon       , var( --default-dark-icon      )));
+/*      --solarized-dark-           : var( --solarized-base-dark-           , var( --solarized-base-main-           , var( --default-dark-          ))); */
+                                                                                                                 
+      --solarized-lite-page       : var( --solarized-base-lite-page       , var( --solarized-base-main-page       , var( --default-lite-page      )));
+      --solarized-lite-onPage     : var( --solarized-base-lite-onPage     , var( --solarized-base-main-onPage     , var( --default-lite-onPage    )));
+      --solarized-lite-head       : var( --solarized-base-lite-head       , var( --solarized-base-main-head       , var( --default-lite-head      )));
+      --solarized-lite-onHead     : var( --solarized-base-lite-onHead     , var( --solarized-base-main-onHead     , var( --default-lite-onHead    )));
+      --solarized-lite-foot       : var( --solarized-base-lite-foot       , var( --solarized-base-main-foot       , var( --default-lite-foot      )));
+      --solarized-lite-onFoot     : var( --solarized-base-lite-onFoot     , var( --solarized-base-main-onFoot     , var( --default-lite-onFoot    )));
+      --solarized-lite-menu       : var( --solarized-base-lite-menu       , var( --solarized-base-main-menu       , var( --default-lite-menu      )));
+      --solarized-lite-onMenu     : var( --solarized-base-lite-onMenu     , var( --solarized-base-main-onMenu     , var( --default-lite-onMenu    )));
+      --solarized-lite-ctrl       : var( --solarized-base-lite-ctrl       , var( --solarized-base-main-ctrl       , var( --default-lite-ctrl      )));
+      --solarized-lite-onCtrl     : var( --solarized-base-lite-onCtrl     , var( --solarized-base-main-onCtrl     , var( --default-lite-onCtrl    )));
+      --solarized-lite-primary    : var( --solarized-base-lite-primary    , var( --solarized-base-main-primary    , var( --default-lite-primary   )));
+      --solarized-lite-onPrimary  : var( --solarized-base-lite-onPrimary  , var( --solarized-base-main-onPrimary  , var( --default-lite-onPrimary )));
+      --solarized-lite-code       : var( --solarized-base-lite-code       , var( --solarized-base-main-code       , var( --default-lite-code      )));
+      --solarized-lite-onCode     : var( --solarized-base-lite-onCode     , var( --solarized-base-main-onCode     , var( --default-lite-onCode    )));
+      --solarized-lite-pass       : var( --solarized-base-lite-pass       , var( --solarized-base-main-pass       , var( --default-lite-pass      )));
+      --solarized-lite-onPass     : var( --solarized-base-lite-onPass     , var( --solarized-base-main-onPass     , var( --default-lite-onPass    )));
+      --solarized-lite-error      : var( --solarized-base-lite-error      , var( --solarized-base-main-error      , var( --default-lite-error     )));
+      --solarized-lite-onError    : var( --solarized-base-lite-onError    , var( --solarized-base-main-onError    , var( --default-lite-onError   )));
+      --solarized-lite-button     : var( --solarized-base-lite-button     , var( --solarized-base-main-button     , var( --default-lite-button    )));
+      --solarized-lite-onButton   : var( --solarized-base-lite-onButton   , var( --solarized-base-main-onButton   , var( --default-lite-onButton  )));
+      --solarized-lite-border     : var( --solarized-base-lite-border     , var( --solarized-base-main-border     , var( --default-lite-border    )));
+      --solarized-lite-icon       : var( --solarized-base-lite-icon       , var( --solarized-base-main-icon       , var( --default-lite-icon      )));
+/*      --solarized-lite-           : var( --solarized-base-lite-           , var( --solarized-base-main-           , var( --default-lite-          ))); */
+    }
+    @media not all and (prefers-color-scheme: light) {
+      #main-mode:checked ~ #solarized-scheme:checked ~ #scheme-container {
+        --colors-page      : var( --solarized-dark-page      );
+        --colors-onPage    : var( --solarized-dark-onPage    );
+        --colors-head      : var( --solarized-dark-head      );
+        --colors-onHead    : var( --solarized-dark-onHead    );
+        --colors-foot      : var( --solarized-dark-foot      );
+        --colors-onFoot    : var( --solarized-dark-onFoot    );
+        --colors-menu      : var( --solarized-dark-menu      );
+        --colors-onMenu    : var( --solarized-dark-onMenu    );
+        --colors-ctrl      : var( --solarized-dark-ctrl      );
+        --colors-onCtrl    : var( --solarized-dark-onCtrl    );
+        --colors-primary   : var( --solarized-dark-primary   );
+        --colors-onPrimary : var( --solarized-dark-onPrimary );
+        --colors-code      : var( --solarized-dark-code      );
+        --colors-onCode    : var( --solarized-dark-onCode    );
+        --colors-pass      : var( --solarized-dark-pass      );
+        --colors-onPass    : var( --solarized-dark-onPass    );
+        --colors-error     : var( --solarized-dark-error     );
+        --colors-onError   : var( --solarized-dark-onError   );
+        --colors-button    : var( --solarized-dark-button    );
+        --colors-onButton  : var( --solarized-dark-onButton  );
+        --colors-border    : var( --solarized-dark-border    );
+        --colors-icon      : var( --solarized-dark-icon      );
+/*        --colors-          : var( --solarized-dark-          ); */
+      }
+      #alt-mode:checked ~ #solarized-scheme:checked ~ #scheme-container {
+        --colors-page      : var( --solarized-lite-page      );
+        --colors-onPage    : var( --solarized-lite-onPage    );
+        --colors-head      : var( --solarized-lite-head      );
+        --colors-onHead    : var( --solarized-lite-onHead    );
+        --colors-foot      : var( --solarized-lite-foot      );
+        --colors-onFoot    : var( --solarized-lite-onFoot    );
+        --colors-menu      : var( --solarized-lite-menu      );
+        --colors-onMenu    : var( --solarized-lite-onMenu    );
+        --colors-ctrl      : var( --solarized-lite-ctrl      );
+        --colors-onCtrl    : var( --solarized-lite-onCtrl    );
+        --colors-primary   : var( --solarized-lite-primary   );
+        --colors-onPrimary : var( --solarized-lite-onPrimary );
+        --colors-code      : var( --solarized-lite-code      );
+        --colors-onCode    : var( --solarized-lite-onCode    );
+        --colors-pass      : var( --solarized-lite-pass      );
+        --colors-onPass    : var( --solarized-lite-onPass    );
+        --colors-error     : var( --solarized-lite-error     );
+        --colors-onError   : var( --solarized-lite-onError   );
+        --colors-button    : var( --solarized-lite-button    );
+        --colors-onButton  : var( --solarized-lite-onButton  );
+        --colors-border    : var( --solarized-lite-border    );
+        --colors-icon      : var( --solarized-lite-icon      );
+/*        --colors-          : var( --solarized-lite-          ); */
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      #main-mode:checked ~ #solarized-scheme:checked ~ #scheme-container {
+        --colors-page      : var( --solarized-lite-page      );
+        --colors-onPage    : var( --solarized-lite-onPage    );
+        --colors-head      : var( --solarized-lite-head      );
+        --colors-onHead    : var( --solarized-lite-onHead    );
+        --colors-foot      : var( --solarized-lite-foot      );
+        --colors-onFoot    : var( --solarized-lite-onFoot    );
+        --colors-menu      : var( --solarized-lite-menu      );
+        --colors-onMenu    : var( --solarized-lite-onMenu    );
+        --colors-ctrl      : var( --solarized-lite-ctrl      );
+        --colors-onCtrl    : var( --solarized-lite-onCtrl    );
+        --colors-primary   : var( --solarized-lite-primary   );
+        --colors-onPrimary : var( --solarized-lite-onPrimary );
+        --colors-code      : var( --solarized-lite-code      );
+        --colors-onCode    : var( --solarized-lite-onCode    );
+        --colors-pass      : var( --solarized-lite-pass      );
+        --colors-onPass    : var( --solarized-lite-onPass    );
+        --colors-error     : var( --solarized-lite-error     );
+        --colors-onError   : var( --solarized-lite-onError   );
+        --colors-button    : var( --solarized-lite-button    );
+        --colors-onButton  : var( --solarized-lite-onButton  );
+        --colors-border    : var( --solarized-lite-border    );
+        --colors-icon      : var( --solarized-lite-icon      );
+/*        --colors-          : var( --solarized-lite-          ); */
+      }
+      #alt-mode:checked ~ #solarized-scheme:checked ~ #scheme-container {
+        --colors-page      : var( --solarized-dark-page      );
+        --colors-onPage    : var( --solarized-dark-onPage    );
+        --colors-head      : var( --solarized-dark-head      );
+        --colors-onHead    : var( --solarized-dark-onHead    );
+        --colors-foot      : var( --solarized-dark-foot      );
+        --colors-onFoot    : var( --solarized-dark-onFoot    );
+        --colors-menu      : var( --solarized-dark-menu      );
+        --colors-onMenu    : var( --solarized-dark-onMenu    );
+        --colors-ctrl      : var( --solarized-dark-ctrl      );
+        --colors-onCtrl    : var( --solarized-dark-onCtrl    );
+        --colors-primary   : var( --solarized-dark-primary   );
+        --colors-onPrimary : var( --solarized-dark-onPrimary );
+        --colors-code      : var( --solarized-dark-code      );
+        --colors-onCode    : var( --solarized-dark-onCode    );
+        --colors-pass      : var( --solarized-dark-pass      );
+        --colors-onPass    : var( --solarized-dark-onPass    );
+        --colors-error     : var( --solarized-dark-error     );
+        --colors-onError   : var( --solarized-dark-onError   );
+        --colors-button    : var( --solarized-dark-button    );
+        --colors-onButton  : var( --solarized-dark-onButton  );
+        --colors-border    : var( --solarized-dark-border    );
+        --colors-icon      : var( --solarized-dark-icon      );
+/*        --colors-          : var( --solarized-dark-          ); */
+      }
+    }
+    #solarized-scheme-switch {
+        display: inline-block;
+    }

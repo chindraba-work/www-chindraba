@@ -1,0 +1,231 @@
+    :root {
+/*      --freshmint-base-main-page      : ; */
+/*      --freshmint-base-main-onPage    : ; */
+/*      --freshmint-base-main-head      : ; */
+/*      --freshmint-base-main-onHead    : ; */
+/*      --freshmint-base-main-foot      : ; */
+/*      --freshmint-base-main-onFoot    : ; */
+/*      --freshmint-base-main-menu      : ; */
+/*      --freshmint-base-main-onMenu    : ; */
+/*      --freshmint-base-main-ctrl      : ; */
+      --freshmint-base-main-onCtrl    : #2379be;
+      --freshmint-base-main-primary   : #2379be;
+/*      --freshmint-base-main-onPrimary : ; */
+/*      --freshmint-base-main-code      : ; */
+/*      --freshmint-base-main-onCode    : ; */
+/*      --freshmint-base-main-pass      : ; */
+/*      --freshmint-base-main-onPass    : ; */
+/*      --freshmint-base-main-error     : ; */
+      --freshmint-base-main-onError   : rgba(250,250,250,.85);
+/*      --freshmint-base-main-button    : ; */
+/*      --freshmint-base-main-onButton  : ; */
+/*      --freshmint-base-main-border    : ; */
+      --freshmint-base-main-icon      : #dc322f;
+/*      --freshmint-base-main-          : ; */
+    }
+    :root {
+      --freshmint-base-dark-page      : #00212c;
+      --freshmint-base-dark-onPage    : #fdf6e3;
+      --freshmint-base-dark-head      : #12313b;
+      --freshmint-base-dark-onHead    : #93a1a1;
+      --freshmint-base-dark-foot      : #0d2c37;
+      --freshmint-base-dark-onFoot    : #eee8d5;
+      --freshmint-base-dark-menu      : #1c3943;
+      --freshmint-base-dark-onMenu    : #839496;
+      --freshmint-base-dark-ctrl      : #29454e;
+      --freshmint-base-dark-onCtrl    : #f5f5f5;
+      --freshmint-base-dark-primary   : rgba(243,150,154,.65);
+      --freshmint-base-dark-onPrimary : rgba(0,0,0,1);
+/*      --freshmint-base-dark-code      : ; */
+      --freshmint-base-dark-onCode    : #ffcc00;
+      --freshmint-base-dark-pass      : rgba(86,204,157,.65);
+      --freshmint-base-dark-onPass    : rgba(255,255,255,.85);
+      --freshmint-base-dark-error     : rgba(255,101,57,.65);
+      --freshmint-base-dark-onError   : rgba(255,255,255,.85) ;
+      --freshmint-base-dark-button    : rgba(136,136,136,.65);
+      --freshmint-base-dark-onButton  : rgba(255,255,255,.85);
+      --freshmint-base-dark-border    : #839496;
+/*      --freshmint-base-dark-icon      : ; */
+/*      --freshmint-base-dark-          : ; */
+    }
+    :root {
+      --freshmint-base-lite-page      : #fdf6e3;
+      --freshmint-base-lite-onPage    : #002b36;
+      --freshmint-base-lite-head      : #e2dccb;
+      --freshmint-base-lite-onHead    : #586e75;
+      --freshmint-base-lite-foot      : #eae4d2;
+      --freshmint-base-lite-onFoot    : #073642;
+      --freshmint-base-lite-menu      : #d3cdbe;
+      --freshmint-base-lite-onMenu    : #657b83;
+      --freshmint-base-lite-ctrl      : #c0bbad;
+/*      --freshmint-base-lite-onCtrl    : ; */
+      --freshmint-base-lite-primary   : rgba(243,150,154,1);
+      --freshmint-base-lite-onPrimary : rgba(255,255,255,.85);
+/*      --freshmint-base-lite-code      : ; */
+      --freshmint-base-lite-onCode    : #41ff00;
+      --freshmint-base-lite-pass      : rgba(86,204,157,1);
+      --freshmint-base-lite-onPass    : rgba(255,255,255,.85);
+      --freshmint-base-lite-error     : rgba(255,101,57,1);
+      --freshmint-base-lite-onError   : rgba(255,255,255,.85) ;
+      --freshmint-base-lite-button    : rgba(136,136,136,1);
+      --freshmint-base-lite-onButton  : rgba(255,255,255,.85);
+      --freshmint-base-lite-border    : #657b83;
+/*      --freshmint-base-lite-icon      : ; */
+/*      --freshmint-base-lite-          : ; */
+    }
+    :root {
+      --freshmint-dark-page       : var( --freshmint-base-dark-page       , var( --freshmint-base-main-page       , var( --default-dark-page      )));
+      --freshmint-dark-onPage     : var( --freshmint-base-dark-onPage     , var( --freshmint-base-main-onPage     , var( --default-dark-onPage    )));
+      --freshmint-dark-head       : var( --freshmint-base-dark-head       , var( --freshmint-base-main-head       , var( --default-dark-head      )));
+      --freshmint-dark-onHead     : var( --freshmint-base-dark-onHead     , var( --freshmint-base-main-onHead     , var( --default-dark-onHead    )));
+      --freshmint-dark-foot       : var( --freshmint-base-dark-foot       , var( --freshmint-base-main-foot       , var( --default-dark-foot      )));
+      --freshmint-dark-onFoot     : var( --freshmint-base-dark-onFoot     , var( --freshmint-base-main-onFoot     , var( --default-dark-onFoot    )));
+      --freshmint-dark-menu       : var( --freshmint-base-dark-menu       , var( --freshmint-base-main-menu       , var( --default-dark-menu      )));
+      --freshmint-dark-onMenu     : var( --freshmint-base-dark-onMenu     , var( --freshmint-base-main-onMenu     , var( --default-dark-onMenu    )));
+      --freshmint-dark-ctrl       : var( --freshmint-base-dark-ctrl       , var( --freshmint-base-main-ctrl       , var( --default-dark-ctrl      )));
+      --freshmint-dark-onCtrl     : var( --freshmint-base-dark-onCtrl     , var( --freshmint-base-main-onCtrl     , var( --default-dark-onCtrl    )));
+      --freshmint-dark-primary    : var( --freshmint-base-dark-primary    , var( --freshmint-base-main-primary    , var( --default-dark-primary   )));
+      --freshmint-dark-onPrimary  : var( --freshmint-base-dark-onPrimary  , var( --freshmint-base-main-onPrimary  , var( --default-dark-onPrimary )));
+      --freshmint-dark-code       : var( --freshmint-base-dark-code       , var( --freshmint-base-main-code       , var( --default-dark-code      )));
+      --freshmint-dark-onCode     : var( --freshmint-base-dark-onCode     , var( --freshmint-base-main-onCode     , var( --default-dark-onCode    )));
+      --freshmint-dark-pass       : var( --freshmint-base-dark-pass       , var( --freshmint-base-main-pass       , var( --default-dark-pass      )));
+      --freshmint-dark-onPass     : var( --freshmint-base-dark-onPass     , var( --freshmint-base-main-onPass     , var( --default-dark-onPass    )));
+      --freshmint-dark-error      : var( --freshmint-base-dark-error      , var( --freshmint-base-main-error      , var( --default-dark-error     )));
+      --freshmint-dark-onError    : var( --freshmint-base-dark-onError    , var( --freshmint-base-main-onError    , var( --default-dark-onError   )));
+      --freshmint-dark-button     : var( --freshmint-base-dark-button     , var( --freshmint-base-main-button     , var( --default-dark-button    )));
+      --freshmint-dark-onButton   : var( --freshmint-base-dark-onButton   , var( --freshmint-base-main-onButton   , var( --default-dark-onButton  )));
+      --freshmint-dark-border     : var( --freshmint-base-dark-border     , var( --freshmint-base-main-border     , var( --default-dark-border    )));
+      --freshmint-dark-icon       : var( --freshmint-base-dark-icon       , var( --freshmint-base-main-icon       , var( --default-dark-icon      )));
+/*      --freshmint-dark-           : var( --freshmint-base-dark-           , var( --freshmint-base-main-           , var( --default-dark-          ))); */
+                                                                                                                 
+      --freshmint-lite-page       : var( --freshmint-base-lite-page       , var( --freshmint-base-main-page       , var( --default-lite-page      )));
+      --freshmint-lite-onPage     : var( --freshmint-base-lite-onPage     , var( --freshmint-base-main-onPage     , var( --default-lite-onPage    )));
+      --freshmint-lite-head       : var( --freshmint-base-lite-head       , var( --freshmint-base-main-head       , var( --default-lite-head      )));
+      --freshmint-lite-onHead     : var( --freshmint-base-lite-onHead     , var( --freshmint-base-main-onHead     , var( --default-lite-onHead    )));
+      --freshmint-lite-foot       : var( --freshmint-base-lite-foot       , var( --freshmint-base-main-foot       , var( --default-lite-foot      )));
+      --freshmint-lite-onFoot     : var( --freshmint-base-lite-onFoot     , var( --freshmint-base-main-onFoot     , var( --default-lite-onFoot    )));
+      --freshmint-lite-menu       : var( --freshmint-base-lite-menu       , var( --freshmint-base-main-menu       , var( --default-lite-menu      )));
+      --freshmint-lite-onMenu     : var( --freshmint-base-lite-onMenu     , var( --freshmint-base-main-onMenu     , var( --default-lite-onMenu    )));
+      --freshmint-lite-ctrl       : var( --freshmint-base-lite-ctrl       , var( --freshmint-base-main-ctrl       , var( --default-lite-ctrl      )));
+      --freshmint-lite-onCtrl     : var( --freshmint-base-lite-onCtrl     , var( --freshmint-base-main-onCtrl     , var( --default-lite-onCtrl    )));
+      --freshmint-lite-primary    : var( --freshmint-base-lite-primary    , var( --freshmint-base-main-primary    , var( --default-lite-primary   )));
+      --freshmint-lite-onPrimary  : var( --freshmint-base-lite-onPrimary  , var( --freshmint-base-main-onPrimary  , var( --default-lite-onPrimary )));
+      --freshmint-lite-code       : var( --freshmint-base-lite-code       , var( --freshmint-base-main-code       , var( --default-lite-code      )));
+      --freshmint-lite-onCode     : var( --freshmint-base-lite-onCode     , var( --freshmint-base-main-onCode     , var( --default-lite-onCode    )));
+      --freshmint-lite-pass       : var( --freshmint-base-lite-pass       , var( --freshmint-base-main-pass       , var( --default-lite-pass      )));
+      --freshmint-lite-onPass     : var( --freshmint-base-lite-onPass     , var( --freshmint-base-main-onPass     , var( --default-lite-onPass    )));
+      --freshmint-lite-error      : var( --freshmint-base-lite-error      , var( --freshmint-base-main-error      , var( --default-lite-error     )));
+      --freshmint-lite-onError    : var( --freshmint-base-lite-onError    , var( --freshmint-base-main-onError    , var( --default-lite-onError   )));
+      --freshmint-lite-button     : var( --freshmint-base-lite-button     , var( --freshmint-base-main-button     , var( --default-lite-button    )));
+      --freshmint-lite-onButton   : var( --freshmint-base-lite-onButton   , var( --freshmint-base-main-onButton   , var( --default-lite-onButton  )));
+      --freshmint-lite-border     : var( --freshmint-base-lite-border     , var( --freshmint-base-main-border     , var( --default-lite-border    )));
+      --freshmint-lite-icon       : var( --freshmint-base-lite-icon       , var( --freshmint-base-main-icon       , var( --default-lite-icon      )));
+/*      --freshmint-lite-           : var( --freshmint-base-lite-           , var( --freshmint-base-main-           , var( --default-lite-          ))); */
+    }
+    @media not all and (prefers-color-scheme: light) {
+      #main-mode:checked ~ #freshmint-scheme:checked ~ #scheme-container {
+        --colors-page      : var( --freshmint-dark-page      );
+        --colors-onPage    : var( --freshmint-dark-onPage    );
+        --colors-head      : var( --freshmint-dark-head      );
+        --colors-onHead    : var( --freshmint-dark-onHead    );
+        --colors-foot      : var( --freshmint-dark-foot      );
+        --colors-onFoot    : var( --freshmint-dark-onFoot    );
+        --colors-menu      : var( --freshmint-dark-menu      );
+        --colors-onMenu    : var( --freshmint-dark-onMenu    );
+        --colors-ctrl      : var( --freshmint-dark-ctrl      );
+        --colors-onCtrl    : var( --freshmint-dark-onCtrl    );
+        --colors-primary   : var( --freshmint-dark-primary   );
+        --colors-onPrimary : var( --freshmint-dark-onPrimary );
+        --colors-code      : var( --freshmint-dark-code      );
+        --colors-onCode    : var( --freshmint-dark-onCode    );
+        --colors-pass      : var( --freshmint-dark-pass      );
+        --colors-onPass    : var( --freshmint-dark-onPass    );
+        --colors-error     : var( --freshmint-dark-error     );
+        --colors-onError   : var( --freshmint-dark-onError   );
+        --colors-button    : var( --freshmint-dark-button    );
+        --colors-onButton  : var( --freshmint-dark-onButton  );
+        --colors-border    : var( --freshmint-dark-border    );
+        --colors-icon      : var( --freshmint-dark-icon      );
+/*        --colors-          : var( --freshmint-dark-          ); */
+      }
+      #alt-mode:checked ~ #freshmint-scheme:checked ~ #scheme-container {
+        --colors-page      : var( --freshmint-lite-page      );
+        --colors-onPage    : var( --freshmint-lite-onPage    );
+        --colors-head      : var( --freshmint-lite-head      );
+        --colors-onHead    : var( --freshmint-lite-onHead    );
+        --colors-foot      : var( --freshmint-lite-foot      );
+        --colors-onFoot    : var( --freshmint-lite-onFoot    );
+        --colors-menu      : var( --freshmint-lite-menu      );
+        --colors-onMenu    : var( --freshmint-lite-onMenu    );
+        --colors-ctrl      : var( --freshmint-lite-ctrl      );
+        --colors-onCtrl    : var( --freshmint-lite-onCtrl    );
+        --colors-primary   : var( --freshmint-lite-primary   );
+        --colors-onPrimary : var( --freshmint-lite-onPrimary );
+        --colors-code      : var( --freshmint-lite-code      );
+        --colors-onCode    : var( --freshmint-lite-onCode    );
+        --colors-pass      : var( --freshmint-lite-pass      );
+        --colors-onPass    : var( --freshmint-lite-onPass    );
+        --colors-error     : var( --freshmint-lite-error     );
+        --colors-onError   : var( --freshmint-lite-onError   );
+        --colors-button    : var( --freshmint-lite-button    );
+        --colors-onButton  : var( --freshmint-lite-onButton  );
+        --colors-border    : var( --freshmint-lite-border    );
+        --colors-icon      : var( --freshmint-lite-icon      );
+/*        --colors-          : var( --freshmint-lite-          ); */
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      #main-mode:checked ~ #freshmint-scheme:checked ~ #scheme-container {
+        --colors-page      : var( --freshmint-lite-page      );
+        --colors-onPage    : var( --freshmint-lite-onPage    );
+        --colors-head      : var( --freshmint-lite-head      );
+        --colors-onHead    : var( --freshmint-lite-onHead    );
+        --colors-foot      : var( --freshmint-lite-foot      );
+        --colors-onFoot    : var( --freshmint-lite-onFoot    );
+        --colors-menu      : var( --freshmint-lite-menu      );
+        --colors-onMenu    : var( --freshmint-lite-onMenu    );
+        --colors-ctrl      : var( --freshmint-lite-ctrl      );
+        --colors-onCtrl    : var( --freshmint-lite-onCtrl    );
+        --colors-primary   : var( --freshmint-lite-primary   );
+        --colors-onPrimary : var( --freshmint-lite-onPrimary );
+        --colors-code      : var( --freshmint-lite-code      );
+        --colors-onCode    : var( --freshmint-lite-onCode    );
+        --colors-pass      : var( --freshmint-lite-pass      );
+        --colors-onPass    : var( --freshmint-lite-onPass    );
+        --colors-error     : var( --freshmint-lite-error     );
+        --colors-onError   : var( --freshmint-lite-onError   );
+        --colors-button    : var( --freshmint-lite-button    );
+        --colors-onButton  : var( --freshmint-lite-onButton  );
+        --colors-border    : var( --freshmint-lite-border    );
+        --colors-icon      : var( --freshmint-lite-icon      );
+/*        --colors-          : var( --freshmint-lite-          ); */
+      }
+      #alt-mode:checked ~ #freshmint-scheme:checked ~ #scheme-container {
+        --colors-page      : var( --freshmint-dark-page      );
+        --colors-onPage    : var( --freshmint-dark-onPage    );
+        --colors-head      : var( --freshmint-dark-head      );
+        --colors-onHead    : var( --freshmint-dark-onHead    );
+        --colors-foot      : var( --freshmint-dark-foot      );
+        --colors-onFoot    : var( --freshmint-dark-onFoot    );
+        --colors-menu      : var( --freshmint-dark-menu      );
+        --colors-onMenu    : var( --freshmint-dark-onMenu    );
+        --colors-ctrl      : var( --freshmint-dark-ctrl      );
+        --colors-onCtrl    : var( --freshmint-dark-onCtrl    );
+        --colors-primary   : var( --freshmint-dark-primary   );
+        --colors-onPrimary : var( --freshmint-dark-onPrimary );
+        --colors-code      : var( --freshmint-dark-code      );
+        --colors-onCode    : var( --freshmint-dark-onCode    );
+        --colors-pass      : var( --freshmint-dark-pass      );
+        --colors-onPass    : var( --freshmint-dark-onPass    );
+        --colors-error     : var( --freshmint-dark-error     );
+        --colors-onError   : var( --freshmint-dark-onError   );
+        --colors-button    : var( --freshmint-dark-button    );
+        --colors-onButton  : var( --freshmint-dark-onButton  );
+        --colors-border    : var( --freshmint-dark-border    );
+        --colors-icon      : var( --freshmint-dark-icon      );
+/*        --colors-          : var( --freshmint-dark-          ); */
+      }
+    }
+    #freshmint-scheme-switch {
+        display: inline-block;
+    }

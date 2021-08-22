@@ -1,0 +1,240 @@
+    :root {
+      --default-base-main-page      : #121212;
+      --default-base-main-onPage    : #f0f0f0;
+      --default-base-main-head      : #232323;
+      --default-base-main-onHead    : #f0f0f0;
+      --default-base-main-foot      : #1e1e1e;
+      --default-base-main-onFoot    : #f0f0f0;
+      --default-base-main-menu      : #2c2c2c;
+      --default-base-main-onMenu    : #f0f0f0;
+      --default-base-main-ctrl      : #383838;
+      --default-base-main-onCtrl    : #f0f0f0;
+      --default-base-main-primary   : #bb86fc;
+      --default-base-main-onPrimary : #121212;
+      --default-base-main-code      : #282828;
+      --default-base-main-onCode    : #00a000;
+/*      --default-base-main-pass      : ; */
+      --default-base-main-onPass    : #cc0000;
+      --default-base-main-error     : #ffffff;
+/*      --default-base-main-onError   : ; */
+/*      --default-base-main-button    : ; */
+/*      --default-base-main-onButton  : ; */
+      --default-base-main-border    : #d5d5d5;
+      --default-base-main-icon      : #cf6679;
+/*      --default-base-main-          : ; */
+    }
+    :root {
+      --default-base-dark-page      : #121212;
+      --default-base-dark-onPage    : #f0f0f0;
+      --default-base-dark-head      : #232323;
+      --default-base-dark-onHead    : #f0f0f0;
+      --default-base-dark-foot      : #1e1e1e;
+      --default-base-dark-onFoot    : #f0f0f0;
+      --default-base-dark-menu      : #2c2c2c;
+      --default-base-dark-onMenu    : #f0f0f0;
+      --default-base-dark-ctrl      : #383838;
+      --default-base-dark-onCtrl    : #f0f0f0;
+      --default-base-dark-primary   : #bb86fc;
+      --default-base-dark-onPrimary : #121212;
+/*      --default-base-dark-code      : ; */
+      --default-base-dark-onCode    : #ffb000;
+/*      --default-base-dark-pass      : ; */
+/*      --default-base-dark-onPass    : ; */
+      --default-base-dark-error     : rgba(166,0,0,.85);
+      --default-base-dark-onError   : rgba(240,240,240,.85);
+/*      --default-base-dark-button    : ; */
+/*      --default-base-dark-onButton  : ; */
+      --default-base-dark-border    : #d5d5d5;
+      --default-base-dark-icon      : #cf6679;
+/*      --default-base-dark-          : ; */
+    }
+    :root {
+      --default-base-lite-page      : #ffffff;
+      --default-base-lite-onPage    : #121212;
+      --default-base-lite-head      : #e4e4e4;
+      --default-base-lite-onHead    : #121212;
+      --default-base-lite-foot      : #ececec;
+      --default-base-lite-onFoot    : #121212;
+      --default-base-lite-menu      : #d5d5d5;
+      --default-base-lite-onMenu    : #121212;
+      --default-base-lite-ctrl      : #d6d6d6;
+      --default-base-lite-onCtrl    : #121212;
+      --default-base-lite-primary   : #6200ee;
+      --default-base-lite-onPrimary : #f5f5f5;
+/*      --default-base-lite-code      : ; */
+      --default-base-lite-onCode    : #66ff66;
+/*      --default-base-lite-pass      : ; */
+/*      --default-base-lite-onPass    : ; */
+      --default-base-lite-error     : rgba(201,36,52,.85);
+      --default-base-lite-onError   : rgba(250,250,250,.85);
+/*      --default-base-lite-button    : ; */
+/*      --default-base-lite-onButton  : ; */
+      --default-base-lite-border    : #444444;
+      --default-base-lite-icon      : #b00020;
+/*      --default-base-lite-          : ; */
+    }
+    :root {
+      --default-dark-page       : var( --default-base-dark-page       , var( --default-base-main-page      ));
+      --default-dark-onPage     : var( --default-base-dark-onPage     , var( --default-base-main-onPage    ));
+      --default-dark-head       : var( --default-base-dark-head       , var( --default-base-main-head      ));
+      --default-dark-onHead     : var( --default-base-dark-onHead     , var( --default-base-main-onHead    ));
+      --default-dark-foot       : var( --default-base-dark-foot       , var( --default-base-main-foot      ));
+      --default-dark-onFoot     : var( --default-base-dark-onFoot     , var( --default-base-main-onFoot    ));
+      --default-dark-menu       : var( --default-base-dark-menu       , var( --default-base-main-menu      ));
+      --default-dark-onMenu     : var( --default-base-dark-onMenu     , var( --default-base-main-onMenu    ));
+      --default-dark-ctrl       : var( --default-base-dark-ctrl       , var( --default-base-main-ctrl      ));
+      --default-dark-onCtrl     : var( --default-base-dark-onCtrl     , var( --default-base-main-onCtrl    ));
+      --default-dark-primary    : var( --default-base-dark-primary    , var( --default-base-main-primary   ));
+      --default-dark-onPrimary  : var( --default-base-dark-onPrimary  , var( --default-base-main-onPrimary ));
+      --default-dark-code       : var( --default-base-dark-code       , var( --default-base-main-code      ));
+      --default-dark-onCode     : var( --default-base-dark-onCode     , var( --default-base-main-onCode    ));
+      --default-dark-pass       : var( --default-base-dark-pass       , var( --default-base-main-pass      ));
+      --default-dark-onPass     : var( --default-base-dark-onPass     , var( --default-base-main-onPass    ));
+      --default-dark-error      : var( --default-base-dark-error      , var( --default-base-main-error     ));
+      --default-dark-onError    : var( --default-base-dark-onError    , var( --default-base-main-onError   ));
+      --default-dark-button     : var( --default-base-dark-button     , var( --default-base-main-button    ));
+      --default-dark-onButton   : var( --default-base-dark-onButton   , var( --default-base-main-onButton  ));
+      --default-dark-border     : var( --default-base-dark-border     , var( --default-base-main-border    ));
+      --default-dark-icon       : var( --default-base-dark-icon       , var( --default-base-main-icon      ));
+/*      --default-dark-           : var( --default-base-dark-           , var( --default-base-main-          )); */
+
+      --default-lite-page       : var( --default-base-lite-page       , var( --default-base-main-page      ));
+      --default-lite-onPage     : var( --default-base-lite-onPage     , var( --default-base-main-onPage    ));
+      --default-lite-head       : var( --default-base-lite-head       , var( --default-base-main-head      ));
+      --default-lite-onHead     : var( --default-base-lite-onHead     , var( --default-base-main-onHead    ));
+      --default-lite-foot       : var( --default-base-lite-foot       , var( --default-base-main-foot      ));
+      --default-lite-onFoot     : var( --default-base-lite-onFoot     , var( --default-base-main-onFoot    ));
+      --default-lite-menu       : var( --default-base-lite-menu       , var( --default-base-main-menu      ));
+      --default-lite-onMenu     : var( --default-base-lite-onMenu     , var( --default-base-main-onMenu    ));
+      --default-lite-ctrl       : var( --default-base-lite-ctrl       , var( --default-base-main-ctrl      ));
+      --default-lite-onCtrl     : var( --default-base-lite-onCtrl     , var( --default-base-main-onCtrl    ));
+      --default-lite-primary    : var( --default-base-lite-primary    , var( --default-base-main-primary   ));
+      --default-lite-onPrimary  : var( --default-base-lite-onPrimary  , var( --default-base-main-onPrimary ));
+      --default-lite-code       : var( --default-base-lite-code       , var( --default-base-main-code      ));
+      --default-lite-onCode     : var( --default-base-lite-onCode     , var( --default-base-main-onCode    ));
+      --default-lite-pass       : var( --default-base-lite-pass       , var( --default-base-main-pass      ));
+      --default-lite-onPass     : var( --default-base-lite-onPass     , var( --default-base-main-onPass    ));
+      --default-lite-error      : var( --default-base-lite-error      , var( --default-base-main-error     ));
+      --default-lite-onError    : var( --default-base-lite-onError    , var( --default-base-main-onError   ));
+      --default-lite-button     : var( --default-base-lite-button     , var( --default-base-main-button    ));
+      --default-lite-onButton   : var( --default-base-lite-onButton   , var( --default-base-main-onButton  ));
+      --default-lite-border     : var( --default-base-lite-border     , var( --default-base-main-border    ));
+      --default-lite-icon       : var( --default-base-lite-icon       , var( --default-base-main-icon      ));
+/*      --default-lite-           : var( --default-base-lite-           , var( --default-base-main-          )); */
+    }
+
+/*  Because this is the default scheme and dark mode is the default mode, activate that now
+ *  Based on available DOM elements and media queries, this might be changed, but it will be
+ *  in effect for styling the page until the DOM is loaded completely and other decisions can
+ *  be made.
+ */
+    #scheme-container {
+      --colors-page       : var( --default-dark-page      );
+      --colors-onPage     : var( --default-dark-onPage    );
+      --colors-head       : var( --default-dark-head      );
+      --colors-onHead     : var( --default-dark-onHead    );
+      --colors-foot       : var( --default-dark-foot      );
+      --colors-onFoot     : var( --default-dark-onFoot    );
+      --colors-menu       : var( --default-dark-menu      );
+      --colors-onMenu     : var( --default-dark-onMenu    );
+      --colors-ctrl       : var( --default-dark-ctrl      );
+      --colors-onCtrl     : var( --default-dark-onCtrl    );
+      --colors-primary    : var( --default-dark-primary   );
+      --colors-onPrimary  : var( --default-dark-onPrimary );
+      --colors-code       : var( --default-dark-code      );
+      --colors-onCode     : var( --default-dark-onCode    );
+      --colors-pass       : var( --default-dark-pass      );
+      --colors-onPass     : var( --default-dark-onPass    );
+      --colors-error      : var( --default-dark-error     );
+      --colors-onError    : var( --default-dark-onError   );
+      --colors-button     : var( --default-dark-button    );
+      --colors-onButton   : var( --default-dark-onButton  );
+      --colors-border     : var( --default-dark-border    );
+      --colors-icon       : var( --default-dark-icon      );
+/*      --colors-           : var( --default-dark-          ); */
+    }
+
+    @media not all and (prefers-color-scheme: light) {
+      #alt-mode:checked ~ #default-scheme:checked ~ #scheme-container {
+        --colors-page       : var( --default-lite-page      );
+        --colors-onPage     : var( --default-lite-onPage    );
+        --colors-head       : var( --default-lite-head      );
+        --colors-onHead     : var( --default-lite-onHead    );
+        --colors-foot       : var( --default-lite-foot      );
+        --colors-onFoot     : var( --default-lite-onFoot    );
+        --colors-menu       : var( --default-lite-menu      );
+        --colors-onMenu     : var( --default-lite-onMenu    );
+        --colors-ctrl       : var( --default-lite-ctrl      );
+        --colors-onCtrl     : var( --default-lite-onCtrl    );
+        --colors-primary    : var( --default-lite-primary   );
+        --colors-onPrimary  : var( --default-lite-onPrimary );
+        --colors-code       : var( --default-lite-code      );
+        --colors-onCode     : var( --default-lite-onCode    );
+        --colors-pass       : var( --default-lite-pass      );
+        --colors-onPass     : var( --default-lite-onPass    );
+        --colors-error      : var( --default-lite-error     );
+        --colors-onError    : var( --default-lite-onError   );
+        --colors-button     : var( --default-lite-button    );
+        --colors-onButton   : var( --default-lite-onButton  );
+        --colors-border     : var( --default-lite-border    );
+        --colors-icon       : var( --default-lite-icon      );
+/*        --colors-           : var( --default-lite-          ); */
+
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      #main-mode:checked ~ #default-scheme:checked ~ #scheme-container {
+        --colors-page       : var( --default-lite-page      );
+        --colors-onPage     : var( --default-lite-onPage    );
+        --colors-head       : var( --default-lite-head      );
+        --colors-onHead     : var( --default-lite-onHead    );
+        --colors-foot       : var( --default-lite-foot      );
+        --colors-onFoot     : var( --default-lite-onFoot    );
+        --colors-menu       : var( --default-lite-menu      );
+        --colors-onMenu     : var( --default-lite-onMenu    );
+        --colors-ctrl       : var( --default-lite-ctrl      );
+        --colors-onCtrl     : var( --default-lite-onCtrl    );
+        --colors-primary    : var( --default-lite-primary   );
+        --colors-onPrimary  : var( --default-lite-onPrimary );
+        --colors-code       : var( --default-lite-code      );
+        --colors-onCode     : var( --default-lite-onCode    );
+        --colors-pass       : var( --default-lite-pass      );
+        --colors-onPass     : var( --default-lite-onPass    );
+        --colors-error      : var( --default-lite-error     );
+        --colors-onError    : var( --default-lite-onError   );
+        --colors-button     : var( --default-lite-button    );
+        --colors-onButton   : var( --default-lite-onButton  );
+        --colors-border     : var( --default-lite-border    );
+        --colors-icon       : var( --default-lite-icon      );
+/*        --colors-           : var( --default-lite-          ); */
+
+      }
+      #alt-mode:checked ~ #default-scheme:checked ~ #scheme-container {
+        --colors-page       : var( --default-dark-page      );
+        --colors-onPage     : var( --default-dark-onPage    );
+        --colors-head       : var( --default-dark-head      );
+        --colors-onHead     : var( --default-dark-onHead    );
+        --colors-foot       : var( --default-dark-foot      );
+        --colors-onFoot     : var( --default-dark-onFoot    );
+        --colors-menu       : var( --default-dark-menu      );
+        --colors-onMenu     : var( --default-dark-onMenu    );
+        --colors-ctrl       : var( --default-dark-ctrl      );
+        --colors-onCtrl     : var( --default-dark-onCtrl    );
+        --colors-primary    : var( --default-dark-primary   );
+        --colors-onPrimary  : var( --default-dark-onPrimary );
+        --colors-code       : var( --default-dark-code      );
+        --colors-onCode     : var( --default-dark-onCode    );
+        --colors-pass       : var( --default-dark-pass      );
+        --colors-onPass     : var( --default-dark-onPass    );
+        --colors-error      : var( --default-dark-error     );
+        --colors-onError    : var( --default-dark-onError   );
+        --colors-button     : var( --default-dark-button    );
+        --colors-onButton   : var( --default-dark-onButton  );
+        --colors-border     : var( --default-dark-border    );
+        --colors-icon       : var( --default-dark-icon      );
+/*        --colors-           : var( --default-dark-          ); */
+      }
+    }
+    #default-scheme-switch {
+        display: inline-block;
+    }

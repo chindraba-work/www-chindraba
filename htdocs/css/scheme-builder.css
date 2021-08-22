@@ -1,0 +1,180 @@
+/*  Every Scheme has these three groups.
+ *   Use the prefered mode (dark or light) for -base-main-
+ *   Use the -base-lite- or -base-dark- for the other mode
+ *   The lite or dark base which matches the prefered can be empty.
+ *   Items which are the same for both lite and dark can be left out
+ *     of the non-prefered group as well.
+ **/
+
+    :root {
+      --${scheme_tag}-base-main-${color_callout}: rgb();
+    }
+    :root {
+      --${scheme_tag}-base-dark-${color_callout}: rgb();
+    }
+    :root {
+      --${scheme_tag}-base-lite-${color_callout}: rgb();
+    }
+
+/*  Every scheme other than the default will have this section. In each case it
+ *  must be AFTER the default scheme is loaded, as the default is referenced for
+ *  filling in colors which are needed, but not changed from the default. For example,
+ *  most lite modes will have black text and many dark modes will have white text.
+ *  Either, or both, could be left out of the custom scheme, and the default will be
+ *  pulled in to fill its place here.
+ **/
+    :root {
+      --${scheme_tag}-dark-${color_callout}:       var( --${scheme_tag}-base-dark-${color_callout},       var( --${scheme_tag}-base-main-${color_callout},       var( --${d_scheme_tag}-dark-${color_callout})));
+
+      --${scheme_tag}-lite-${color_callout}:       var( --${scheme_tag}-base-lite-${color_callout},       var( --${scheme_tag}-base-main-${color_callout},       var( --${d_scheme_tag}-lite-${color_callout})));
+    }
+.
+
+/*  The default scheme uses this block rather than the one above. */
+    :root {
+      --${scheme_tag}-dark-${color_callout}:       var( --${scheme_tag}-base-dark-${color_callout},       var( --${scheme_tag}-base-main-${color_callout}));
+
+      --${scheme_tag}-lite-${color_callout}:       var( --${scheme_tag}-base-lite-${color_callout},       var( --${scheme_tag}-base-main-${color_callout}));
+    }
+
+
+/*  Every Scheme has a group that matches this format. It can be at the end of the
+ *  CSS file for the scheme, provided the default scheme is already loaded. The schemes
+ *  may all be collected together in one group, expecially if all the schemes are part
+ *  of the main CSS rather than individual files.
+ **/
+
+    @media not all and (prefers-color-scheme: light) {
+      #main-mode:checked ~ #${scheme_tag}-scheme:checked ~ #scheme-container {
+        --colors-${color_callout}:       var( --${scheme_tag}-dark-${color_callout});
+      }
+      #alt-mode:checked ~ #${scheme_tag}-scheme:checked ~ #scheme-container {
+        --colors-${color_callout}:       var( --${scheme_tag}-lite-${color_callout});
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      #main-mode:checked ~ #${scheme_tag}-scheme:checked ~ #scheme-container {
+        --colors-${color_callout}:       var( --${scheme_tag}-lite-${color_callout});
+      }
+      #alt-mode:checked ~ #${scheme_tag}-scheme:checked ~ #scheme-container {
+        --colors-${color_callout}:       var( --${scheme_tag}-dark-${color_callout});
+      }
+    }
+
+/*  Each Scheme needs to have this line in the HTML inside the <body> and
+ *  BEFORE the id="scheme-container" tag, usually a <div> or <section> tag.
+ **/
+  <input id="${scheme_tag}-scheme" class="hidden-control" name="scheme_switch" type="radio">
+
+/*  Each Scheme needs to have this line in the HTML AFTER the
+ *  id="scheme-container" tag, usually a <div> or <section> tag.
+ *  Often part of a drop-down or menu.
+ **/
+  <label for="${scheme_tag}-scheme" id="${scheme_tag}-scheme-switch">${scheme_name}</label>
+
+
+      --lvl-01dp-value: .05;
+      --lvl-02dp-value: .07;
+      --lvl-03dp-value: .08;
+      --lvl-04dp-value: .09;
+      --lvl-06dp-value: .11;
+      --lvl-08dp-value: .12;
+      --lvl-12dp-value: .14;
+      --lvl-16dp-value: .15;
+      --lvl-24dp-value: .16;
+
+/* Basic set of colors may include: */
+    :root {
+      --colors-page     : rgb();
+      --colors-onPage   : rgb();
+      --colors-head     : rgb();
+      --colors-onHead   : rgb();
+      --colors-foot     : rgb();
+      --colors-onFoot   : rgb();
+      --colors-menu     : rgb();
+      --colors-onMenu   : rgb();
+      --colors-ctrl     : rgb();
+      --colors-onCtrl   : rgb();
+      --colors-primary  : rgb();
+      --colors-onPrimary: rgb();
+      --colors-code     : rgb();
+      --colors-onCode   : rgb();
+      --colors-button   : rgb();
+      --colors-onButton : rgb();
+      --colors-border   : rgb();
+      --colors-icon     : rgb();
+  }
+--colors-brand-mainColor
+--colors-brand-altColor
+--colors-page-fgSecond
+--colors-page-bgColor
+--colors-page-bg02dp /* .07 overlay */
+--colors-page-bg06dp /* .11 overlay */
+--colors-page-bg12dp /* .14 overlay */
+--colors-page-bg24dp /* .16 overlay */
+--colors-image-shadeColor
+
+
+Calculate overlay results with:
+R = overlayRed * overlayValue + baseRed * (1 - overlayValue)
+B = overlayBlue * overlayValue + baseBlue * (1 - overlayValue)
+G = overlayGreen * overlayValue + baseGreen * (1 - overlayValue)
+
+currently in use:
+--control-fgColor: gold;
+--control-bgColor: rgba(240,240,240,.46);
+--logo-frameColor: rgba(102,51,153,.25);
+--logo-frameColor: white;
+--logo-bgColor: rgba(0,0,0,1);
+--menu-bgColor: rgb(40,40,40);
+
+
+
+
+    :root {
+      --${scheme_tag}-base-main-${color_callout}: rgb();
+    }
+    :root {
+      --${scheme_tag}-base-dark-${color_callout}: rgb();
+    }
+    :root {
+      --${scheme_tag}-base-lite-${color_callout}: rgb();
+    }
+
+    :root {
+      --${scheme_tag}-dark-${color_callout}:       var( --${scheme_tag}-base-dark-${color_callout},       var( --${scheme_tag}-base-main-${color_callout},       var( --${d_scheme_tag}-dark-${color_callout})));
+
+      --${scheme_tag}-lite-${color_callout}:       var( --${scheme_tag}-base-lite-${color_callout},       var( --${scheme_tag}-base-main-${color_callout},       var( --${d_scheme_tag}-lite-${color_callout})));
+    }
+
+    @media not all and (prefers-color-scheme: light) {
+      #main-mode:checked ~ #${scheme_tag}-scheme:checked ~ #scheme-container {
+        --colors-${color_callout}:       var( --${scheme_tag}-dark-${color_callout});
+      }
+      #alt-mode:checked ~ #${scheme_tag}-scheme:checked ~ #scheme-container {
+        --colors-${color_callout}:       var( --${scheme_tag}-lite-${color_callout});
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      #main-mode:checked ~ #${scheme_tag}-scheme:checked ~ #scheme-container {
+        --colors-${color_callout}:       var( --${scheme_tag}-lite-${color_callout});
+      }
+      #alt-mode:checked ~ #${scheme_tag}-scheme:checked ~ #scheme-container {
+        --colors-${color_callout}:       var( --${scheme_tag}-dark-${color_callout});
+      }
+    }
+    #${scheme_tag}-scheme-switch {
+        display: inline-block;
+    }
+
+
+/*  Each Scheme needs to have this line in the HTML inside the <body> and
+ *  BEFORE the id="scheme-container" tag, usually a <div> or <section> tag.
+ **/
+  <input id="${scheme_tag}-scheme" class="hidden-control" name="scheme_switch" type="radio">
+
+/*  Each Scheme needs to have this line in the HTML AFTER the
+ *  id="scheme-container" tag, usually a <div> or <section> tag.
+ *  Often part of a drop-down or menu.
+ **/
+  <label for="${scheme_tag}-scheme" id="${scheme_tag}-scheme-switch">${scheme_name}</label>
