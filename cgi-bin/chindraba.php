@@ -34,5 +34,6 @@
 
 /* Place temporary, development only, code here. The production-level,
  * or live version of the system should have this file completely empty.
+ */
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:
