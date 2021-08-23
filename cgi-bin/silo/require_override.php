@@ -32,10 +32,27 @@
 *                                                                      *
 ************************************************************************/
 
-/* Place temporary, development only, code here. The production-level,
- * or live version of the system should have this file completely empty.
+/* Function to choose between a distributed version or a custom version
+ * of a file. The custom files are used to override the distributed
+ * version and _must_ have the same filename as the distributed file,
+ * _must_ contain the same function(s) with the same signature, and
+ * are in the 'overrides' directory within the directory of the
+ * distributed version.
+ * Argument: path of the file to include, relative to SCRIPT_PATH_FS
+ * Return: path of the choosen file, relative to SCRIPT_PATH_FS
  */
-
-define('SOLO_FILES', SCRIPT_PATH_FS . "silo/");
+function require_override($check_file) {
+    $check_filename = $check_file;
+    $path_parts = pathinfo($check_file);
+    if (! array_key_exists('extension', $path_parts) || 'php' != $path_parts['extension']) {
+        $check_filename .= '.php';
+    }
+    $path_parts = pathinfo($check_filename);
+    $overridePath =  $path_parts['dirname'] . '/overrides/' . $path_parts['basename'];
+    if (file_exists($overridePath)) {
+        require_once "$overridePath";
+    }
+    require_once "$check_filename";
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

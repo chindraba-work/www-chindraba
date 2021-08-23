@@ -34,13 +34,29 @@
 
 error_reporting(-1);
 
-require "include.php";
-
-// Set the path for including scripts
-set_include_path(get_include_path() . PATH_SEPARATOR . SCRIPT_PATH_FS);
-
 // Development only includes
 // Set any info for testing, or simulating things
-require "chindraba.php";
+require_once SCRIPT_PATH_FS . "chindraba.php";
+
+// Load the assorted paths for comment-less file access
+require_once SCRIPT_PATH_FS . "define-paths.php";
+
+/* Include files added in the custom functions directory
+ * 'extra-functions'. Only includes PHP files and loads them in lexical
+ * order. _Do NOT_ use the 'extra-functions' directory to override
+ * existing functions, only for addind new functions.
+ */
+if (file_exists(EXTRA_FUNCTIONS_PATH)) {
+    $extraFunctions = dir(EXTRA_FUNCTIONS_PATH);
+    while ($extraFile = $extraFunctions->read()) {
+        if (preg_match('~^[^\._].*\.php$~i', $extraFile) > 0) {
+            require_once EXTRA_FUNCTIONS_PATH . $extraFile;
+        }
+    }
+    $extraFunctions->close();
+    unset($extraFunctions);
+}
+
+require_once FUNCTIONS_PATH . "functions-general.php";
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

@@ -32,10 +32,6 @@
 *                                                                      *
 ************************************************************************/
 
-/* Place temporary, development only, code here. The production-level,
- * or live version of the system should have this file completely empty.
- */
-
-define('SOLO_FILES', SCRIPT_PATH_FS . "silo/");
+require_once SOLO_FILES . "require_override.php";
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

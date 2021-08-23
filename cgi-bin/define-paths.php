@@ -32,10 +32,7 @@
 *                                                                      *
 ************************************************************************/
 
-/* Place temporary, development only, code here. The production-level,
- * or live version of the system should have this file completely empty.
- */
-
-define('SOLO_FILES', SCRIPT_PATH_FS . "silo/");
+define('FUNCTIONS_PATH', SCRIPT_PATH_FS . 'functions/');
+define('EXTRA_FUNCTIONS_PATH', SCRIPT_PATH_FS . 'extra-functions/');
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

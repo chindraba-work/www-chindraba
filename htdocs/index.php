@@ -32,7 +32,8 @@
 *                                                                      *
 ************************************************************************/
 
-require "conf.php";
+require_once "includes.php";
+require_once SCRIPT_PATH_FS . "systemInit.php";
 
 print <<<EOHTML
 <!DOCTYPE html>
