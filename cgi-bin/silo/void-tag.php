@@ -32,13 +32,27 @@
 *                                                                      *
 ************************************************************************/
 
-require_once SOLO_FILES . "require-override.php";
-require_once SOLO_FILES . "flatten-list.php";
-require_once SOLO_FILES . "render-list.php";
-require_once SOLO_FILES . "build-node.php";
-require_once SOLO_FILES . "void-tag.php";
-require_once SOLO_FILES . "join-string.php";
-require_once SOLO_FILES . "build-equiv-node.php";
-require_once SOLO_FILES . "build-meta-node.php";
+// Test an HTML tag for status as a 'void' tag
+function void_tag($tag) {
+    return in_array(strtolower($tag), [
+        'area',
+        'base',
+        'br',
+        'col',
+        'embed',
+        'hr',
+        'img',
+        'input',
+        'link',
+        'meta',
+        'param',
+        'source',
+        'track',
+        'wbr',
+        'menuitem',
+        'keygen',
+        'command',
+    ]);
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

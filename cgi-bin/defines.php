@@ -37,5 +37,23 @@
  * For production, use "" for compact code.
  */
 define('HTML_EOL', "\n");
+/* What to indent each level of HTML by.
+ * For developement use desired spaces (2, 3 or 4 are common).
+ * For production use "" for compact code.
+ */
+define('HTML_INDENT', "    ");
+// The keys in metadata to ignore when building element metadata
+define('IGNORED_META_KEYS', [
+    0,
+    'id',
+    'class',
+    'classes',
+]);
+
+// The extra keys of metadata to ignore when building an element
+define('IGNORED_NODE_KEYS', [
+    'tag',
+    'contents',
+]);
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

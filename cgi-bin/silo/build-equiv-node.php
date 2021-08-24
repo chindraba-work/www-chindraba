@@ -32,13 +32,13 @@
 *                                                                      *
 ************************************************************************/
 
-require_once SOLO_FILES . "require-override.php";
-require_once SOLO_FILES . "flatten-list.php";
-require_once SOLO_FILES . "render-list.php";
-require_once SOLO_FILES . "build-node.php";
-require_once SOLO_FILES . "void-tag.php";
-require_once SOLO_FILES . "join-string.php";
-require_once SOLO_FILES . "build-equiv-node.php";
-require_once SOLO_FILES . "build-meta-node.php";
+// Shortcut for creating a <meta> tag with http-equiv/content pair
+function build_equiv_node($http_name, $http_content) {
+    return build_node([
+        'tag' => "meta",
+        'http-equiv' => $http_name,
+        'content' => $http_content,
+    ]);
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:
