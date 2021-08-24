@@ -1,5 +1,5 @@
 # Prevent viewing of sensitive files (even if the server setup does not)
-<FilesMatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
     <IfModule !mod_access_compat.c>
         Require all denied
     </IfModule>

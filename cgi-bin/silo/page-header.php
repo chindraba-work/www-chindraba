@@ -46,15 +46,15 @@ function render_page_header($page_name) {
                 <nav id='site-nav' class='side-menu surface-menu bot-right'>
                     <div id='site-menu-box' class='box-menu'>
                         <div id='site-nav-left' class='nav-item'>
-                            <a href='/index.html' title='Return to the home page' class='nav-link block-up pad-3rem soft-corner nowrap'>Home</a>
-                            <a href='/pages/about.html' title='Read more about me' class='nav-link block-up pad-3rem soft-corner nowrap'>About</a>
-                            <a href='/pages/blog.html' title='Read about what I do, or think' class='nav-link block-up pad-3rem soft-corner nowrap'>Blog</a>
-                            <a href='/pages/portfolio.html' title='Look at some of the other projects I have' class='nav-link block-up pad-3rem soft-corner nowrap'>Portfolio</a>
+                            <a href='/home' title='Return to the home page' class='nav-link block-up pad-3rem soft-corner nowrap'>Home</a>
+                            <a href='/about' title='Read more about me' class='nav-link block-up pad-3rem soft-corner nowrap'>About</a>
+                            <a href='/blog' title='Read about what I do, or think' class='nav-link block-up pad-3rem soft-corner nowrap'>Blog</a>
+                            <a href='/portfolio' title='Look at some of the other projects I have' class='nav-link block-up pad-3rem soft-corner nowrap'>Portfolio</a>
                         </div>
                         <div id='site-nav-right' class='nav-item'>
-                            <a href='/pages/references.html' title='A collection of references I find useful' class='nav-link block-up pad-3rem soft-corner nowrap'>References</a>
-                            <a href='/pages/reviews.html' title='A collection of reviews I have done' class='nav-link block-up pad-3rem soft-corner nowrap'>Reviews</a>
-                            <a href='/pages/legal.html' title='Every site needs legal junk. It&amp;apo;s the law.' class='nav-link block-up pad-3rem soft-corner nowrap'>Legal</a>
+                            <a href='/references' title='A collection of references I find useful' class='nav-link block-up pad-3rem soft-corner nowrap'>References</a>
+                            <a href='/reviews' title='A collection of reviews I have done' class='nav-link block-up pad-3rem soft-corner nowrap'>Reviews</a>
+                            <a href='/legal' title='Every site needs legal junk. It&amp;apo;s the law.' class='nav-link block-up pad-3rem soft-corner nowrap'>Legal</a>
                         </div>
                     </div>
                 </nav>

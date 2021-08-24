@@ -34,6 +34,27 @@
 
 error_reporting(-1);
 
+// Translate the query string into a page to build.
+// For normal links to work and be silently changed into query strings
+// the root directory needs to have the following in the .htaccess file
+//      RewriteCond "/filesystem.path/to/webroot/%{REQUEST_URI}" !-f
+//      RewriteRule "^.*$" "/index.php?%{REQUEST_URI}" [L,QSA]
+// with, of course the proper filesystem path to the web root. The same value
+// as used in SITEROOT_FS above.
+if ( array_key_exists('QUERY_STRING', $_SERVER) && $_SERVER['QUERY_STRING'] ) {
+    // Grap the supplied query string
+    $query_string = $_SERVER['QUERY_STRING'];
+} else {
+    // Provide a defalut if the isn't anything given
+    $query_string = '/home';
+}
+$page_path = explode('/', $query_string);
+
+if (!$page_path[0]) {
+    array_shift($page_path);
+}
+$page_name = $page_path[array_key_last($page_path)];
+
 // Development only includes
 // Set any info for testing, or simulating things
 require_once SCRIPT_PATH_FS . "chindraba.php";

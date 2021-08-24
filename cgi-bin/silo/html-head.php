@@ -51,7 +51,7 @@ function render_html_head($page_name) {
                 'tag' => "title",
                 'text' => "[ return || !return ] - Rabbit Hole Reports Blog (FEWDR Final Project: Ronald Lamoreaux)",
             ]),
-            render_favicons('home') ,
+            render_favicons($page_name) ,
             build_node([
                 'tag' => "link",
                 'href' => "/css/common.css",

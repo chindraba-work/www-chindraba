@@ -65,12 +65,12 @@ function render_page_menus($page_name) {
                 <div id='right-nav' class='side-menu surface-menu box-right nav-item'>
                     <div id='right-menu-box' class='box-menu'>
                         <div id='right-nav-menu'>
-                            <a href='/pages/projects.html' title='The projects and homework from the FEWDR course I am taking' class='nav-link block-up pad-3rem soft-corner nowrap'>Projects</a>
-                            <a href='/pages/so.html' title='Collection of my Q&amp;A on Stack Overflow' class='nav-link block-up pad-3rem soft-corner nowrap'>Stack Overflow</a>
-                            <a href='/pages/ul.html' title='Collection of my Q&amp;A On Unix &amp; Linux' class='nav-link block-up pad-3rem soft-corner nowrap'>Unix &amp; Linux</a>
-                            <a href='/pages/su.html' title='Collection of my Q&amp;A on Super User' class='nav-link block-up pad-3rem soft-corner nowrap'>Super User</a>
-                            <a href='/pages/git.html' title='My different GitHub and GitLab repository accounts' class='nav-link block-up pad-3rem soft-corner nowrap terminal-case surface-code'>git</a>
-                            <a href='/pages/contact.html' title='Different methods of connecting with me' class='nav-link block-up pad-3rem soft-corner nowrap'>Contact</a>
+                            <a href='/pages/projects' title='The projects and homework from the FEWDR course I am taking' class='nav-link block-up pad-3rem soft-corner nowrap'>Projects</a>
+                            <a href='/page/so' title='Collection of my Q&amp;A on Stack Overflow' class='nav-link block-up pad-3rem soft-corner nowrap'>Stack Overflow</a>
+                            <a href='/pages/ul' title='Collection of my Q&amp;A On Unix &amp; Linux' class='nav-link block-up pad-3rem soft-corner nowrap'>Unix &amp; Linux</a>
+                            <a href='/pages/su' title='Collection of my Q&amp;A on Super User' class='nav-link block-up pad-3rem soft-corner nowrap'>Super User</a>
+                            <a href='/git' title='My different GitHub and GitLab repository accounts' class='nav-link block-up pad-3rem soft-corner nowrap terminal-case surface-code'>git</a>
+                            <a href='/contact' title='Different methods of connecting with me' class='nav-link block-up pad-3rem soft-corner nowrap'>Contact</a>
                         </div>
                     </div>
                 </div>
