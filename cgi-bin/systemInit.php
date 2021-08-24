@@ -38,6 +38,9 @@ error_reporting(-1);
 // Set any info for testing, or simulating things
 require_once SCRIPT_PATH_FS . "chindraba.php";
 
+// Load system-wide values
+require_once SCRIPT_PATH_FS . "defines.php";
+
 // Load the assorted paths for comment-less file access
 require_once SCRIPT_PATH_FS . "define-paths.php";
 

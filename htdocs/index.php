@@ -36,29 +36,21 @@ require_once "includes.php";
 require_once SCRIPT_PATH_FS . "systemInit.php";
 
 
-print <<<EOHTML
-<!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>
-
-EOHTML.
-render_html_head('home').
-<<<EOHTML
-<body>
-
-EOHTML.
-render_page_controls('home').
-<<<EOHTML
-    <div id='scheme-container' class='surface-page'>
-
-EOHTML.
-render_page_header('home').
-render_page_menus('home').
-render_value_content('home').
-render_page_footer('home').
-<<<EOHTML
-    </div>
-</body>
-</html>
-EOHTML;
+$page_content = [
+    "<!DOCTYPE html>",
+    "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>",
+    render_html_head('home'),
+    "<body>",
+    render_page_controls('home'),
+    "    <div id='scheme-container' class='surface-page'>",
+    render_page_header('home'),
+    render_page_menus('home'),
+    render_value_content('home'),
+    render_page_footer('home'),
+    "    </div>",
+    "</body>",
+    "</html>"
+];
+print render_list($page_content);
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

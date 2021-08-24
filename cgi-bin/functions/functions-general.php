@@ -33,5 +33,7 @@
 ************************************************************************/
 
 require_once SOLO_FILES . "require-override.php";
+require_once SOLO_FILES . "flatten-list.php";
+require_once SOLO_FILES . "render-list.php";
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

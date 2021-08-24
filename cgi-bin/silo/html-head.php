@@ -34,23 +34,20 @@
 
 function render_html_head($page_name) {
     require_override(SOLO_FILES . "favicons.php");
-    return <<<EOHTML
-<head>
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-    <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'>
-    <meta http-equiv='Pragma' content='no-cache'>
-    <meta http-equiv='Expires' content='0'>
-    <meta charset='UTF-8'>
-    <meta name='language' content='English'>
-    <meta name='viewport' content='viewport-fit=contain, width=device-width, height=device-height, initial-scale=1.0'>
-    <meta name='author' content='Chindraba (Ronald Lamoreaux)'>
-    <title>[ return || !return ] - Rabbit Hole Reports Blog (FEWDR Final Project: Ronald Lamoreaux)</title>
-EOHTML . 
-    render_favicons('home') . <<<EOHTML
-    <link href='/css/common.css' rel='stylesheet' type='text/css'>
-</head>
-
-EOHTML;
+    return [
+        "<head>",
+        "    <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'>",
+        "    <meta http-equiv='Pragma' content='no-cache'>",
+        "    <meta http-equiv='Expires' content='0'>",
+        "    <meta charset='UTF-8'>",
+        "    <meta name='language' content='English'>",
+        "    <meta name='viewport' content='viewport-fit=contain, width=device-width, height=device-height, initial-scale=1.0'>",
+        "    <meta name='author' content='Chindraba (Ronald Lamoreaux)'>",
+        "    <title>[ return || !return ] - Rabbit Hole Reports Blog (FEWDR Final Project: Ronald Lamoreaux)</title>",
+        render_favicons('home') ,
+        "    <link href='/css/common.css' rel='stylesheet' type='text/css'>",
+        "</head>"
+    ];
 }
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:
