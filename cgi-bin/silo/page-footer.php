@@ -35,69 +35,69 @@
 // Create the site-wide page footer
 function render_page_footer($pageName) {
     return <<<EOHTML
-        <footer id="site-footer" class="surface-foot">
-            <div id="copyright">
+        <footer id='site-footer' class='surface-foot'>
+            <div id='copyright'>
                 Copyright © 2020 - 2021 Chindraba
             </div>
             <aside>
-                <div class="box-icon ui-control">
-                    <label id="settings-switch" for="settings-control" class="onCtrl">⚙</label>
+                <div class='box-icon ui-control'>
+                    <label id='settings-switch' for='settings-control' class='onCtrl'>⚙</label>
                 </div>
-                <section id="view-settings" class="surface-menu box-right">
-                    <div class="box box-icon surface-ctrl ui-control">
+                <section id='view-settings' class='surface-menu box-right'>
+                    <div class='box box-icon surface-ctrl ui-control'>
                         <div>
-                            <label id="font-up-2" for="font-size-2" class="font-switch">🗚</label>
-                            <label id="font-up-3" for="font-size-3" class="font-switch">🗚</label>
-                            <label id="font-up-4" for="font-size-4" class="font-switch">🗚</label>
-                            <label id="font-up-5" for="font-size-5" class="font-switch">🗚</label>
-                            <label id="font-up-6" for="font-size-6" class="font-switch">🗚</label>
-                            <label id="font-up-7" for="font-size-7" class="font-switch">🗚</label>
+                            <label id='font-dn-1' for='font-size-1' class='font-switch'>🗛</label>
+                            <label id='font-dn-2' for='font-size-2' class='font-switch'>🗛</label>
+                            <label id='font-dn-3' for='font-size-3' class='font-switch'>🗛</label>
+                            <label id='font-dn-4' for='font-size-4' class='font-switch'>🗛</label>
+                            <label id='font-dn-5' for='font-size-5' class='font-switch'>🗛</label>
+                            <label id='font-dn-6' for='font-size-6' class='font-switch'>🗛</label>
                         </div>
                     </div>
-                    <div class="box box-icon surface-ctrl ui-control">
+                    <div class='box box-icon surface-ctrl ui-control'>
                         <div>
-                            <label id="font-dn-1" for="font-size-1" class="font-switch">🗛</label>
-                            <label id="font-dn-2" for="font-size-2" class="font-switch">🗛</label>
-                            <label id="font-dn-3" for="font-size-3" class="font-switch">🗛</label>
-                            <label id="font-dn-4" for="font-size-4" class="font-switch">🗛</label>
-                            <label id="font-dn-5" for="font-size-5" class="font-switch">🗛</label>
-                            <label id="font-dn-6" for="font-size-6" class="font-switch">🗛</label>
+                            <label id='font-up-2' for='font-size-2' class='font-switch'>🗚</label>
+                            <label id='font-up-3' for='font-size-3' class='font-switch'>🗚</label>
+                            <label id='font-up-4' for='font-size-4' class='font-switch'>🗚</label>
+                            <label id='font-up-5' for='font-size-5' class='font-switch'>🗚</label>
+                            <label id='font-up-6' for='font-size-6' class='font-switch'>🗚</label>
+                            <label id='font-up-7' for='font-size-7' class='font-switch'>🗚</label>
                         </div>
                     </div>
                     <div>
-                        <div class="box box-icon surface-ctrl ui-control">
-                            <label id="scheme-switch" for="scheme-control">
-                                <span id="scheme-icon">ꙮ</span>
+                        <div class='box box-icon surface-ctrl ui-control'>
+                            <label id='scheme-switch' for='scheme-control'>
+                                <span id='scheme-icon'>ꙮ</span>
                             </label>
                         </div>
-                        <div class="side-menu">
-                            <div id="scheme-menu-box" class="box-menu">
-                                <div id="scheme-menu" class="box box-full surface-menu ui-menu">
-                                    <span id="solarized-scheme-switch" class="scheme-selector">
-                                        <label for="solarized-scheme">Solarized</label>
+                        <div class='side-menu'>
+                            <div id='scheme-menu-box' class='box-menu'>
+                                <div id='scheme-menu' class='box box-full surface-menu ui-menu'>
+                                    <span id='solarized-scheme-switch' class='scheme-selector'>
+                                        <label for='solarized-scheme'>Solarized</label>
                                     </span>
-                                    <span id="freshmint-scheme-switch" class="scheme-selector">
-                                        <label for="freshmint-scheme">Fresh Mint</label>
+                                    <span id='freshmint-scheme-switch' class='scheme-selector'>
+                                        <label for='freshmint-scheme'>Fresh Mint</label>
                                     </span>
-                                    <span id="default-scheme-switch" class="scheme-selector">
-                                        <label for="default-scheme">Vanilla</label>
+                                    <span id='default-scheme-switch' class='scheme-selector'>
+                                        <label for='default-scheme'>Vanilla</label>
                                     </span>
-                                    <span class="surface-primary">
-                                        <label id="scheme-accept" for="scheme-control">Accept</label>
+                                    <span class='surface-primary'>
+                                        <label id='scheme-accept' for='scheme-control'>Accept</label>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="box box-icon surface-ctrl ui-control">
-                            <label id="main-mode-switch" for="main-mode">
-                                <span id="main-is-dark">☾</span>
-                                <span id="main-is-lite">☀</span>
+                        <div class='box box-icon surface-ctrl ui-control'>
+                            <label id='main-mode-switch' for='main-mode'>
+                                <span id='main-is-dark'>☾</span>
+                                <span id='main-is-lite'>☀</span>
                             </label>
-                            <label id="alt-mode-switch" for="alt-mode">
-                                <span id="alt-is-dark">☽</span>
-                                <span id="alt-is-lite">☀</span>
+                            <label id='alt-mode-switch' for='alt-mode'>
+                                <span id='alt-is-dark'>☽</span>
+                                <span id='alt-is-lite'>☀</span>
                             </label>
                         </div>
                     </div>

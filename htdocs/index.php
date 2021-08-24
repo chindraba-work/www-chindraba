@@ -38,7 +38,7 @@ require_once SCRIPT_PATH_FS . "systemInit.php";
 
 print <<<EOHTML
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>
 
 EOHTML.
 render_html_head('home').
@@ -48,7 +48,7 @@ render_html_head('home').
 EOHTML.
 render_page_controls('home').
 <<<EOHTML
-    <div id="scheme-container" class="surface-page">
+    <div id='scheme-container' class='surface-page'>
 
 EOHTML.
 render_page_header('home').
