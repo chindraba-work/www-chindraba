@@ -32,25 +32,25 @@
 *                                                                      *
 ************************************************************************/
 
-require_once "includes.php";
-require_once SCRIPT_PATH_FS . "systemInit.php";
-
-
-$page_content = [
-    "<!DOCTYPE html>",
-    "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>",
-    render_html_head('home'),
-    "<body>",
-    render_page_controls('home'),
-    "    <div id='scheme-container' class='surface-page'>",
-    render_page_header('home'),
-    render_page_menus('home'),
-    render_value_content('home'),
-    render_page_footer('home'),
-    "    </div>",
-    "</body>",
-    "</html>"
-];
-print render_list($page_content);
+// Flatten a list to any level of dimensions into a single dimension list
+function flatten_list($in) {
+    $list = [];
+    if ( is_array($in) ) {
+        $temp_list = array_values($in);
+        while ($temp_list) {
+            $test = array_shift($temp_list);
+            if ( is_array($test) ) {
+                array_unshift($temp_list, ...$test);
+            } else {
+                if ($test) {
+                    $list[] = $test;
+                }
+            }
+        }
+    } else {
+        $list[] = $in;
+    }
+    return $list;
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

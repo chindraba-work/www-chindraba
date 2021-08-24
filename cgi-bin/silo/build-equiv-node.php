@@ -32,15 +32,13 @@
 *                                                                      *
 ************************************************************************/
 
-error_reporting(-1);
-
-require "include.php";
-
-// Set the path for including scripts
-set_include_path(get_include_path() . PATH_SEPARATOR . SCRIPT_PATH_FS);
-
-// Development only includes
-// Set any info for testing, or simulating things
-require "chindraba.php";
+// Shortcut for creating a <meta> tag with http-equiv/content pair
+function build_equiv_node($http_name, $http_content) {
+    return build_node([
+        'tag' => "meta",
+        'http-equiv' => $http_name,
+        'content' => $http_content,
+    ]);
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

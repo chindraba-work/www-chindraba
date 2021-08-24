@@ -32,25 +32,28 @@
 *                                                                      *
 ************************************************************************/
 
-require_once "includes.php";
-require_once SCRIPT_PATH_FS . "systemInit.php";
+/* Line separator for HTML.
+ * For development, use "\n" for pretty printing.
+ * For production, use "" for compact code.
+ */
+define('HTML_EOL', "\n");
+/* What to indent each level of HTML by.
+ * For developement use desired spaces (2, 3 or 4 are common).
+ * For production use "" for compact code.
+ */
+define('HTML_INDENT', "    ");
+// The keys in metadata to ignore when building element metadata
+define('IGNORED_META_KEYS', [
+    0,
+    'id',
+    'class',
+    'classes',
+]);
 
-
-$page_content = [
-    "<!DOCTYPE html>",
-    "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>",
-    render_html_head('home'),
-    "<body>",
-    render_page_controls('home'),
-    "    <div id='scheme-container' class='surface-page'>",
-    render_page_header('home'),
-    render_page_menus('home'),
-    render_value_content('home'),
-    render_page_footer('home'),
-    "    </div>",
-    "</body>",
-    "</html>"
-];
-print render_list($page_content);
+// The extra keys of metadata to ignore when building an element
+define('IGNORED_NODE_KEYS', [
+    'tag',
+    'contents',
+]);
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

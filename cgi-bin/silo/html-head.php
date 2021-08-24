@@ -32,25 +32,34 @@
 *                                                                      *
 ************************************************************************/
 
-require_once "includes.php";
-require_once SCRIPT_PATH_FS . "systemInit.php";
-
-
-$page_content = [
-    "<!DOCTYPE html>",
-    "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>",
-    render_html_head('home'),
-    "<body>",
-    render_page_controls('home'),
-    "    <div id='scheme-container' class='surface-page'>",
-    render_page_header('home'),
-    render_page_menus('home'),
-    render_value_content('home'),
-    render_page_footer('home'),
-    "    </div>",
-    "</body>",
-    "</html>"
-];
-print render_list($page_content);
+function render_html_head($page_name) {
+    require_override(SOLO_FILES . "favicons.php");
+    return build_node([
+        'tag' => "head",
+        'contents' => [
+            build_equiv_node('Cache-Control', "no-cache, no-store, must-revalidate"),
+            build_equiv_node('Pragma', "no-cache"),
+            build_equiv_node('Expires', "0"),
+            build_node([
+                'tag' => "meta",
+                'charset' => "UTF-8",
+            ]),
+            build_meta_node('language', "English"),
+            build_meta_node('viewport', "viewport-fit=contain, width=device-width, height=device-height, initial-scale=1.0"),
+            build_meta_node('author', "Chindraba (Ronald Lamoreaux)"),
+            build_node([
+                'tag' => "title",
+                'text' => "[ return || !return ] - Rabbit Hole Reports Blog (FEWDR Final Project: Ronald Lamoreaux)",
+            ]),
+            render_favicons('home') ,
+            build_node([
+                'tag' => "link",
+                'href' => "/css/common.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+        ],
+    ]);
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

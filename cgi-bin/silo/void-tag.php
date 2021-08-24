@@ -32,25 +32,27 @@
 *                                                                      *
 ************************************************************************/
 
-require_once "includes.php";
-require_once SCRIPT_PATH_FS . "systemInit.php";
-
-
-$page_content = [
-    "<!DOCTYPE html>",
-    "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>",
-    render_html_head('home'),
-    "<body>",
-    render_page_controls('home'),
-    "    <div id='scheme-container' class='surface-page'>",
-    render_page_header('home'),
-    render_page_menus('home'),
-    render_value_content('home'),
-    render_page_footer('home'),
-    "    </div>",
-    "</body>",
-    "</html>"
-];
-print render_list($page_content);
+// Test an HTML tag for status as a 'void' tag
+function void_tag($tag) {
+    return in_array(strtolower($tag), [
+        'area',
+        'base',
+        'br',
+        'col',
+        'embed',
+        'hr',
+        'img',
+        'input',
+        'link',
+        'meta',
+        'param',
+        'source',
+        'track',
+        'wbr',
+        'menuitem',
+        'keygen',
+        'command',
+    ]);
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

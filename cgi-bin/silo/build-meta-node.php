@@ -32,25 +32,13 @@
 *                                                                      *
 ************************************************************************/
 
-require_once "includes.php";
-require_once SCRIPT_PATH_FS . "systemInit.php";
-
-
-$page_content = [
-    "<!DOCTYPE html>",
-    "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>",
-    render_html_head('home'),
-    "<body>",
-    render_page_controls('home'),
-    "    <div id='scheme-container' class='surface-page'>",
-    render_page_header('home'),
-    render_page_menus('home'),
-    render_value_content('home'),
-    render_page_footer('home'),
-    "    </div>",
-    "</body>",
-    "</html>"
-];
-print render_list($page_content);
+// Shortcut for creating a <meta> tag with name/content pair
+function build_meta_node($meta_name, $meta_content) {
+    return build_node([
+        'tag' => "meta",
+        'name' => $meta_name,
+        'content' => $meta_content,
+    ]);
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

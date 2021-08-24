@@ -36,4 +36,6 @@
  * or live version of the system should have this file completely empty.
  */
 
+define('SOLO_FILES', SCRIPT_PATH_FS . "silo/");
+
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

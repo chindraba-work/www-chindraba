@@ -32,25 +32,35 @@
 *                                                                      *
 ************************************************************************/
 
-require_once "includes.php";
-require_once SCRIPT_PATH_FS . "systemInit.php";
+error_reporting(-1);
 
+// Development only includes
+// Set any info for testing, or simulating things
+require_once SCRIPT_PATH_FS . "chindraba.php";
 
-$page_content = [
-    "<!DOCTYPE html>",
-    "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us' lang='en-us'>",
-    render_html_head('home'),
-    "<body>",
-    render_page_controls('home'),
-    "    <div id='scheme-container' class='surface-page'>",
-    render_page_header('home'),
-    render_page_menus('home'),
-    render_value_content('home'),
-    render_page_footer('home'),
-    "    </div>",
-    "</body>",
-    "</html>"
-];
-print render_list($page_content);
+// Load system-wide values
+require_once SCRIPT_PATH_FS . "defines.php";
+
+// Load the assorted paths for comment-less file access
+require_once SCRIPT_PATH_FS . "define-paths.php";
+
+/* Include files added in the custom functions directory
+ * 'extra-functions'. Only includes PHP files and loads them in lexical
+ * order. _Do NOT_ use the 'extra-functions' directory to override
+ * existing functions, only for addind new functions.
+ */
+if (file_exists(EXTRA_FUNCTIONS_PATH)) {
+    $extraFunctions = dir(EXTRA_FUNCTIONS_PATH);
+    while ($extraFile = $extraFunctions->read()) {
+        if (preg_match('~^[^\._].*\.php$~i', $extraFile) > 0) {
+            require_once EXTRA_FUNCTIONS_PATH . $extraFile;
+        }
+    }
+    $extraFunctions->close();
+    unset($extraFunctions);
+}
+
+require_once FUNCTIONS_PATH . "functions-general.php";
+require_once FUNCTIONS_PATH . "render-page.php";
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:
