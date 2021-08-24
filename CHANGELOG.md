@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 2021-08-24
+
+-  Refactor the HTML for logical processing
+-  Create the basic functions for building HTML segments
+
 ### 2021-08-19
 
 -  Add external libraries for puny code and regional data
