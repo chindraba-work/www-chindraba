@@ -76,34 +76,6 @@ function render_page_menus($page_name) {
                 </div>
             </nav>
         </nav>
-        <nav id="nav-container" class="surface-page">
-            <nav id="page-nav-box" class="nav-box">
-                <div>
-                    <label id="page-nav-switch" for="page-nav-control" class="nav-box-switch surface-ctrl box-left nav-control">
-                        <span id="page-nav-icon" class="nav-icon">▶</span>
-                    </label>
-                </div>
-                <div id="page-nav" class="side-menu surface-menu box-left nav-item">
-                    <div id="page-menu-box" class="box-menu">
-                        <div id="page-nav-menu">
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <nav id="right-nav-box" class="nav-box">
-                <div>
-                    <label id="right-nav-switch" for="right-nav-control" class="nav-box-switch surface-ctrl box-right nav-control">
-                        <span id="right-nav-icon" class="nav-icon">◀</span>
-                    </label>
-                </div>
-                <div id="right-nav" class="side-menu surface-menu box-right nav-item">
-                    <div id="right-menu-box" class="box-menu">
-                        <div id="right-nav-menu">
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </nav>
 
 EOHTML;
 }
