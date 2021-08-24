@@ -32,32 +32,11 @@
 *                                                                      *
 ************************************************************************/
 
-error_reporting(-1);
-
-// Development only includes
-// Set any info for testing, or simulating things
-require_once SCRIPT_PATH_FS . "chindraba.php";
-
-// Load the assorted paths for comment-less file access
-require_once SCRIPT_PATH_FS . "define-paths.php";
-
-/* Include files added in the custom functions directory
- * 'extra-functions'. Only includes PHP files and loads them in lexical
- * order. _Do NOT_ use the 'extra-functions' directory to override
- * existing functions, only for addind new functions.
- */
-if (file_exists(EXTRA_FUNCTIONS_PATH)) {
-    $extraFunctions = dir(EXTRA_FUNCTIONS_PATH);
-    while ($extraFile = $extraFunctions->read()) {
-        if (preg_match('~^[^\._].*\.php$~i', $extraFile) > 0) {
-            require_once EXTRA_FUNCTIONS_PATH . $extraFile;
-        }
-    }
-    $extraFunctions->close();
-    unset($extraFunctions);
-}
-
-require_once FUNCTIONS_PATH . "functions-general.php";
-require_once FUNCTIONS_PATH . "render-page.php";
+require_override(SOLO_FILES . "html-head.php");
+require_override(SOLO_FILES . "page-controls.php");
+require_override(SOLO_FILES . "page-header.php");
+require_override(SOLO_FILES . "page-menus.php");
+require_override(SOLO_FILES . "value-content.php");
+require_override(SOLO_FILES . "page-footer.php");
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

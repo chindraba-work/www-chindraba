@@ -32,32 +32,25 @@
 *                                                                      *
 ************************************************************************/
 
-error_reporting(-1);
+function render_html_head($page_name) {
+    require_override(SOLO_FILES . "favicons.php");
+    return <<<EOHTML
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <meta name="language" content="English">
+    <meta name="viewport" content="viewport-fit=contain, width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="author" content="Chindraba (Ronald Lamoreaux)">
+    <title>[ return || !return ] - Rabbit Hole Reports Blog (FEWDR Final Project: Ronald Lamoreaux)</title>
+EOHTML . 
+    render_favicons('home') . <<<EOHTML
+    <link href="/css/common.css" rel="stylesheet" type="text/css">
+</head>
 
-// Development only includes
-// Set any info for testing, or simulating things
-require_once SCRIPT_PATH_FS . "chindraba.php";
-
-// Load the assorted paths for comment-less file access
-require_once SCRIPT_PATH_FS . "define-paths.php";
-
-/* Include files added in the custom functions directory
- * 'extra-functions'. Only includes PHP files and loads them in lexical
- * order. _Do NOT_ use the 'extra-functions' directory to override
- * existing functions, only for addind new functions.
- */
-if (file_exists(EXTRA_FUNCTIONS_PATH)) {
-    $extraFunctions = dir(EXTRA_FUNCTIONS_PATH);
-    while ($extraFile = $extraFunctions->read()) {
-        if (preg_match('~^[^\._].*\.php$~i', $extraFile) > 0) {
-            require_once EXTRA_FUNCTIONS_PATH . $extraFile;
-        }
-    }
-    $extraFunctions->close();
-    unset($extraFunctions);
+EOHTML;
 }
-
-require_once FUNCTIONS_PATH . "functions-general.php";
-require_once FUNCTIONS_PATH . "render-page.php";
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:
