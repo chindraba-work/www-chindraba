@@ -32,14 +32,14 @@
 *                                                                      *
 ************************************************************************/
 
-require_once SOLO_FILES . "require-override.php";
-require_once SOLO_FILES . "flatten-list.php";
-require_once SOLO_FILES . "render-list.php";
-require_once SOLO_FILES . "build-node.php";
-require_once SOLO_FILES . "void-tag.php";
-require_once SOLO_FILES . "join-string.php";
 require_once SOLO_FILES . "build-equiv-node.php";
 require_once SOLO_FILES . "build-meta-node.php";
+require_once SOLO_FILES . "build-node.php";
+require_once SOLO_FILES . "flatten-list.php";
+require_once SOLO_FILES . "join-string.php";
 require_once SOLO_FILES . "merged-list.php";
+require_once SOLO_FILES . "render-list.php";
+require_once SOLO_FILES . "require-override.php";
+require_once SOLO_FILES . "void-tag.php";
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

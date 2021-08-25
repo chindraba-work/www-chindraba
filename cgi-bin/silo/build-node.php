@@ -33,14 +33,14 @@
 ************************************************************************/
 
 // Create an HTML element containing an element, or list of elements
-// Arguments: $meta - Assoc array of attributes for the element
+// Arguments: $node_data - Assoc array of attributes for the element
 //               ['tag']
 //               ['id']
 //               ['contents']
 //               ['classes']
 // Return: list of strings
 //      HTML opening tag
-//      flattened list $contents (if not a self-closing tag)
+//      flattened list of node content (if not a self-closing tag)
 //      HTML closing tag (if not a self-closing tag)
 
 function build_node($node_data) {
@@ -55,13 +55,13 @@ function build_node($node_data) {
     $tag = $node_info['tag'];
     // The list of attributes for the HTML tag
     $attribs = [];
-    // Grap the id first, just to keep things easier to find in the HTML view
+    // Grab the id first, just to keep things easier to find in the HTML view
     if ( array_key_exists('id', $node_info) && $node_info['id'] ) {
         $attribs[] = sprintf("id='%s'", $node_info['id']);
     }
     // Grab the classes next, just for convenience again
     if ( array_key_exists('classes', $node_info) && $node_info['classes'] ){
-        $attribs[] = sprintf("class='%s'", joinString($node_info['classes']));
+        $attribs[] = sprintf("class='%s'", join_string($node_info['classes']));
     }
     // Except for attributes to be ignored, and any 'text' key, copy the
     // supplied attributes to the building list
