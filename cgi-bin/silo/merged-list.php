@@ -32,14 +32,17 @@
 *                                                                      *
 ************************************************************************/
 
-require_once SOLO_FILES . "require-override.php";
-require_once SOLO_FILES . "flatten-list.php";
-require_once SOLO_FILES . "render-list.php";
-require_once SOLO_FILES . "build-node.php";
-require_once SOLO_FILES . "void-tag.php";
-require_once SOLO_FILES . "join-string.php";
-require_once SOLO_FILES . "build-equiv-node.php";
-require_once SOLO_FILES . "build-meta-node.php";
-require_once SOLO_FILES . "merged-list.php";
+/* Create a new list from a pair of lists.
+ * Arg addon_list: values to add to the list
+ * Arg base_list: the starting list (may be null)
+ * Return: single-level list of values
+ * 
+ * The values from new_list are placed first in the return list
+ * Either of the arguments may be a single string, list, or a multi-
+ * level compound list.
+ */
+function merged_list($addon_list, $base_list = []) {
+    return array_unique(flatten_list([$addon_list, $base_list]));
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:
