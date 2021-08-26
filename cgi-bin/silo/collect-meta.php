@@ -32,16 +32,32 @@
 *                                                                      *
 ************************************************************************/
 
-require_once SOLO_FILES . "build-equiv-node.php";
-require_once SOLO_FILES . "build-meta-node.php";
-require_once SOLO_FILES . "build-node.php";
-require_once SOLO_FILES . "collect-meta.php";
-require_once SOLO_FILES . "flatten-list.php";
-require_once SOLO_FILES . "join-string.php";
-require_once SOLO_FILES . "merge-meta.php";
-require_once SOLO_FILES . "merged-list.php";
-require_once SOLO_FILES . "render-list.php";
-require_once SOLO_FILES . "require-override.php";
-require_once SOLO_FILES . "void-tag.php";
+// Create the meta for the current element: merge between common meta and element defaults
+// supplemented with overrides for the specific use-case.
+// Return: Assoc array of meta for building the current element
+/* Create the meta data for a node using default values, common data
+ * for the group, data for the specific node itself, and the data which
+ * is required by the system for the type of node being made.
+ *
+ * Arg meta_data: the master associative array for the group
+ * Arg meta_key: the array key for the attributes to use for the node
+ * Arg meta_defaults: the baseline defaults to apply if nothing else is
+ *      provided for an attribute
+ * Arg meta_overrides: any values required by the building functions
+ *
+ * Return: The aggregate of the inputs in a single assoc array for use
+ *      in the building functions
+ */
+function collect_meta(&$meta_data, $meta_key, $meta_defaults, $meta_overrides = []) {
+    // Load the default values, updated with the group's common data
+    $meta_out = merge_meta($meta_defaults, $meta_data['common']);
+    // Further update with the node specific data, if any
+    if ( array_key_exists($meta_key, $meta_data) && is_array($meta_data[$meta_key]) ) {
+        $meta_out = merge_meta($meta_out, $meta_data[$meta_key]);
+    }
+    // Lastly, apply function required override data
+    $meta_out = merge_meta($meta_out, $meta_overrides);
+    return $meta_out;
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:
