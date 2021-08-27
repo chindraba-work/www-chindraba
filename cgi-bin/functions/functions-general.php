@@ -35,6 +35,7 @@
 require_once SOLO_FILES . "build-equiv-node.php";
 require_once SOLO_FILES . "build-meta-node.php";
 require_once SOLO_FILES . "build-node.php";
+require_once SOLO_FILES . "build-ui-node.php";
 require_once SOLO_FILES . "collect-meta.php";
 require_once SOLO_FILES . "flatten-list.php";
 require_once SOLO_FILES . "join-string.php";
