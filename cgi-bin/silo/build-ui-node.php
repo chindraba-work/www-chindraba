@@ -36,6 +36,7 @@
 /* Specialised version of build_node for handling the extra meta data
  * associated with UI elements.
  * Arg data: the assoc array of meta data for a group of elements
+ *      See cgi-bin/docs/metadata.php for a full description.
  * Arg node_key: the type of UI node being made
  * Arg defaults: default attribute values applied if nothing else is
  * Arg overrides: attributes to replace the ones found in the normal

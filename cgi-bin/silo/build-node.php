@@ -60,8 +60,12 @@ function build_node($node_data) {
         $attribs[] = sprintf("id='%s'", $node_info['id']);
     }
     // Grab the classes next, just for convenience again
-    if ( array_key_exists('classes', $node_info) && $node_info['classes'] ){
+    if ( array_key_exists('classes', $node_info) && $node_info['classes'] ) {
         $attribs[] = sprintf("class='%s'", join_string($node_info['classes']));
+    }
+    // Grab the roles next
+    if ( array_key_exists('roles',  $node_info) && $node_info['roles'] ) {
+        $attribs[] = srpintf("role='%s'", join_string($node_info['roles']));
     }
     // Except for attributes to be ignored, and any 'text' key, copy the
     // supplied attributes to the building list

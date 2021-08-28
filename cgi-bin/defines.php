@@ -54,6 +54,7 @@ define('IGNORED_META_KEYS', [
 define('IGNORED_NODE_KEYS', [
     'tag',
     'contents',
+    'roles',
 ]);
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

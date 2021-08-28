@@ -38,11 +38,10 @@
  * Return: base_data updated and/or overwritten with new_data
  *
  * The 'classes' attribute, as a list, is updated by addition.
- * The 'role' attribute, as a string, is updated by pre-pending the new
- *      data to it.
+ * The 'role' attribute, as a list, is updated by addition.
  * If new_data has an attribute 'class-list' it replaces 'classes' from
  *      base_data.
- * If new_data has an attribute 'roles' it replaces 'role' from
+ * If new_data has an attribute 'role-list' it replaces 'role' from
  *      base_data.
  * If new_data has an attribute 'radio-name' it creates the expectation
  *      that a radio button is being created and the HTML attribute
@@ -55,15 +54,16 @@
  */
 function merge_meta($base_data, $new_data) {
     $class_list = [$base_data['classes'] ?? NULL];
+    $role_list = [$base_data['role'] ?? NULL];
     foreach ($new_data as $key => $value) {
         if ('classes' === $key) {
             $class_list[] = $value;
         } elseif ('class-list' === $key) {
             $class_list = flatten_list([$value]);
-        } elseif ('role' === $key) {
-            $base_data['role'] =  join_string($value, $base_data['role']??'');
         } elseif ('roles' === $key) {
-            $base_data['role'] = join_string($value);
+            $role_list[] = $value;
+        } elseif ('role-list' === $key) {
+            $role_list = flatten_list([$value]);
         } elseif ('radio-name' === $key) {
             $base_data['name'] = $value;
             $base_data['type'] = 'radio';
@@ -74,6 +74,7 @@ function merge_meta($base_data, $new_data) {
         }
     }
     $base_data['classes'] = flatten_list($class_list);
+    $base_data['role'] = flatten_list($role_list);
     return $base_data;
 }
 
