@@ -32,11 +32,11 @@
 *                                                                      *
 ************************************************************************/
 
-require_override(SOLO_FILES . "html-head.php");
-require_override(SOLO_FILES . "page-controls.php");
-require_override(SOLO_FILES . "page-header.php");
-require_override(SOLO_FILES . "page-menus.php");
-require_override(SOLO_FILES . "value-content.php");
-require_override(SOLO_FILES . "page-footer.php");
+require_override(SOLO_FILES . "render-html-head.php");
+require_override(SOLO_FILES . "render-page-controls.php");
+require_override(SOLO_FILES . "render-page-footer.php");
+require_override(SOLO_FILES . "render-page-header.php");
+require_override(SOLO_FILES . "render-page-menus.php");
+require_override(SOLO_FILES . "render-value-content.php");
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

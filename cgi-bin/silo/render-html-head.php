@@ -33,7 +33,7 @@
 ************************************************************************/
 
 function render_html_head($page_name) {
-    require_override(SOLO_FILES . "favicons.php");
+    require_override(SOLO_FILES . "render-favicons.php");
     return build_node([
         'tag' => "head",
         'contents' => [
