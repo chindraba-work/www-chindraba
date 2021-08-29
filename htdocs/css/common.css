@@ -364,25 +364,25 @@ h2, .surface-page {
 
 /*  Adjusting the font-size in response to user selection */
 
-#font-size-1:checked ~ #scheme-container #page-container {
+#switch-font-size-1:checked ~ #scheme-container #page-container {
   font-size: 0.68rem;
 }
-#font-size-2:checked ~ #scheme-container #page-container {
+#switch-font-size-2:checked ~ #scheme-container #page-container {
   font-size: 0.825rem;
 }
-#font-size-3:checked ~ #scheme-container #page-container {
+#switch-font-size-3:checked ~ #scheme-container #page-container {
   font-size: 1.10rem;
 }
-#font-size-4:checked ~ #scheme-container #page-container {
+#switch-font-size-4:checked ~ #scheme-container #page-container {
   font-size: 1.31rem;
 }
-#font-size-5:checked ~ #scheme-container #page-container {
+#switch-font-size-5:checked ~ #scheme-container #page-container {
   font-size: 1.75rem;
 }
-#font-size-6:checked ~ #scheme-container #page-container {
+#switch-font-size-6:checked ~ #scheme-container #page-container {
   font-size: 2.31rem;
 }
-#font-size-7:checked ~ #scheme-container #page-container {
+#switch-font-size-7:checked ~ #scheme-container #page-container {
   font-size: 3rem;
 }
 
