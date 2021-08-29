@@ -155,7 +155,7 @@
     }
 
     @media not all and (prefers-color-scheme: light) {
-      #alt-mode:checked ~ #default-scheme:checked ~ #scheme-container {
+      #switch-alt-mode:checked ~ #switch-default-scheme:checked ~ #scheme-container {
         --colors-page       : var( --default-lite-page      );
         --colors-onPage     : var( --default-lite-onPage    );
         --colors-head       : var( --default-lite-head      );
@@ -183,7 +183,7 @@
       }
     }
     @media (prefers-color-scheme: light) {
-      #main-mode:checked ~ #default-scheme:checked ~ #scheme-container {
+      #switch-main-mode:checked ~ #switch-default-scheme:checked ~ #scheme-container {
         --colors-page       : var( --default-lite-page      );
         --colors-onPage     : var( --default-lite-onPage    );
         --colors-head       : var( --default-lite-head      );
@@ -209,7 +209,7 @@
 /*        --colors-           : var( --default-lite-          ); */
 
       }
-      #alt-mode:checked ~ #default-scheme:checked ~ #scheme-container {
+      #switch-alt-mode:checked ~ #switch-default-scheme:checked ~ #scheme-container {
         --colors-page       : var( --default-dark-page      );
         --colors-onPage     : var( --default-dark-onPage    );
         --colors-head       : var( --default-dark-head      );

@@ -41,32 +41,32 @@ function render_page_footer($pageName) {
             </div>
             <aside>
                 <div class='box-icon ui-control'>
-                    <label id='settings-switch' for='settings-control' class='onCtrl'>⚙</label>
+                    <label id='settings-switch' for='switch-settings-control' class='onCtrl'>⚙</label>
                 </div>
                 <section id='view-settings' class='surface-menu box-right'>
                     <div class='box box-icon surface-ctrl ui-control'>
                         <div>
-                            <label id='font-dn-1' for='font-size-1' class='font-switch'>🗛</label>
-                            <label id='font-dn-2' for='font-size-2' class='font-switch'>🗛</label>
-                            <label id='font-dn-3' for='font-size-3' class='font-switch'>🗛</label>
-                            <label id='font-dn-4' for='font-size-4' class='font-switch'>🗛</label>
-                            <label id='font-dn-5' for='font-size-5' class='font-switch'>🗛</label>
-                            <label id='font-dn-6' for='font-size-6' class='font-switch'>🗛</label>
+                            <label id='font-dn-1' for='switch-font-size-1' class='font-switch'>🗛</label>
+                            <label id='font-dn-2' for='switch-font-size-2' class='font-switch'>🗛</label>
+                            <label id='font-dn-3' for='switch-font-size-3' class='font-switch'>🗛</label>
+                            <label id='font-dn-4' for='switch-font-size-4' class='font-switch'>🗛</label>
+                            <label id='font-dn-5' for='switch-font-size-5' class='font-switch'>🗛</label>
+                            <label id='font-dn-6' for='switch-font-size-6' class='font-switch'>🗛</label>
                         </div>
                     </div>
                     <div class='box box-icon surface-ctrl ui-control'>
                         <div>
-                            <label id='font-up-2' for='font-size-2' class='font-switch'>🗚</label>
-                            <label id='font-up-3' for='font-size-3' class='font-switch'>🗚</label>
-                            <label id='font-up-4' for='font-size-4' class='font-switch'>🗚</label>
-                            <label id='font-up-5' for='font-size-5' class='font-switch'>🗚</label>
-                            <label id='font-up-6' for='font-size-6' class='font-switch'>🗚</label>
-                            <label id='font-up-7' for='font-size-7' class='font-switch'>🗚</label>
+                            <label id='font-up-2' for='switch-font-size-2' class='font-switch'>🗚</label>
+                            <label id='font-up-3' for='switch-font-size-3' class='font-switch'>🗚</label>
+                            <label id='font-up-4' for='switch-font-size-4' class='font-switch'>🗚</label>
+                            <label id='font-up-5' for='switch-font-size-5' class='font-switch'>🗚</label>
+                            <label id='font-up-6' for='switch-font-size-6' class='font-switch'>🗚</label>
+                            <label id='font-up-7' for='switch-font-size-7' class='font-switch'>🗚</label>
                         </div>
                     </div>
                     <div>
                         <div class='box box-icon surface-ctrl ui-control'>
-                            <label id='scheme-switch' for='scheme-control'>
+                            <label id='scheme-switch' for='switch-scheme-control'>
                                 <span id='scheme-icon'>ꙮ</span>
                             </label>
                         </div>
@@ -74,16 +74,16 @@ function render_page_footer($pageName) {
                             <div id='scheme-menu-box' class='box-menu'>
                                 <div id='scheme-menu' class='box box-full surface-menu ui-menu'>
                                     <span id='solarized-scheme-switch' class='scheme-selector'>
-                                        <label for='solarized-scheme'>Solarized</label>
+                                        <label for='switch-solarized-scheme'>Solarized</label>
                                     </span>
                                     <span id='freshmint-scheme-switch' class='scheme-selector'>
-                                        <label for='freshmint-scheme'>Fresh Mint</label>
+                                        <label for='switch-freshmint-scheme'>Fresh Mint</label>
                                     </span>
                                     <span id='default-scheme-switch' class='scheme-selector'>
-                                        <label for='default-scheme'>Vanilla</label>
+                                        <label for='switch-default-scheme'>Vanilla</label>
                                     </span>
                                     <span class='surface-primary'>
-                                        <label id='scheme-accept' for='scheme-control'>Accept</label>
+                                        <label id='scheme-accept' for='switch-scheme-control'>Accept</label>
                                     </span>
                                 </div>
                             </div>
@@ -91,11 +91,11 @@ function render_page_footer($pageName) {
                     </div>
                     <div>
                         <div class='box box-icon surface-ctrl ui-control'>
-                            <label id='main-mode-switch' for='main-mode'>
+                            <label id='main-mode-switch' for='switch-main-mode'>
                                 <span id='main-is-dark'>☾</span>
                                 <span id='main-is-lite'>☀</span>
                             </label>
-                            <label id='alt-mode-switch' for='alt-mode'>
+                            <label id='alt-mode-switch' for='switch-alt-mode'>
                                 <span id='alt-is-dark'>☽</span>
                                 <span id='alt-is-lite'>☀</span>
                             </label>

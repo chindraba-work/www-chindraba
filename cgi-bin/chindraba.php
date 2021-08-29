@@ -38,4 +38,171 @@
 
 define('SOLO_FILES', SCRIPT_PATH_FS . "silo/");
 
+function get_meta($meta_name) {
+    $element_meta_data = [
+        'wide_screen' => [
+            'common' => [
+                'id' => "widescreen",
+            ],
+            'switch' => [
+                'value' => "isWide",
+            ],
+        ],
+        'site_nav' => [
+            'common' => [
+                'id' => "site-nav-control",
+            ],
+            'switch' => [
+                'value' => "site-nav-open",
+            ],
+        ],
+        'page_nav' => [
+            'common' => [
+                'id' => 'page-nav-control',
+            ],
+            'switch' => [
+                'value' => "page-nav-open",
+            ]
+        ],
+        'right_nav' => [
+            'common' => [
+                'id' => "right-nav-control",
+            ],
+            'switch' => [
+                'value' => "right_nav_open",
+            ],
+        ],
+        'settings' => [
+            'common' => [
+                'id' => "settings",
+            ],
+            'switch' => [
+                'value' => "settings",
+            ],
+        ],
+        'scheme' => [
+            'common' => [
+                'id' => "scheme",
+            ],
+            'switch' => [
+                'value' => "scheme-open",
+            ],
+        ],
+        'main-mode' => [
+            'common' => [
+                'id' => "main-mode",
+            ],
+            'switch' => [
+                'radio-name' => "dark-mode",
+                'value' => "main",
+                'checked' => 1,
+            ],
+        ],
+        'alt-mode' => [
+            'common' => [
+                'id' => "alt-mode",
+            ],
+            'switch' => [
+                'radio-name' => "dark-mode",
+                'value' => 'alt',
+            ],
+        ],
+        'solarized-scheme' => [
+            'common' => [
+                'id' => "solarized-scheme",
+            ],
+            'switch' => [
+                'radio-name' => "scheme-selector",
+                'value' => "solarized",
+            ],
+        ],
+        'freshmint-scheme' => [
+            'common' => [
+                'id' => "freshmint-scheme",
+            ],
+            'switch' => [
+                'radio-name' => "scheme-selector",
+                'value' => "freshmint",
+            ],
+        ],
+        'default-scheme' => [
+            'common' => [
+                'id' => "default-scheme",
+            ],
+            'switch' => [
+                'radio-name' => "scheme-selector",
+                'value' => "default",
+            ],
+        ],
+        'font-1' => [
+            'common' => [
+                'id' => "font-size-1",
+            ],
+            'switch' => [
+                'radio-name' => "font-size",
+                'value' => 1,
+            ],
+        ],
+        'font-2' => [
+            'common' => [
+                'id' => "font-size-2",
+            ],
+            'switch' => [
+                'radio-name' => "font-size",
+                'value' => 2,
+            ],
+        ],
+        'font-3' => [
+            'common' => [
+                'id' => "font-size-3",
+            ],
+            'switch' => [
+                'radio-name' => "font-size",
+                'value' => 3,
+                'checked' => 1,
+            ],
+        ],
+        'font-4' => [
+            'common' => [
+                'id' => "font-size-4",
+            ],
+            'switch' => [
+                'radio-name' => "font-size",
+                'value' => 4,
+            ],
+        ],
+        'font-5' => [
+            'common' => [
+                'id' => "font-size-5",
+            ],
+            'switch' => [
+                'radio-name' => "font-size",
+                'value' => 5,
+            ],
+        ],
+        'font-6' => [
+            'common' => [
+                'id' => "font-size-6",
+            ],
+            'switch' => [
+                'radio-name' => "font-size",
+                'value' => 6,
+            ],
+        ],
+        'font-7' => [
+            'common' => [
+                'id' => "font-size-7",
+            ],
+            'switch' => [
+                'radio-name' => "font-size",
+                'value' => 7,
+            ],
+        ],
+    ];
+    if ( array_key_exists($meta_name, $element_meta_data)) {
+        return $element_meta_data[$meta_name];
+    }
+    return NULL;
+}
+
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

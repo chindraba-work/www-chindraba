@@ -37,7 +37,7 @@ function render_page_menus($page_name) {
         <nav id='nav-container' class='surface-page'>
             <nav id='page-nav-box' class='nav-box'>
                 <div>
-                    <label id='page-nav-switch' class='nav-box-switch surface-ctrl box-left nav-control' for='page-nav-control' aria-ignore='true'>
+                    <label id='page-nav-switch' class='nav-box-switch surface-ctrl box-left nav-control' for='switch-page-nav-control' aria-ignore='true'>
                         <span id='page-nav-icon' class='nav-icon'>▶</span>
                     </label>
                 </div>
@@ -58,7 +58,7 @@ function render_page_menus($page_name) {
             </nav>
             <nav id='right-nav-box' class='nav-box'>
                 <div>
-                    <label id='right-nav-switch' class='nav-box-switch surface-ctrl box-right nav-control' for='right-nav-control'>
+                    <label id='right-nav-switch' class='nav-box-switch surface-ctrl box-right nav-control' for='switch-right-nav-control'>
                         <span id='right-nav-icon' class='nav-icon'>◀</span>
                     </label>
                 </div>

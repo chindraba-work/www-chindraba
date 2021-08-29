@@ -36,7 +36,7 @@ function render_page_header($page_name) {
     return <<<EOHTML
         <header id='site-header' class='surface-head'>
             <div id='site-logo' class='ui-control'>
-                <label for='widescreen'><img id='logo-img' src='/assets/logo.png' alt=''></label>
+                <label for='switch-widescreen'><img id='logo-img' src='/assets/logo.png' alt=''></label>
             </div>
             <div id='title-bar'>
                 <div id='site-header-title'>
@@ -60,7 +60,7 @@ function render_page_header($page_name) {
                 </nav>
             </div>
             <div id='site-nav-icon'>
-                <label id='site-nav-switch' for='site-nav-control' class='nav-control'>
+                <label id='site-nav-switch' for='switch-site-nav-control' class='nav-control'>
                     <span id='burger_top'></span>
                     <span id='burger_mid'></span>
                     <span id='burger_base'></span>

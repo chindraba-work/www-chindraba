@@ -39,6 +39,7 @@ require_once SOLO_FILES . "build-ui-node.php";
 require_once SOLO_FILES . "collect-meta.php";
 require_once SOLO_FILES . "flatten-list.php";
 require_once SOLO_FILES . "join-string.php";
+require_once SOLO_FILES . "make-switch.php";
 require_once SOLO_FILES . "merge-meta.php";
 require_once SOLO_FILES . "merged-list.php";
 require_once SOLO_FILES . "render-list.php";

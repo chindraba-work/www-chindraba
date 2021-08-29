@@ -95,7 +95,7 @@
   transition: all var(--menu-timing) linear;
 }
 /*  Spin the icon and scale it up while the menu is opening  */
-#scheme-control:checked ~ #scheme-container #scheme-icon {
+#switch-scheme-control:checked ~ #scheme-container #scheme-icon {
   scale: none;
   transform: rotate(0deg);
 }
@@ -115,7 +115,7 @@
   transition: all var(--menu-timing) linear;
 }
 /*    Open the menu by flipping it out from behind the settings icons  */
-#scheme-control:checked ~ #scheme-container #scheme-menu {
+#switch-scheme-control:checked ~ #scheme-container #scheme-menu {
   transform: rotateY(0deg);
 }
 #scheme-menu span {
@@ -183,7 +183,7 @@
   transition: all var(--menu-timing) linear;
 }
 /*   Open the menu by rotating from behind the right edge of the window   */
-#settings-control:checked ~ #scheme-container #view-settings {
+#switch-settings-control:checked ~ #scheme-container #view-settings {
   transform: rotateY(0deg);
 }
 
@@ -195,7 +195,7 @@
   transition: all var(--menu-timing) linear;
 }
 /* Spin and expand the icon when the menu opens */
-#settings-control:checked ~ #scheme-container #settings-switch {
+#switch-settings-control:checked ~ #scheme-container #settings-switch {
   scale: 1.25;
   transform: rotate(360deg);
 }

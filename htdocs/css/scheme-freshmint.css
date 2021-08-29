@@ -123,7 +123,7 @@
 /*      --freshmint-lite-           : var( --freshmint-base-lite-           , var( --freshmint-base-main-           , var( --default-lite-          ))); */
     }
     @media not all and (prefers-color-scheme: light) {
-      #main-mode:checked ~ #freshmint-scheme:checked ~ #scheme-container {
+      #switch-main-mode:checked ~ #switch-freshmint-scheme:checked ~ #scheme-container {
         --colors-page      : var( --freshmint-dark-page      );
         --colors-onPage    : var( --freshmint-dark-onPage    );
         --colors-head      : var( --freshmint-dark-head      );
@@ -148,7 +148,7 @@
         --colors-icon      : var( --freshmint-dark-icon      );
 /*        --colors-          : var( --freshmint-dark-          ); */
       }
-      #alt-mode:checked ~ #freshmint-scheme:checked ~ #scheme-container {
+      #switch-alt-mode:checked ~ #switch-freshmint-scheme:checked ~ #scheme-container {
         --colors-page      : var( --freshmint-lite-page      );
         --colors-onPage    : var( --freshmint-lite-onPage    );
         --colors-head      : var( --freshmint-lite-head      );
@@ -175,7 +175,7 @@
       }
     }
     @media (prefers-color-scheme: light) {
-      #main-mode:checked ~ #freshmint-scheme:checked ~ #scheme-container {
+      #switch-main-mode:checked ~ #switch-freshmint-scheme:checked ~ #scheme-container {
         --colors-page      : var( --freshmint-lite-page      );
         --colors-onPage    : var( --freshmint-lite-onPage    );
         --colors-head      : var( --freshmint-lite-head      );
@@ -200,7 +200,7 @@
         --colors-icon      : var( --freshmint-lite-icon      );
 /*        --colors-          : var( --freshmint-lite-          ); */
       }
-      #alt-mode:checked ~ #freshmint-scheme:checked ~ #scheme-container {
+      #switch-alt-mode:checked ~ #switch-freshmint-scheme:checked ~ #scheme-container {
         --colors-page      : var( --freshmint-dark-page      );
         --colors-onPage    : var( --freshmint-dark-onPage    );
         --colors-head      : var( --freshmint-dark-head      );

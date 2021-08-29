@@ -196,17 +196,17 @@
               opacity calc( var(--menu-timing) / 2) linear calc( var(--menu-timing) / 2);
 }
 /*   Make the hamburger into an X on menu open  */
-#site-nav-control:checked ~ #scheme-container #burger-top {
+#switch-site-nav-control:checked ~ #scheme-container #burger-top {
   transform: translateX(2.5px) translateY(13px) rotate(-315deg);
 }
-#site-nav-control:checked ~ #scheme-container #burger-mid {
+#switch-site-nav-control:checked ~ #scheme-container #burger-mid {
   opacity: 0;
 }
-#site-nav-control:checked ~ #scheme-container #burger-base {
+#switch-site-nav-control:checked ~ #scheme-container #burger-base {
   transform: translateX(2.5px) translateY(-13px) rotate(315deg);
 }
 /*   Open the menu by flipping it down   */
-#site-nav-control:checked ~ #scheme-container #site-nav {
+#switch-site-nav-control:checked ~ #scheme-container #site-nav {
   transform: rotateX(360deg);
   transition: transform var(--menu-timing) linear;
 }
@@ -268,12 +268,12 @@
   flex-direction: row-reverse;
 }
 /*    Open the menu by unfolding it from the left side   */
-#page-nav-control:checked ~ #scheme-container #page-nav {
+#switch-page-nav-control:checked ~ #scheme-container #page-nav {
   width: 9.375rem;
   transform: rotateX(0deg);
 }
 /*   Rotate the handle on menu open   */
-#page-nav-control:checked ~ #scheme-container #page-nav-icon {
+#switch-page-nav-control:checked ~ #scheme-container #page-nav-icon {
   transform: rotate(180deg);
 }
 
@@ -318,12 +318,12 @@
   flex-direction: row;
 }
 /*    Open the menu by unfolding it from the right side   */
-#right-nav-control:checked ~ #scheme-container #right-nav {
+#switch-right-nav-control:checked ~ #scheme-container #right-nav {
   width: 9.375rem;
   transform: rotateY(0deg);
 }
 /*   Rotate the handle on menu open   */
-#right-nav-control:checked ~ #scheme-container #right-nav-icon {
+#switch-right-nav-control:checked ~ #scheme-container #right-nav-icon {
   transform: rotate(-180deg);
 }
 
@@ -351,12 +351,12 @@
 /*   On very narrow pages the two handles overlap. Slide the right menu
  *   handle down to avoid a collision when both are opened.
  **/
-#page-nav-control:checked ~ #right-nav-control:checked ~ #scheme-container #right-nav-switch {
+#switch-page-nav-control:checked ~ #switch-right-nav-control:checked ~ #scheme-container #right-nav-switch {
   margin-top: 39px;
 }
 /*   Cancel anti-collision slide once the page is wide enough  */
 @media screen and (min-width: 22rem) {
-  #page-nav-control:checked ~ #right-nav-control:checked ~ #scheme-container #right-nav-switch {
+  #switch-page-nav-control:checked ~ #switch-right-nav-control:checked ~ #scheme-container #right-nav-switch {
     margin-top: 5px;
   }
 }

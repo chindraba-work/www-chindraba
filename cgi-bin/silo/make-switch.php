@@ -32,27 +32,49 @@
 *                                                                      *
 ************************************************************************/
 
-function render_page_controls($page_name) {
-    return render_list([
-        make_switch(get_meta('wide_screen')),
-        make_switch(get_meta('site_nav')),
-        make_switch(get_meta('page_nav')),
-        make_switch(get_meta('right_nav')),
-        make_switch(get_meta('settings')),
-        make_switch(get_meta('scheme')),
-        make_switch(get_meta('main-mode')),
-        make_switch(get_meta('alt-mode')),
-        make_switch(get_meta('solarized-scheme')),
-        make_switch(get_meta('freshmint-scheme')),
-        make_switch(get_meta('default-scheme')),
-        make_switch(get_meta('font-1')),
-        make_switch(get_meta('font-2')),
-        make_switch(get_meta('font-3')),
-        make_switch(get_meta('font-4')),
-        make_switch(get_meta('font-5')),
-        make_switch(get_meta('font-6')),
-        make_switch(get_meta('font-7')),
-    ]);
+/* Create a checkbox or radio button, hidden, which serves as the
+ * controller, and/or CSS selector, for some behavior of the site or
+ * page.
+ * Arg switch_data: the un-collapsed meta data for the group the switch
+ *      is in. See cgi-bin/docs/metadata.php for a full description.
+ * Arg is_close: set to true to create a close switch for cases where
+ *      a separate switch is needed for opening (adding) and closing
+ *      (removing) a section of HTML.
+ * Return: list of HTML strings to add to the rendered page
+ *
+ * Conceptually every switch should be tied to a trigger, or triggers,
+ * which are displayed to the user. Activating the trigger changes the
+ * state of the switch, whose state is used within the CSS to change
+ * the presentation of some element, or group of elements.
+ */
+function make_switch($switch_data, $is_close = false) {
+    $switch_defaults = [
+        'tag'         => 'input',
+        'classes'     => '',
+        'type'        => 'checkbox',
+        'aira-ignore' => 'true',
+        'contents'    => NULL,
+    ];
+    $switch_overrides = [
+        'classes' => ($is_close)? ['ui-close-switch','ui-switch'] : 'ui-switch',
+    ];
+    $attribs = collect_meta($switch_data, ($is_close)?'close-switch':'switch', $switch_defaults, $switch_overrides);
+    $switch_name_parts = ['switch'];
+    if ($is_close) {
+        array_unshift($switch_name_parts, 'close');
+    }
+    $attribs['id'] = implode('-', flatten_list([$switch_name_parts, $attribs['id']]));
+    $attribs['classes'] = $attribs['classes'] ?? '';
+    if ( isset($attribs['checked']) ) {
+        $attribs['checked'] = 'checked';
+    }
+    return build_ui_node(
+        $switch_data,
+        ($is_close)? 'close-switch' : 'switch',
+        $switch_defaults,
+        $switch_overrides,
+        ($is_close)? 'close-switch' : 'switch'
+    );
 }
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

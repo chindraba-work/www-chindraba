@@ -54,6 +54,48 @@ function render_html_head($page_name) {
             render_favicons($page_name) ,
             build_node([
                 'tag' => "link",
+                'href' => "/css/normalize.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
+                'href' => "/css/fonts.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
+                'href' => "/css/ui-settings.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
+                'href' => "/css/nav-menus.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
+                'href' => "/css/scheme-default.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
+                'href' => "/css/scheme-solarized.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
+                'href' => "/css/scheme-freshmint.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
                 'href' => "/css/common.css",
                 'rel' => "stylesheet",
                 'type' => "text/css",

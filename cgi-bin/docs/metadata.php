@@ -52,7 +52,7 @@
  * or potentially common, to all elements within the group.
  *
  * The top-level elements available are:
- *  common: the aforementioned data common to all elements
+ *  common: the aforementioned data common to all elements (Required)
  *  switch: data for building a "switch", a hidden element on the page
  *      to track, and update, the user's interaction with the group's
  *      controls.

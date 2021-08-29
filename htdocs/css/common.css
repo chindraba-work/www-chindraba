@@ -31,24 +31,6 @@
 *                                                                      *
 ************************************************************************/
 
-/* Load the normalize reset sheet first */
-@import url("/css/normalize.css");
-/* Load the default color theme which will apply to everything
- * until something else changes it. Changes require DOM elements
- * which may not be present yet.
- */
-@import "/css/scheme-default.css";
-/* Load in the sheets to control navigation and UI elements */
-@import "/css/nav-menus.css";
-@import "/css/ui-settings.css";
-/* Load in whatever fonts have been selected for the site */
-@import "/css/fonts.css";
-
-/* Load in any available color schemes desired. List may grow. */
-@import "/css/scheme-solarized.css";
-@import "/css/scheme-freshmint.css";
-
-
 /*  Variables for consistency and simple modifications later
  *  possiblity for themes to change these elements if every designed to do so
  */
@@ -77,7 +59,7 @@ body * {
 label {
   cursor: pointer;
 }
-.hidden-control {
+.ui-switch {
   display: none;
 }
 sub, sup {
