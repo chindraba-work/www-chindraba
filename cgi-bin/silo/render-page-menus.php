@@ -35,15 +35,15 @@
 function render_page_menus($page_name) {
     return <<<EOHTML
         <nav id='nav-container' class='surface-page'>
-            <nav id='page-nav-box' class='nav-box'>
+            <nav id='menu-jump-box' class='nav-box'>
                 <div>
-                    <label id='page-nav-switch' class='nav-box-switch surface-ctrl box-left nav-control' for='switch-page-nav-control' aria-ignore='true'>
-                        <span id='page-nav-icon' class='nav-icon'>▶</span>
+                    <label id='trigger-menu-jump' class='nav-box-switch surface-ctrl box-left nav-control' for='switch-menu-jump' aria-ignore='true'>
+                        <span id='menu-jump-icon' class='nav-icon'>▶</span>
                     </label>
                 </div>
-                <div id='page-nav' class='side-menu surface-menu box-left nav-item'>
-                    <div id='page-menu-box' class='box-menu'>
-                        <div id='page-nav-menu'>
+                <div id='menu-jump' class='side-menu surface-menu box-left nav-item'>
+                    <div id='menu-jump-box' class='box-menu'>
+                        <div id='menu-jump-menu'>
                             <a title='Jump to Where it all began' href='#section-link-0' class='nav-link block-up pad-3rem soft-corner nowrap surface-menu shift-in-0'>Where it all began</a>
                             <a title='Jump to Dijkstra and programming without a computer' href='#section-link-1' class='nav-link block-up pad-3rem soft-corner nowrap surface-menu shift-in-1'>Dijkstra and programming without a computer</a>
                             <a title='Jump to Are GOTO statements harmful?' href='#section-link-2' class='nav-link block-up pad-3rem soft-corner nowrap surface-menu shift-in-1'>Are <span class='terminal-case surface-code'>GOTO</span> statements harmful?</a>
@@ -56,15 +56,15 @@ function render_page_menus($page_name) {
                     </div>
                 </div>
             </nav>
-            <nav id='right-nav-box' class='nav-box'>
+            <nav id='menu-page-box' class='nav-box'>
                 <div>
-                    <label id='right-nav-switch' class='nav-box-switch surface-ctrl box-right nav-control' for='switch-right-nav-control'>
-                        <span id='right-nav-icon' class='nav-icon'>◀</span>
+                    <label id='trigger-menu-page' class='nav-box-switch surface-ctrl box-right nav-control' for='switch-menu-page'>
+                        <span id='menu-page-icon' class='nav-icon'>◀</span>
                     </label>
                 </div>
-                <div id='right-nav' class='side-menu surface-menu box-right nav-item'>
-                    <div id='right-menu-box' class='box-menu'>
-                        <div id='right-nav-menu'>
+                <div id='menu-page' class='side-menu surface-menu box-right nav-item'>
+                    <div id='menu-page-box' class='box-menu'>
+                        <div id='menu-page-menu'>
                             <a href='/pages/projects' title='The projects and homework from the FEWDR course I am taking' class='nav-link block-up pad-3rem soft-corner nowrap'>Projects</a>
                             <a href='/page/so' title='Collection of my Q&amp;A on Stack Overflow' class='nav-link block-up pad-3rem soft-corner nowrap'>Stack Overflow</a>
                             <a href='/pages/ul' title='Collection of my Q&amp;A On Unix &amp; Linux' class='nav-link block-up pad-3rem soft-corner nowrap'>Unix &amp; Linux</a>

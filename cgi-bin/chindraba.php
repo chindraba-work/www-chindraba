@@ -40,7 +40,7 @@ define('SOLO_FILES', SCRIPT_PATH_FS . "silo/");
 
 function get_meta($meta_name) {
     $element_meta_data = [
-        'wide_screen' => [
+        'widescreen' => [
             'common' => [
                 'id' => "widescreen",
             ],
@@ -48,89 +48,89 @@ function get_meta($meta_name) {
                 'value' => "isWide",
             ],
         ],
-        'site_nav' => [
+        'menu-site' => [
             'common' => [
-                'id' => "site-nav-control",
+                'id' => "menu-site",
             ],
             'switch' => [
-                'value' => "site-nav-open",
+                'value' => "menu-site-open",
             ],
         ],
-        'page_nav' => [
+        'menu-jump' => [
             'common' => [
-                'id' => 'page-nav-control',
+                'id' => 'menu-jump',
             ],
             'switch' => [
-                'value' => "page-nav-open",
+                'value' => "menu-jump-open",
             ]
         ],
-        'right_nav' => [
+        'menu-page' => [
             'common' => [
-                'id' => "right-nav-control",
+                'id' => "menu-page",
             ],
             'switch' => [
-                'value' => "right_nav_open",
+                'value' => "menu-page-open",
             ],
         ],
-        'settings' => [
+        'control-settings' => [
             'common' => [
-                'id' => "settings",
+                'id' => "control-settings",
             ],
             'switch' => [
-                'value' => "settings",
+                'value' => "control-settings-open",
             ],
         ],
-        'scheme' => [
+        'menu-scheme' => [
             'common' => [
-                'id' => "scheme",
+                'id' => "menu-scheme",
             ],
             'switch' => [
-                'value' => "scheme-open",
+                'value' => "menu-scheme-open",
             ],
         ],
-        'main-mode' => [
+        'mode-main' => [
             'common' => [
-                'id' => "main-mode",
+                'id' => "mode-main",
             ],
             'switch' => [
-                'radio-name' => "dark-mode",
-                'value' => "main",
+                'radio-name' => "mode-select",
+                'value' => "main-mode",
                 'checked' => 1,
             ],
         ],
-        'alt-mode' => [
+        'mode-alt' => [
             'common' => [
-                'id' => "alt-mode",
+                'id' => "mode-alt",
             ],
             'switch' => [
-                'radio-name' => "dark-mode",
-                'value' => 'alt',
+                'radio-name' => "mode-select",
+                'value' => 'alt-mode',
             ],
         ],
-        'solarized-scheme' => [
+        'scheme-solarized' => [
             'common' => [
-                'id' => "solarized-scheme",
+                'id' => "scheme-solarized",
             ],
             'switch' => [
-                'radio-name' => "scheme-selector",
+                'radio-name' => "scheme-select",
                 'value' => "solarized",
             ],
         ],
-        'freshmint-scheme' => [
+        'scheme-freshmint' => [
             'common' => [
-                'id' => "freshmint-scheme",
+                'id' => "scheme-freshmint",
             ],
             'switch' => [
-                'radio-name' => "scheme-selector",
+                'radio-name' => "scheme-select",
                 'value' => "freshmint",
             ],
         ],
-        'default-scheme' => [
+        'scheme-default' => [
             'common' => [
-                'id' => "default-scheme",
+                'id' => "scheme-default",
             ],
             'switch' => [
-                'radio-name' => "scheme-selector",
+                'radio-name' => "scheme-select",
                 'value' => "default",
             ],
         ],

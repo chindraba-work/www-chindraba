@@ -97,7 +97,7 @@
       --solarized-dark-border     : var( --solarized-base-dark-border     , var( --solarized-base-main-border     , var( --default-dark-border    )));
       --solarized-dark-icon       : var( --solarized-base-dark-icon       , var( --solarized-base-main-icon       , var( --default-dark-icon      )));
 /*      --solarized-dark-           : var( --solarized-base-dark-           , var( --solarized-base-main-           , var( --default-dark-          ))); */
-                                                                                                                 
+
       --solarized-lite-page       : var( --solarized-base-lite-page       , var( --solarized-base-main-page       , var( --default-lite-page      )));
       --solarized-lite-onPage     : var( --solarized-base-lite-onPage     , var( --solarized-base-main-onPage     , var( --default-lite-onPage    )));
       --solarized-lite-head       : var( --solarized-base-lite-head       , var( --solarized-base-main-head       , var( --default-lite-head      )));
@@ -123,7 +123,7 @@
 /*      --solarized-lite-           : var( --solarized-base-lite-           , var( --solarized-base-main-           , var( --default-lite-          ))); */
     }
     @media not all and (prefers-color-scheme: light) {
-      #switch-main-mode:checked ~ #switch-solarized-scheme:checked ~ #scheme-container {
+      #switch-mode-main:checked ~ #switch-scheme-solarized:checked ~ #scheme-container {
         --colors-page      : var( --solarized-dark-page      );
         --colors-onPage    : var( --solarized-dark-onPage    );
         --colors-head      : var( --solarized-dark-head      );
@@ -148,7 +148,7 @@
         --colors-icon      : var( --solarized-dark-icon      );
 /*        --colors-          : var( --solarized-dark-          ); */
       }
-      #switch-alt-mode:checked ~ #switch-solarized-scheme:checked ~ #scheme-container {
+      #switch-mode-alt:checked ~ #switch-scheme-solarized:checked ~ #scheme-container {
         --colors-page      : var( --solarized-lite-page      );
         --colors-onPage    : var( --solarized-lite-onPage    );
         --colors-head      : var( --solarized-lite-head      );
@@ -175,7 +175,7 @@
       }
     }
     @media (prefers-color-scheme: light) {
-      #switch-main-mode:checked ~ #switch-solarized-scheme:checked ~ #scheme-container {
+      #switch-mode-main:checked ~ #switch-scheme-solarized:checked ~ #scheme-container {
         --colors-page      : var( --solarized-lite-page      );
         --colors-onPage    : var( --solarized-lite-onPage    );
         --colors-head      : var( --solarized-lite-head      );
@@ -200,7 +200,7 @@
         --colors-icon      : var( --solarized-lite-icon      );
 /*        --colors-          : var( --solarized-lite-          ); */
       }
-      #switch-alt-mode:checked ~ #switch-solarized-scheme:checked ~ #scheme-container {
+      #switch-mode-alt:checked ~ #switch-scheme-solarized:checked ~ #scheme-container {
         --colors-page      : var( --solarized-dark-page      );
         --colors-onPage    : var( --solarized-dark-onPage    );
         --colors-head      : var( --solarized-dark-head      );
@@ -226,6 +226,6 @@
 /*        --colors-          : var( --solarized-dark-          ); */
       }
     }
-    #solarized-scheme-switch {
+    #trigger-scheme-solarized {
         display: inline-block;
     }

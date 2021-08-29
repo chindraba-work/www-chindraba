@@ -97,7 +97,7 @@
       --freshmint-dark-border     : var( --freshmint-base-dark-border     , var( --freshmint-base-main-border     , var( --default-dark-border    )));
       --freshmint-dark-icon       : var( --freshmint-base-dark-icon       , var( --freshmint-base-main-icon       , var( --default-dark-icon      )));
 /*      --freshmint-dark-           : var( --freshmint-base-dark-           , var( --freshmint-base-main-           , var( --default-dark-          ))); */
-                                                                                                                 
+
       --freshmint-lite-page       : var( --freshmint-base-lite-page       , var( --freshmint-base-main-page       , var( --default-lite-page      )));
       --freshmint-lite-onPage     : var( --freshmint-base-lite-onPage     , var( --freshmint-base-main-onPage     , var( --default-lite-onPage    )));
       --freshmint-lite-head       : var( --freshmint-base-lite-head       , var( --freshmint-base-main-head       , var( --default-lite-head      )));
@@ -123,7 +123,7 @@
 /*      --freshmint-lite-           : var( --freshmint-base-lite-           , var( --freshmint-base-main-           , var( --default-lite-          ))); */
     }
     @media not all and (prefers-color-scheme: light) {
-      #switch-main-mode:checked ~ #switch-freshmint-scheme:checked ~ #scheme-container {
+      #switch-mode-main:checked ~ #switch-scheme-freshmint:checked ~ #scheme-container {
         --colors-page      : var( --freshmint-dark-page      );
         --colors-onPage    : var( --freshmint-dark-onPage    );
         --colors-head      : var( --freshmint-dark-head      );
@@ -148,7 +148,7 @@
         --colors-icon      : var( --freshmint-dark-icon      );
 /*        --colors-          : var( --freshmint-dark-          ); */
       }
-      #switch-alt-mode:checked ~ #switch-freshmint-scheme:checked ~ #scheme-container {
+      #switch-mode-alt:checked ~ #switch-scheme-freshmint:checked ~ #scheme-container {
         --colors-page      : var( --freshmint-lite-page      );
         --colors-onPage    : var( --freshmint-lite-onPage    );
         --colors-head      : var( --freshmint-lite-head      );
@@ -175,7 +175,7 @@
       }
     }
     @media (prefers-color-scheme: light) {
-      #switch-main-mode:checked ~ #switch-freshmint-scheme:checked ~ #scheme-container {
+      #switch-mode-main-mode:checked ~ #switch-scheme-freshmint:checked ~ #scheme-container {
         --colors-page      : var( --freshmint-lite-page      );
         --colors-onPage    : var( --freshmint-lite-onPage    );
         --colors-head      : var( --freshmint-lite-head      );
@@ -200,7 +200,7 @@
         --colors-icon      : var( --freshmint-lite-icon      );
 /*        --colors-          : var( --freshmint-lite-          ); */
       }
-      #switch-alt-mode:checked ~ #switch-freshmint-scheme:checked ~ #scheme-container {
+      #switch-mode-alt:checked ~ #switch-scheme-freshmint:checked ~ #scheme-container {
         --colors-page      : var( --freshmint-dark-page      );
         --colors-onPage    : var( --freshmint-dark-onPage    );
         --colors-head      : var( --freshmint-dark-head      );
@@ -226,6 +226,6 @@
 /*        --colors-          : var( --freshmint-dark-          ); */
       }
     }
-    #freshmint-scheme-switch {
+    #trigger-scheme-freshmint {
         display: inline-block;
     }

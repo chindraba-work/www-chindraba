@@ -41,49 +41,49 @@ function render_page_footer($pageName) {
             </div>
             <aside>
                 <div class='box-icon ui-control'>
-                    <label id='settings-switch' for='switch-settings-control' class='onCtrl'>⚙</label>
+                    <label id='trigger-control-settings' for='switch-control-settings' class='onCtrl'>⚙</label>
                 </div>
                 <section id='view-settings' class='surface-menu box-right'>
                     <div class='box box-icon surface-ctrl ui-control'>
                         <div>
-                            <label id='font-dn-1' for='switch-font-size-1' class='font-switch'>🗛</label>
-                            <label id='font-dn-2' for='switch-font-size-2' class='font-switch'>🗛</label>
-                            <label id='font-dn-3' for='switch-font-size-3' class='font-switch'>🗛</label>
-                            <label id='font-dn-4' for='switch-font-size-4' class='font-switch'>🗛</label>
-                            <label id='font-dn-5' for='switch-font-size-5' class='font-switch'>🗛</label>
-                            <label id='font-dn-6' for='switch-font-size-6' class='font-switch'>🗛</label>
+                            <label id='trigger-font-dn-1' for='switch-font-size-1' class='font-switch'>🗛</label>
+                            <label id='trigger-font-dn-2' for='switch-font-size-2' class='font-switch'>🗛</label>
+                            <label id='trigger-font-dn-3' for='switch-font-size-3' class='font-switch'>🗛</label>
+                            <label id='trigger-font-dn-4' for='switch-font-size-4' class='font-switch'>🗛</label>
+                            <label id='trigger-font-dn-5' for='switch-font-size-5' class='font-switch'>🗛</label>
+                            <label id='trigger-font-dn-6' for='switch-font-size-6' class='font-switch'>🗛</label>
                         </div>
                     </div>
                     <div class='box box-icon surface-ctrl ui-control'>
                         <div>
-                            <label id='font-up-2' for='switch-font-size-2' class='font-switch'>🗚</label>
-                            <label id='font-up-3' for='switch-font-size-3' class='font-switch'>🗚</label>
-                            <label id='font-up-4' for='switch-font-size-4' class='font-switch'>🗚</label>
-                            <label id='font-up-5' for='switch-font-size-5' class='font-switch'>🗚</label>
-                            <label id='font-up-6' for='switch-font-size-6' class='font-switch'>🗚</label>
-                            <label id='font-up-7' for='switch-font-size-7' class='font-switch'>🗚</label>
+                            <label id='trigger-font-up-2' for='switch-font-size-2' class='font-switch'>🗚</label>
+                            <label id='trigger-font-up-3' for='switch-font-size-3' class='font-switch'>🗚</label>
+                            <label id='trigger-font-up-4' for='switch-font-size-4' class='font-switch'>🗚</label>
+                            <label id='trigger-font-up-5' for='switch-font-size-5' class='font-switch'>🗚</label>
+                            <label id='trigger-font-up-6' for='switch-font-size-6' class='font-switch'>🗚</label>
+                            <label id='trigger-font-up-7' for='switch-font-size-7' class='font-switch'>🗚</label>
                         </div>
                     </div>
                     <div>
                         <div class='box box-icon surface-ctrl ui-control'>
-                            <label id='scheme-switch' for='switch-scheme-control'>
-                                <span id='scheme-icon'>ꙮ</span>
+                            <label id='trigger-menu-scheme' for='switch-menu-scheme'>
+                                <span id='menu-scheme-icon'>ꙮ</span>
                             </label>
                         </div>
                         <div class='side-menu'>
-                            <div id='scheme-menu-box' class='box-menu'>
-                                <div id='scheme-menu' class='box box-full surface-menu ui-menu'>
-                                    <span id='solarized-scheme-switch' class='scheme-selector'>
-                                        <label for='switch-solarized-scheme'>Solarized</label>
+                            <div id='menu-scheme-box' class='box-menu'>
+                                <div id='menu-scheme' class='box box-full surface-menu ui-menu'>
+                                    <span id='trigger-scheme-solarized' class='scheme-selector'>
+                                        <label for='switch-scheme-solarized'>Solarized</label>
                                     </span>
-                                    <span id='freshmint-scheme-switch' class='scheme-selector'>
-                                        <label for='switch-freshmint-scheme'>Fresh Mint</label>
+                                    <span id='trigger-scheme-freshmint' class='scheme-selector'>
+                                        <label for='switch-scheme-freshmint'>Fresh Mint</label>
                                     </span>
-                                    <span id='default-scheme-switch' class='scheme-selector'>
-                                        <label for='switch-default-scheme'>Vanilla</label>
+                                    <span id='trigger-scheme-default' class='scheme-selector'>
+                                        <label for='switch-scheme-default'>Vanilla</label>
                                     </span>
                                     <span class='surface-primary'>
-                                        <label id='scheme-accept' for='switch-scheme-control'>Accept</label>
+                                        <label id='trigger-close-menu-scheme' for='switch-menu-scheme'>Accept</label>
                                     </span>
                                 </div>
                             </div>
@@ -91,11 +91,11 @@ function render_page_footer($pageName) {
                     </div>
                     <div>
                         <div class='box box-icon surface-ctrl ui-control'>
-                            <label id='main-mode-switch' for='switch-main-mode'>
+                            <label id='trigger-mode-main' for='switch-mode-main'>
                                 <span id='main-is-dark'>☾</span>
                                 <span id='main-is-lite'>☀</span>
                             </label>
-                            <label id='alt-mode-switch' for='switch-alt-mode'>
+                            <label id='trigger-mode-alt' for='switch-mode-alt'>
                                 <span id='alt-is-dark'>☽</span>
                                 <span id='alt-is-lite'>☀</span>
                             </label>

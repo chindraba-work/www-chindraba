@@ -44,18 +44,18 @@
 
 /*   The ability to switch between light and dark modes   */
 /*  Containers for the icons  */
-#alt-mode-switch,
-#main-mode-switch {
+#trigger-mode-alt,
+#trigger-mode-main {
   display: none;
   text-align: center;
 }
 /*   When dark mode is the main mode, lite mode is the alternate, reversed if light
- *    mode is the main mode. 
+ *    mode is the main mode.
  * #main-is-dark is in the main-mode control with a moon,
  *      used to turn on dark mode when that is the default
  * #alt-is-lite is in the alt-mode control with a sun,
  *      used to turn on lite mode when dark is the default
- * 
+ *
  * #main-is-lite is in the main-mode control with a sun,
  *      used to turn on lite mode when that is the default
  * #alt-is-dark is in the alt-mode control with a moon.
@@ -77,17 +77,17 @@
   }
 }
 /*  When the main mode is on, display the icon to switch to the alternate */
-#main-mode:checked ~ #scheme-container #alt-mode-switch {
+#switch-mode-main:checked ~ #scheme-container #trigger-mode-alt {
   display: block;
 }
 /*  When the alternate mode is on, display the icon to switch to the main mode */
-#alt-mode:checked ~ #scheme-container #main-mode-switch {
+#switch-mode-alt:checked ~ #scheme-container #trigger-mode-main {
   display: block;
 }
 
 /*   Color scheme selection   */
 /*  Scale down the icon when the scheme menu is closed */
-#scheme-icon {
+#menu-scheme-icon {
   display: inline-block;
   scale: 0.5;
   transform: rotate(-360deg);
@@ -95,12 +95,12 @@
   transition: all var(--menu-timing) linear;
 }
 /*  Spin the icon and scale it up while the menu is opening  */
-#switch-scheme-control:checked ~ #scheme-container #scheme-icon {
+#switch-menu-scheme:checked ~ #scheme-container #menu-scheme-icon {
   scale: none;
   transform: rotate(0deg);
 }
 /*  The menu list of available color schemes  */
-#scheme-menu {
+#menu-scheme {
   position: absolute;
   right: calc(var(--logo-size) / 2 + 4px);
   bottom: calc(var(--logo-size) / 2 + 6px);
@@ -115,10 +115,10 @@
   transition: all var(--menu-timing) linear;
 }
 /*    Open the menu by flipping it out from behind the settings icons  */
-#switch-scheme-control:checked ~ #scheme-container #scheme-menu {
+#switch-menu-scheme:checked ~ #scheme-container #menu-scheme {
   transform: rotateY(0deg);
 }
-#scheme-menu span {
+#menu-scheme span {
   padding: .25rem;
   margin: .25rem;
   text-align: center;
@@ -126,7 +126,7 @@
 /*  Give the accept button more room to breathe  */
 /*  Accept closes the menu, the same as the clicking the icon would  */
 /*  Accept might be a bad choice of wording as the changes are instant from the menu */
-#scheme-accept {
+#trigger-close-menu-scheme {
   padding: .75rem;
 }
 /*  Turn off all the color schemes, if possible.
@@ -156,19 +156,19 @@
  * options available, and enable it/them.
  **/
 /*  Step donw by one */
-#font-size-2:checked ~ #scheme-container #font-dn-1 { display: inline-block; }
-#font-size-3:checked ~ #scheme-container #font-dn-2 { display: inline-block; }
-#font-size-4:checked ~ #scheme-container #font-dn-3 { display: inline-block; }
-#font-size-5:checked ~ #scheme-container #font-dn-4 { display: inline-block; }
-#font-size-6:checked ~ #scheme-container #font-dn-5 { display: inline-block; }
-#font-size-7:checked ~ #scheme-container #font-dn-6 { display: inline-block; }
+#switch-font-size-2:checked ~ #scheme-container #trigger-font-dn-1 { display: inline-block; }
+#switch-font-size-3:checked ~ #scheme-container #trigger-font-dn-2 { display: inline-block; }
+#switch-font-size-4:checked ~ #scheme-container #trigger-font-dn-3 { display: inline-block; }
+#switch-font-size-5:checked ~ #scheme-container #trigger-font-dn-4 { display: inline-block; }
+#switch-font-size-6:checked ~ #scheme-container #trigger-font-dn-5 { display: inline-block; }
+#switch-font-size-7:checked ~ #scheme-container #trigger-font-dn-6 { display: inline-block; }
 /*  Step up by one */
-#font-size-1:checked ~ #scheme-container #font-up-2 { display: inline-block; }
-#font-size-2:checked ~ #scheme-container #font-up-3 { display: inline-block; }
-#font-size-3:checked ~ #scheme-container #font-up-4 { display: inline-block; }
-#font-size-4:checked ~ #scheme-container #font-up-5 { display: inline-block; }
-#font-size-5:checked ~ #scheme-container #font-up-6 { display: inline-block; }
-#font-size-6:checked ~ #scheme-container #font-up-7 { display: inline-block; }
+#switch-font-size-1:checked ~ #scheme-container #trigger-font-up-2 { display: inline-block; }
+#switch-font-size-2:checked ~ #scheme-container #trigger-font-up-3 { display: inline-block; }
+#switch-font-size-3:checked ~ #scheme-container #trigger-font-up-4 { display: inline-block; }
+#switch-font-size-4:checked ~ #scheme-container #trigger-font-up-5 { display: inline-block; }
+#switch-font-size-5:checked ~ #scheme-container #trigger-font-up-6 { display: inline-block; }
+#switch-font-size-6:checked ~ #scheme-container #trigger-font-up-7 { display: inline-block; }
 
 /* The settings menu itself  */
 #view-settings {
@@ -183,19 +183,19 @@
   transition: all var(--menu-timing) linear;
 }
 /*   Open the menu by rotating from behind the right edge of the window   */
-#switch-settings-control:checked ~ #scheme-container #view-settings {
+#switch-control-settings:checked ~ #scheme-container #view-settings {
   transform: rotateY(0deg);
 }
 
 /* The settings menu switch */
-#settings-switch {
+#trigger-control-settings {
   scale: .75;
   transform: rotate(0deg);
   transform-origin: 50% 50%;
   transition: all var(--menu-timing) linear;
 }
 /* Spin and expand the icon when the menu opens */
-#switch-settings-control:checked ~ #scheme-container #settings-switch {
+#switch-control-settings:checked ~ #scheme-container #trigger-control-settings {
   scale: 1.25;
   transform: rotate(360deg);
 }

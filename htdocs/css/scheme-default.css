@@ -155,7 +155,7 @@
     }
 
     @media not all and (prefers-color-scheme: light) {
-      #switch-alt-mode:checked ~ #switch-default-scheme:checked ~ #scheme-container {
+      #switch-mode-alt:checked ~ #switch-scheme-default:checked ~ #scheme-container {
         --colors-page       : var( --default-lite-page      );
         --colors-onPage     : var( --default-lite-onPage    );
         --colors-head       : var( --default-lite-head      );
@@ -183,7 +183,7 @@
       }
     }
     @media (prefers-color-scheme: light) {
-      #switch-main-mode:checked ~ #switch-default-scheme:checked ~ #scheme-container {
+      #switch-mode-main:checked ~ #switch-scheme-default:checked ~ #scheme-container {
         --colors-page       : var( --default-lite-page      );
         --colors-onPage     : var( --default-lite-onPage    );
         --colors-head       : var( --default-lite-head      );
@@ -209,7 +209,7 @@
 /*        --colors-           : var( --default-lite-          ); */
 
       }
-      #switch-alt-mode:checked ~ #switch-default-scheme:checked ~ #scheme-container {
+      #switch-mode-alt:checked ~ #switch-scheme-default:checked ~ #scheme-container {
         --colors-page       : var( --default-dark-page      );
         --colors-onPage     : var( --default-dark-onPage    );
         --colors-head       : var( --default-dark-head      );
@@ -235,6 +235,6 @@
 /*        --colors-           : var( --default-dark-          ); */
       }
     }
-    #default-scheme-switch {
+    #trigger-scheme-default {
         display: inline-block;
     }

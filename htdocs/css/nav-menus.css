@@ -62,7 +62,7 @@
   z-index: 10;
 }
 /*************  box formatting options   *******************/
-.box-icon, .nav-icon, #settings-switch {
+.box-icon, .nav-icon, #trigger-control-settings {
   display: inline-block;
   font-size: 28px;
   font-family: var(--icon-fontFace);
@@ -168,7 +168,7 @@
 
 
 /*    The site nav menu  */
-#site-nav {
+#menu-site {
   position: absolute;
   top: var(--logo-size);
   right: 0;
@@ -180,39 +180,39 @@
 }
 
 /*  The site navigation menu switch  */
-#site-nav-icon {
+#menu-site-icon {
   text-align: center;
   align-self: start;
 }
-#site-nav-switch {
+#trigger-menu-site {
   display: grid;
   grid-gap: 8px;
   grid-template-rows: repeat(3,5px);
   padding: 20px;
 }
-#site-nav-switch > span {
+#trigger-menu-site > span {
   background-color: var(--colors-onCtrl);
   transition: transform var(--menu-timing) linear,
               opacity calc( var(--menu-timing) / 2) linear calc( var(--menu-timing) / 2);
 }
 /*   Make the hamburger into an X on menu open  */
-#switch-site-nav-control:checked ~ #scheme-container #burger-top {
+#switch-menu-site:checked ~ #scheme-container #burger-top {
   transform: translateX(2.5px) translateY(13px) rotate(-315deg);
 }
-#switch-site-nav-control:checked ~ #scheme-container #burger-mid {
+#switch-menu-site:checked ~ #scheme-container #burger-mid {
   opacity: 0;
 }
-#switch-site-nav-control:checked ~ #scheme-container #burger-base {
+#switch-menu-site:checked ~ #scheme-container #burger-base {
   transform: translateX(2.5px) translateY(-13px) rotate(315deg);
 }
 /*   Open the menu by flipping it down   */
-#switch-site-nav-control:checked ~ #scheme-container #site-nav {
+#switch-menu-site:checked ~ #scheme-container #menu-site {
   transform: rotateX(360deg);
   transition: transform var(--menu-timing) linear;
 }
 /*  Switch from a drop down menu to a menu bar for less narrow screens */
 @media screen and (min-width: 40.5rem) {
-  #site-nav {
+  #menu-site {
     background-color: inherit;
     box-shadow: 0 0 0 rgb(0,0,0,0);
     border: none;
@@ -223,127 +223,127 @@
     z-index: auto;
     flex-grow: 0;
   }
-  #site-menu-box {
+  #menu-site-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  #site-nav div {
+  #menu-site div {
     padding: 0;
     flex-grow: 1;
   }
-  #site-menu-box div {
+  #menu-site-box div {
     display: flex;
     flex-direction: row;
   }
-  #site-nav-left {
+  #menu-site-left {
     justify-content: flex-start;
   }
-  #site-nav-right {
+  #menu-site-right {
     justify-content: flex-end;
     flex-grow: 1;
   }
-  #site-menu-box span {
+  #menu-site-box span {
     display: inline-block;
     margin: 0 .25rem;
   }
 /*  Don't need to show the hamburger menu at all now */
-  #site-nav-switch {
+  #trigger-menu-site {
     display: none;
   }
 }
 
 /*    The on-page navigation   */
-#page-nav {
+#menu-jump {
   height: 16rem;
   transform: perspective(350px) rotateY(-90deg);
   transform-origin: 10% 50%;
 }
-#page-nav-switch {
+#trigger-menu-jump {
   margin-top: 5px;
 }
 /*    reverse the display sequence so that the "handle" is on the right   */
-#page-nav-box {
+#menu-jump-box {
   left: 0;
   flex-direction: row-reverse;
 }
 /*    Open the menu by unfolding it from the left side   */
-#switch-page-nav-control:checked ~ #scheme-container #page-nav {
+#switch-menu-jump:checked ~ #scheme-container #menu-jump {
   width: 9.375rem;
   transform: rotateX(0deg);
 }
 /*   Rotate the handle on menu open   */
-#switch-page-nav-control:checked ~ #scheme-container #page-nav-icon {
+#switch-menu-jump:checked ~ #scheme-container #menu-jump-icon {
   transform: rotate(180deg);
 }
 
 /* Hide the on-page navigation if there's nothing to show */
-#page-nav-box.no-show {
+#menu-jump-box.no-show {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  #page-nav {
+  #menu-jump {
     width: calc(9.375rem + .15 * (100vw - 48rem));
     transform: none;
     height: auto;
     max-height: 85vh;
   }
-  #page-nav-switch {
+  #trigger-menu-jump {
     display: none;
   }
 }
 @media screen and (min-width: 57rem) {
-  #page-nav {
+  #menu-jump {
     width: calc(9.375rem + .15 * (100vw - 57rem));
   }
 }
 @media screen and (min-width: 90rem) {
-  #page-nav {
+  #menu-jump {
     width: 14.325rem;
   }
 }
 
 /*   The right side menu   */
-#right-nav {
+#menu-page {
   height: 16rem;
   transform: perspective(350px) rotateY(90deg);
   transform-origin: 90% 50%;
 }
-#right-nav-switch {
+#trigger-menu-page {
   margin-top: 5px;
   transition: margin-top var(--menu-timing) linear;
 }
-#right-nav-box {
+#menu-page-box {
   right: 0;
   flex-direction: row;
 }
 /*    Open the menu by unfolding it from the right side   */
-#switch-right-nav-control:checked ~ #scheme-container #right-nav {
+#switch-menu-page:checked ~ #scheme-container #menu-page {
   width: 9.375rem;
   transform: rotateY(0deg);
 }
 /*   Rotate the handle on menu open   */
-#switch-right-nav-control:checked ~ #scheme-container #right-nav-icon {
+#switch-menu-page:checked ~ #scheme-container #menu-page-icon {
   transform: rotate(-180deg);
 }
 
 /* Hide the right navigation if there's nothing to show */
-#right-nav-box.no-show {
+#menu-page-box.no-show {
   display: none;
 }
 @media screen and (min-width: 57rem) {
-  #right-nav {
+  #menu-page {
     width: calc(9.375rem + .15 * (100vw - 57rem));
     transform: none;
     height: auto;
     max-height: 85vh;
   }
-  #right-nav-switch {
+  #trigger-menu-page {
     display: none;
   }
 }
 @media screen and (min-width: 90rem) {
-  #right-nav {
+  #menu-page {
     width: 14.325rem;
   }
 }
@@ -351,12 +351,12 @@
 /*   On very narrow pages the two handles overlap. Slide the right menu
  *   handle down to avoid a collision when both are opened.
  **/
-#switch-page-nav-control:checked ~ #switch-right-nav-control:checked ~ #scheme-container #right-nav-switch {
+#switch-menu-jump:checked ~ #switch-menu-page:checked ~ #scheme-container #trigger-menu-page {
   margin-top: 39px;
 }
 /*   Cancel anti-collision slide once the page is wide enough  */
 @media screen and (min-width: 22rem) {
-  #switch-page-nav-control:checked ~ #switch-right-nav-control:checked ~ #scheme-container #right-nav-switch {
+  #switch-menu-jump:checked ~ #switch-menu-page:checked ~ #scheme-container #trigger-menu-page {
     margin-top: 5px;
   }
 }
