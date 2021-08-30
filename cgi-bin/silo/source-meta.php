@@ -32,19 +32,30 @@
 *                                                                      *
 ************************************************************************/
 
-require_once SOLO_FILES . "build-equiv-node.php";
-require_once SOLO_FILES . "build-meta-node.php";
-require_once SOLO_FILES . "build-node.php";
-require_once SOLO_FILES . "build-ui-node.php";
-require_once SOLO_FILES . "collect-meta.php";
-require_once SOLO_FILES . "flatten-list.php";
-require_once SOLO_FILES . "join-string.php";
-require_once SOLO_FILES . "make-switch.php";
-require_once SOLO_FILES . "merge-meta.php";
-require_once SOLO_FILES . "merged-list.php";
-require_once SOLO_FILES . "render-list.php";
-require_once SOLO_FILES . "require-override.php";
-require_once SOLO_FILES . "source-meta.php";
-require_once SOLO_FILES . "void-tag.php";
+function source_meta($ui_target) {
+    $ui_meta['controls']  = [];
+    foreach(UI_CONTROLS as $control) $ui_meta['controls'][$control] = false;
+//  Simulate database retreival
+require SOLO_FILES . 'fakeDB.php';
+//  Replace with a function call for database retreival
+//  $source_meta_data = db_call('ui_meta_data', $ui_target);
+    foreach ($source_meta_data as $data_set) {
+        list($ui_element, $ui_group, $ui_name, $ui_value) = explode(',', $data_set);
+// Database implementation should remove the next line
+if ($ui_target === $ui_element) {
+        if ('controls' === $ui_group) {
+            $ui_meta['controls'][$ui_name] = (!!$ui_value);
+        } elseif( array_key_exists($ui_group, $ui_meta) ) {
+            $ui_meta[$ui_group][$ui_name] = $ui_value;
+        } else if (!!$ui_name) {
+            $ui_meta[$ui_group] = [$ui_name => $ui_value];
+        } else {
+            $uiMeta[$ui_group] = $ui_value;
+        }
+// Database implementation should remove the next line
+}
+    }
+    return $ui_meta;
+}
 
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

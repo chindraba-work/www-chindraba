@@ -83,7 +83,7 @@ function render_page_footer($pageName) {
                                         <label for='switch-scheme-default'>Vanilla</label>
                                     </span>
                                     <span class='surface-primary'>
-                                        <label id='trigger-close-menu-scheme' for='switch-menu-scheme'>Accept</label>
+                                        <label id='close-trigger-menu-scheme' for='switch-menu-scheme'>Accept</label>
                                     </span>
                                 </div>
                             </div>

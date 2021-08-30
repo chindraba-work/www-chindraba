@@ -57,4 +57,10 @@ define('IGNORED_NODE_KEYS', [
     'roles',
 ]);
 
+// The buildable UI control elements
+define('UI_CONTROLS', [
+    'switch',
+    'close-switch',
+]);
+
 // vim: set syntax=php ts=4 sw=4 sts=4 et sr:

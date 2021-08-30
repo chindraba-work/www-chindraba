@@ -52,16 +52,20 @@
  * or potentially common, to all elements within the group.
  *
  * The top-level elements available are:
+ *  controls: list of UI elements to build for the group. Each ia a
+ *      Boolean, or cast to Boolean, with only the 'true' elements in
+ *      the final build. The database only need return the ones that
+ *      are needed, and the other possibilities will be set to false.
  *  common: the aforementioned data common to all elements (Required)
  *  switch: data for building a "switch", a hidden element on the page
  *      to track, and update, the user's interaction with the group's
  *      controls.
- *  switch-close: the same as a `switch` which is used if the element
+ *  close-switch: the same as a `switch` which is used if the element
  *      has need of a separte control to control closing vs opening.
  *  trigger: the visual element the user interacts with to control the
  *      group. Every trigger is associated with a switch, though the
  *      association need not be exclusive in either direction
- *  trigger-close: the same as a `trigger` except that it is expected
+ *  close-trigger: the same as a `trigger` except that it is expected
  *      to be associated with a `switch-close`
  */
 

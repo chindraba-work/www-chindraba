@@ -58,15 +58,8 @@ function make_switch($switch_data, $is_close = false) {
     $switch_overrides = [
         'classes' => ($is_close)? ['ui-close-switch','ui-switch'] : 'ui-switch',
     ];
-    $attribs = collect_meta($switch_data, ($is_close)?'close-switch':'switch', $switch_defaults, $switch_overrides);
-    $switch_name_parts = ['switch'];
-    if ($is_close) {
-        array_unshift($switch_name_parts, 'close');
-    }
-    $attribs['id'] = implode('-', flatten_list([$switch_name_parts, $attribs['id']]));
-    $attribs['classes'] = $attribs['classes'] ?? '';
-    if ( isset($attribs['checked']) ) {
-        $attribs['checked'] = 'checked';
+    if ( isset($switch_data[($is_close)?'close-switch':'switch']['checked']) ) {
+        $switch_overrides['checked'] = 'checked';
     }
     return build_ui_node(
         $switch_data,
