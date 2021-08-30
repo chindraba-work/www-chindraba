@@ -36,7 +36,7 @@
  * controller, and/or CSS selector, for some behavior of the site or
  * page.
  * Arg switch_data: the un-collapsed meta data for the group the switch
- *      is in. See cgi-bin/docs/metadata.php for a full description.
+ *      is in. See cgi-bin/docs/metadata.md for a full description.
  * Arg is_close: set to true to create a close switch for cases where
  *      a separate switch is needed for opening (adding) and closing
  *      (removing) a section of HTML.

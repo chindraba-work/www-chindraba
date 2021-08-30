@@ -32,6 +32,11 @@
 *                                                                      *
 ************************************************************************/
 
+/* Build the meta data for a given UI group
+ * Arg ui_target: the UI group to get the data for
+ * Return: multi-level assoc array of meta data
+ *  See cgi-bin/docs/metadata.md for details
+ */
 function source_meta($ui_target) {
     $ui_meta['controls']  = [];
     foreach(UI_CONTROLS as $control) $ui_meta['controls'][$control] = false;
@@ -40,17 +45,17 @@ require SOLO_FILES . 'fakeDB.php';
 //  Replace with a function call for database retreival
 //  $source_meta_data = db_call('ui_meta_data', $ui_target);
     foreach ($source_meta_data as $data_set) {
-        list($ui_element, $ui_group, $ui_name, $ui_value) = explode(',', $data_set);
+        list($ui_group, $ui_item, $ui_name, $ui_value) = explode(',', $data_set);
 // Database implementation should remove the next line
-if ($ui_target === $ui_element) {
-        if ('controls' === $ui_group) {
+if ($ui_target === $ui_group) {
+        if ('controls' === $ui_item) {
             $ui_meta['controls'][$ui_name] = (!!$ui_value);
-        } elseif( array_key_exists($ui_group, $ui_meta) ) {
-            $ui_meta[$ui_group][$ui_name] = $ui_value;
+        } elseif( array_key_exists($ui_item, $ui_meta) ) {
+            $ui_meta[$ui_item][$ui_name] = $ui_value;
         } else if (!!$ui_name) {
-            $ui_meta[$ui_group] = [$ui_name => $ui_value];
+            $ui_meta[$ui_item] = [$ui_name => $ui_value];
         } else {
-            $uiMeta[$ui_group] = $ui_value;
+            $uiMeta[$ui_item] = $ui_value;
         }
 // Database implementation should remove the next line
 }
