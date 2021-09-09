@@ -59,9 +59,6 @@ body * {
 label {
   cursor: pointer;
 }
-.ui-switch {
-  display: none;
-}
 sub, sup {
   position: static;
   font-size: .7em;
@@ -210,11 +207,13 @@ h2, .surface-page {
   justify-content: space-between;
   align-items: center;
 }
+/*
 @media screen and (min-width: 40.5rem) {
   #site-header {
     align-items: start;
   }
 }
+*/
 #site-logo {
   box-sizing: border-box;
   width: var(--logo-size);
@@ -251,6 +250,7 @@ h2, .surface-page {
   font-size: 1em;
   font-family: var(--menu-fontFace);
 }
+/*
 @media screen and (min-width: 405px) {
   #title-bar {
     min-height: var(--logo-size);
@@ -295,6 +295,7 @@ h2, .surface-page {
     content: '';
   }
 }
+*/
 #nav-container {
   position: sticky;
   top: 0;
@@ -343,6 +344,7 @@ h2, .surface-page {
   line-height: 1.35;
   min-height: 100vh;
 }
+/*
 @media screen and (min-width: 48rem) {
   #page-container {
     margin-left: calc(9.55rem + .15 * (100vw - 48rem));;
@@ -361,6 +363,7 @@ h2, .surface-page {
     margin-right: 14.5rem;
   }
 }
+*/
 
 /*  Adjusting the font-size in response to user selection */
 

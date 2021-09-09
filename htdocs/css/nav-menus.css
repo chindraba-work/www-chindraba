@@ -184,6 +184,7 @@
   text-align: center;
   align-self: start;
 }
+/*
 #trigger-menu-site {
   display: grid;
   grid-gap: 8px;
@@ -195,7 +196,9 @@
   transition: transform var(--menu-timing) linear,
               opacity calc( var(--menu-timing) / 2) linear calc( var(--menu-timing) / 2);
 }
+*/
 /*   Make the hamburger into an X on menu open  */
+/*
 #switch-menu-site:checked ~ #scheme-container #burger-top {
   transform: translateX(2.5px) translateY(13px) rotate(-315deg);
 }
@@ -205,12 +208,14 @@
 #switch-menu-site:checked ~ #scheme-container #burger-base {
   transform: translateX(2.5px) translateY(-13px) rotate(315deg);
 }
+*/
 /*   Open the menu by flipping it down   */
 #switch-menu-site:checked ~ #scheme-container #menu-site {
   transform: rotateX(360deg);
   transition: transform var(--menu-timing) linear;
 }
 /*  Switch from a drop down menu to a menu bar for less narrow screens */
+/*
 @media screen and (min-width: 40.5rem) {
   #menu-site {
     background-color: inherit;
@@ -247,12 +252,14 @@
     display: inline-block;
     margin: 0 .25rem;
   }
+*/
 /*  Don't need to show the hamburger menu at all now */
+/*
   #trigger-menu-site {
     display: none;
   }
 }
-
+*/
 /*    The on-page navigation   */
 #menu-jump {
   height: 16rem;
@@ -281,6 +288,7 @@
 #menu-jump-box.no-show {
   display: none;
 }
+/*
 @media screen and (min-width: 48rem) {
   #menu-jump {
     width: calc(9.375rem + .15 * (100vw - 48rem));
@@ -302,6 +310,7 @@
     width: 14.325rem;
   }
 }
+*/
 
 /*   The right side menu   */
 #menu-page {
@@ -331,6 +340,7 @@
 #menu-page-box.no-show {
   display: none;
 }
+/*
 @media screen and (min-width: 57rem) {
   #menu-page {
     width: calc(9.375rem + .15 * (100vw - 57rem));
@@ -347,6 +357,7 @@
     width: 14.325rem;
   }
 }
+*/
 
 /*   On very narrow pages the two handles overlap. Slide the right menu
  *   handle down to avoid a collision when both are opened.
@@ -355,8 +366,10 @@
   margin-top: 39px;
 }
 /*   Cancel anti-collision slide once the page is wide enough  */
+/*
 @media screen and (min-width: 22rem) {
   #switch-menu-jump:checked ~ #switch-menu-page:checked ~ #scheme-container #trigger-menu-page {
     margin-top: 5px;
   }
 }
+*/

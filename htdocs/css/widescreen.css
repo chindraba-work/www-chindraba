@@ -1,0 +1,144 @@
+/* SPDX-License-Identifier: MIT */
+
+/***********************************************************************
+*                                                                      *
+*  This file is part of collection of scripts and files used to create *
+*  the website for Chindraba.                                          *
+*                                                                      *
+*  Copyright © 2020 - 2021  Chindraba (Ronald Lamoreaux)               *
+*                    <website@chindraba.work>                          *
+*  - All Rights Reserved                                               *
+*                                                                      *
+*  Permission is hereby granted, free of charge, to any person         *
+*  obtaining a copy of this software and associated documentation      *
+*  files (the "Software"), to deal in the Software without             *
+*  restriction, including without limitation the rights to use, copy,  *
+*  modify, merge, publish, distribute, sublicense, and/or sell copies  *
+*  of the Software, and to permit persons to whom the Software is      *
+*  furnished to do so, subject to the following conditions:            *
+*                                                                      *
+*  The above copyright notice and this permission notice shall be      *
+*  included in all copies or substantial portions of the Software.     *
+*                                                                      *
+*  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,     *
+*  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  *
+*  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND               *
+*  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS *
+*  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN  *
+*  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN   *
+*  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE    *
+*  SOFTWARE.                                                           *
+*                                                                      *
+************************************************************************/
+
+/* ************************************************************* */
+/*     Widescreen switch overrides for media query settings      */
+/* ************************************************************* */
+
+#logo-img {
+    background-color: rebeccapurple;
+}
+#switch-widescreen:checked ~ #scheme-container #logo-img {
+    background-color: firebrick;
+}
+/*  The site header region */
+#switch-widescreen:checked ~ #scheme-container #site-header {
+    align-items: start;
+}
+
+#switch-widescreen:checked ~ #scheme-container #title-bar {
+    min-height: var(--logo-size);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#switch-widescreen:checked ~ #scheme-container #site-header-title {
+    font-size: 32px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#switch-widescreen:checked ~ #scheme-container #page-title {
+    font-size: 1.4em;
+}
+
+#switch-widescreen:checked ~ #scheme-container #page-tagline {
+    font-size: 1em;
+    content: '\a0\2014\a0';
+    content: '';
+}
+
+/*  The site menu */
+#switch-widescreen:checked ~ #scheme-container #menu-site {
+    background-color: inherit;
+    box-shadow: 0 0 0 rgb(0,0,0,0);
+    border: none;
+    position: static;
+    width: auto;
+    transform: none;
+    transition: none;
+    z-index: auto;
+    flex-grow: 0;
+}
+#switch-widescreen:checked ~ #scheme-container #menu-site-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#switch-widescreen:checked ~ #scheme-container #menu-site div {
+    padding: 0;
+    flex-grow: 1;
+}
+#switch-widescreen:checked ~ #scheme-container #menu-site-box div {
+    display: flex;
+    flex-direction: row;
+}
+#switch-widescreen:checked ~ #scheme-container #menu-site-left {
+    justify-content: flex-start;
+}
+#switch-widescreen:checked ~ #scheme-container #menu-site-right {
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+#switch-widescreen:checked ~ #scheme-container #menu-site-box span {
+    display: inline-block;
+    margin: 0 .25rem;
+}
+
+/*  The site menu hamburger menu */
+#switch-widescreen:checked ~ #scheme-container #trigger-menu-site {
+    display: none;
+}
+
+/*  The Jump menu (left side) */
+#switch-widescreen:checked ~ #scheme-container #menu-jump {
+    width: 14.325rem;
+    transform: none;
+    height: auto;
+    max-height: 85vh;
+}
+#switch-widescreen:checked ~ #scheme-container #trigger-menu-jump {
+    display: none;
+}
+
+/*  The Page menu (right-side) */
+#switch-widescreen:checked ~ #scheme-container #menu-page {
+    width: 14.325rem;
+    transform: none;
+    height: auto;
+    max-height: 85vh;
+}
+#switch-widescreen:checked ~ #scheme-container #trigger-menu-page {
+    display: none;
+}
+
+/*  The anti-collision provision for jump menu and page menu triggers */
+#switch-widescreen:checked ~ #switch-menu-jump:checked ~ #switch-menu-page:checked ~ #scheme-container #trigger-menu-page {
+    margin-top: 5px;
+}
+
+#switch-widescreen:checked ~ #scheme-container #page-container {
+    margin-left: 14.5rem;
+    margin-right: 14.5rem;
+}

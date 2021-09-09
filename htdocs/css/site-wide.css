@@ -1,0 +1,75 @@
+/* SPDX-License-Identifier: MIT */
+
+/***********************************************************************
+*                                                                      *
+*  This file is part of collection of scripts and files used to create *
+*  the website for Chindraba.                                          *
+*                                                                      *
+*  Copyright © 2020 - 2021  Chindraba (Ronald Lamoreaux)               *
+*                    <website@chindraba.work>                          *
+*  - All Rights Reserved                                               *
+*                                                                      *
+*  Permission is hereby granted, free of charge, to any person         *
+*  obtaining a copy of this software and associated documentation      *
+*  files (the "Software"), to deal in the Software without             *
+*  restriction, including without limitation the rights to use, copy,  *
+*  modify, merge, publish, distribute, sublicense, and/or sell copies  *
+*  of the Software, and to permit persons to whom the Software is      *
+*  furnished to do so, subject to the following conditions:            *
+*                                                                      *
+*  The above copyright notice and this permission notice shall be      *
+*  included in all copies or substantial portions of the Software.     *
+*                                                                      *
+*  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,     *
+*  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF  *
+*  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND               *
+*  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS *
+*  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN  *
+*  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN   *
+*  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE    *
+*  SOFTWARE.                                                           *
+*                                                                      *
+************************************************************************/
+
+/* ************************************************************* */
+/*                       Reworked styles                         */
+/* ************************************************************* */
+.ui-switch {
+  display: none;
+}
+.ui-trigger {
+}
+.ui-trigger-burger {
+  display: grid;
+  grid-gap: 0.1875rem;
+  grid-template-rows: repeat(3,0.125rem);
+  padding: 0.5rem 0.5rem 0 56px;
+}
+/*  Switch from a drop down menu to a menu bar for less narrow screens */
+/*  Don't need to show the hamburger menu at all now */
+/*
+@media screen and (min-width: 40.5rem) {
+    .ui-trigger-burger {
+        display: none;
+    }
+}
+*/
+.ui-burger-line {
+  background-color: var(--color-ctrlFg);
+  transition: transform var(--menu-timing) linear,
+              opacity calc( var(--menu-timing) / 2) linear calc( var(--menu-timing) / 2);
+}
+/*   Make the hamburger into an X on menu open  */
+#switch-menu-site:checked ~ #scheme-container .ui-burger-line-top {
+  transform: translateX(2.5px) translateY(5px) rotate(-315deg);
+}
+#switch-menu-site:checked ~ #scheme-container .ui-burger-line-mid {
+  opacity: 0;
+}
+#switch-menu-site:checked ~ #scheme-container .ui-burger-line-low {
+  transform: translateX(2.5px) translateY(-5px) rotate(315deg);
+}
+.soft-box-left, .soft-box-right {
+  border-style: solid;
+  border-color: var(--colors-border);
+}

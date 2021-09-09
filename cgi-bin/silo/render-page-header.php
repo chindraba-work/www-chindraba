@@ -36,7 +36,7 @@ function render_page_header($page_name) {
     return <<<EOHTML
         <header id='site-header' class='surface-head'>
             <div id='site-logo' class='ui-control'>
-                <label for='switch-widescreen'><img id='logo-img' src='/assets/logo.png' alt=''></label>
+                <label id='trigger-widescreen' for='switch-widescreen' role='button' class='ui-trigger'><img id='logo-img' src='/assets/logo.png' alt=''></label>
             </div>
             <div id='title-bar'>
                 <div id='site-header-title'>
@@ -60,10 +60,10 @@ function render_page_header($page_name) {
                 </nav>
             </div>
             <div id='menu-site-icon'>
-                <label id='trigger-menu-site' for='switch-menu-site' class='nav-control'>
-                    <span id='burger_top'></span>
-                    <span id='burger_mid'></span>
-                    <span id='burger_base'></span>
+                <label id='trigger-menu-site' for='switch-menu-site' role='button' class='ui-trigger ui-trigger-burger'>
+                    <span id='burger-menu-site-top' class='ui-burger-line ui-burger-line-top'></span>
+                    <span id='burger-menu-site-mid' class='ui-burger-line ui-burger-line-mid'></span>
+                    <span id='burger-menu-site-low' class='ui-burger-line ui-burger-line-low'></span>
                 </label>
             </div>
         </header>

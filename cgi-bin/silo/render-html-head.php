@@ -39,7 +39,7 @@ function render_html_head($page_name) {
         'contents' => [
             build_equiv_node('Cache-Control', "no-cache, no-store, must-revalidate"),
             build_equiv_node('Pragma', "no-cache"),
-            build_equiv_node('Expires', "0"),
+            build_equiv_node('Expires', "1"),
             build_node([
                 'tag' => "meta",
                 'charset' => "UTF-8",
@@ -97,6 +97,25 @@ function render_html_head($page_name) {
             build_node([
                 'tag' => "link",
                 'href' => "/css/common.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+/* 3 CSS files added for development */
+            build_node([
+                'tag' => "link",
+                'href' => "/css/widescreen.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
+                'href' => "/css/colors.css",
+                'rel' => "stylesheet",
+                'type' => "text/css",
+            ]),
+            build_node([
+                'tag' => "link",
+                'href' => "/css/site-wide.css",
                 'rel' => "stylesheet",
                 'type' => "text/css",
             ]),
