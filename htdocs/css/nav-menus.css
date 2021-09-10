@@ -145,12 +145,6 @@
 .surface-menu span:hover {
   background-color: rgba(255,255,255,.1);
 }
-.nav-box {
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: flex-start;
-}
 .nav-box-switch {
   display: inline-flex;
   flex-direction: column;
@@ -184,31 +178,6 @@
   text-align: center;
   align-self: start;
 }
-/*
-#trigger-menu-site {
-  display: grid;
-  grid-gap: 8px;
-  grid-template-rows: repeat(3,5px);
-  padding: 20px;
-}
-#trigger-menu-site > span {
-  background-color: var(--colors-onCtrl);
-  transition: transform var(--menu-timing) linear,
-              opacity calc( var(--menu-timing) / 2) linear calc( var(--menu-timing) / 2);
-}
-*/
-/*   Make the hamburger into an X on menu open  */
-/*
-#switch-menu-site:checked ~ #scheme-container #burger-top {
-  transform: translateX(2.5px) translateY(13px) rotate(-315deg);
-}
-#switch-menu-site:checked ~ #scheme-container #burger-mid {
-  opacity: 0;
-}
-#switch-menu-site:checked ~ #scheme-container #burger-base {
-  transform: translateX(2.5px) translateY(-13px) rotate(315deg);
-}
-*/
 /*   Open the menu by flipping it down   */
 #switch-menu-site:checked ~ #scheme-container #menu-site {
   transform: rotateX(360deg);
@@ -269,11 +238,6 @@
 #trigger-menu-jump {
   margin-top: 5px;
 }
-/*    reverse the display sequence so that the "handle" is on the right   */
-#menu-jump-box {
-  left: 0;
-  flex-direction: row-reverse;
-}
 /*    Open the menu by unfolding it from the left side   */
 #switch-menu-jump:checked ~ #scheme-container #menu-jump {
   width: 9.375rem;
@@ -284,10 +248,6 @@
   transform: rotate(180deg);
 }
 
-/* Hide the on-page navigation if there's nothing to show */
-#menu-jump-box.no-show {
-  display: none;
-}
 /*
 @media screen and (min-width: 48rem) {
   #menu-jump {
@@ -322,10 +282,6 @@
   margin-top: 5px;
   transition: margin-top var(--menu-timing) linear;
 }
-#menu-page-box {
-  right: 0;
-  flex-direction: row;
-}
 /*    Open the menu by unfolding it from the right side   */
 #switch-menu-page:checked ~ #scheme-container #menu-page {
   width: 9.375rem;
@@ -336,10 +292,6 @@
   transform: rotate(-180deg);
 }
 
-/* Hide the right navigation if there's nothing to show */
-#menu-page-box.no-show {
-  display: none;
-}
 /*
 @media screen and (min-width: 57rem) {
   #menu-page {

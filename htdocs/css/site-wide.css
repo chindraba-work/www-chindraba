@@ -34,42 +34,75 @@
 /* ************************************************************* */
 /*                       Reworked styles                         */
 /* ************************************************************* */
+
+/* A UI switch is _always_ a hidden input */
 .ui-switch {
   display: none;
 }
+
+/* Styling which applies to all UI triggers */
 .ui-trigger {
 }
+
+/* Styling which applies to all UI trigger burger menu icons */
 .ui-trigger-burger {
   display: grid;
   grid-gap: 0.1875rem;
   grid-template-rows: repeat(3,0.125rem);
   padding: 0.5rem 0.5rem 0 56px;
 }
-/*  Switch from a drop down menu to a menu bar for less narrow screens */
-/*  Don't need to show the hamburger menu at all now */
-/*
-@media screen and (min-width: 40.5rem) {
-    .ui-trigger-burger {
-        display: none;
-    }
-}
-*/
 .ui-burger-line {
   background-color: var(--color-ctrlFg);
   transition: transform var(--menu-timing) linear,
               opacity calc( var(--menu-timing) / 2) linear calc( var(--menu-timing) / 2);
 }
-/*   Make the hamburger into an X on menu open  */
-#switch-menu-site:checked ~ #scheme-container .ui-burger-line-top {
+
+/*
+ *  Make the hamburger into an X on menu open
+ *  Rare, but possible, to have multiple burger menu icons so the
+ *  animation must be targeted to the correct one and connected to the
+ *  corrent UI switch. Here that is the `menu-site` portion of the
+ *  element ID selectors.
+ */
+#switch-menu-site:checked ~ #scheme-container #menu-site-icon .ui-burger-line-top {
   transform: translateX(2.5px) translateY(5px) rotate(-315deg);
 }
-#switch-menu-site:checked ~ #scheme-container .ui-burger-line-mid {
+#switch-menu-site:checked ~ #scheme-container #menu-site-icon .ui-burger-line-mid {
   opacity: 0;
 }
-#switch-menu-site:checked ~ #scheme-container .ui-burger-line-low {
+#switch-menu-site:checked ~ #scheme-container #menu-site-icon .ui-burger-line-low {
   transform: translateX(2.5px) translateY(-5px) rotate(315deg);
 }
-.soft-box-left, .soft-box-right {
-  border-style: solid;
-  border-color: var(--colors-border);
+
+/*
+ * Switch from a drop down menu to a menu bar for less narrow screens
+ * Don't need to show the hamburger menu at all now. To allow for
+ * multiple menus to be affected, which might have different width
+ * limits, the affected menu must be targeted. Here that is the
+ * `menu-site` portion of the element ID selector
+ */
+/*
+@media screen and (min-width: 40.5rem) {
+    #menu-site-icon .ui-trigger-burger {
+        display: none;
+    }
+}
+*/
+
+/* Styling for collapable sidebar menus */
+.ui-side-menu-left-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.ui-side-menu-right-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }

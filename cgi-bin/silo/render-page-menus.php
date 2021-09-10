@@ -35,12 +35,7 @@
 function render_page_menus($page_name) {
     return <<<EOHTML
         <nav id='nav-container' class='surface-page'>
-            <nav id='menu-jump-box' class='nav-box'>
-                <div>
-                    <label id='trigger-menu-jump' class='nav-box-switch surface-ctrl box-left nav-control' for='switch-menu-jump' aria-ignore='true'>
-                        <span id='menu-jump-icon' class='nav-icon'>▶</span>
-                    </label>
-                </div>
+            <nav id='menu-jumpx-box' class='ui-side-menu-left-container'>
                 <div id='menu-jump' class='side-menu surface-menu box-left nav-item'>
                     <div id='menu-jump-box' class='box-menu'>
                         <div id='menu-jump-menu'>
@@ -55,10 +50,15 @@ function render_page_menus($page_name) {
                         </div>
                     </div>
                 </div>
-            </nav>
-            <nav id='menu-page-box' class='nav-box'>
                 <div>
-                    <label id='trigger-menu-page' class='nav-box-switch surface-ctrl box-right nav-control' for='switch-menu-page'>
+                    <label id='trigger-menu-jump' for='switch-menu-jump' class='scheme-ctrl nav-box-switch box-left nav-control'>
+                        <span id='menu-jump-icon' class='nav-icon'>▶</span>
+                    </label>
+                </div>
+            </nav>
+            <nav id='menu-pagex-box' class='ui-side-menu-right-container'>
+                <div>
+                    <label id='trigger-menu-page' for='switch-menu-page' class='scheme-ctrl nav-box-switch box-right nav-control'>
                         <span id='menu-page-icon' class='nav-icon'>◀</span>
                     </label>
                 </div>
