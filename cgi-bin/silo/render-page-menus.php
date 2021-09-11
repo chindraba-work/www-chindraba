@@ -35,8 +35,8 @@
 function render_page_menus($page_name) {
     return <<<EOHTML
         <nav id='nav-container' class='surface-page'>
-            <nav id='menu-jumpx-box' class='ui-side-menu-left-container'>
-                <div id='menu-jump' class='side-menu surface-menu box-left nav-item'>
+            <nav id='menu-jumpx-box' class='ui-side-menu-container ui-side-menu-left-container'>
+                <div id='menu-jump' class='side-menu surface-menu soft-box soft-box-left nav-item'>
                     <div id='menu-jump-box' class='box-menu'>
                         <div id='menu-jump-menu'>
                             <a title='Jump to Where it all began' href='#section-link-0' class='nav-link block-up pad-3rem soft-corner nowrap surface-menu shift-in-0'>Where it all began</a>
@@ -51,18 +51,18 @@ function render_page_menus($page_name) {
                     </div>
                 </div>
                 <div>
-                    <label id='trigger-menu-jump' for='switch-menu-jump' class='scheme-ctrl nav-box-switch box-left nav-control'>
-                        <span id='menu-jump-icon' class='nav-icon'>▶</span>
+                    <label id='trigger-menu-jumpx' for='switch-menu-jump' class='ui-side-menu-trigger scheme-ctrl soft-box soft-box-left'>
+                        <span id='menu-jump-icon' class='ui-trigger-icon'>▶</span>
                     </label>
                 </div>
             </nav>
-            <nav id='menu-pagex-box' class='ui-side-menu-right-container'>
+            <nav id='menu-pagex-box' class='ui-side-menu-container ui-side-menu-right-container'>
                 <div>
-                    <label id='trigger-menu-page' for='switch-menu-page' class='scheme-ctrl nav-box-switch box-right nav-control'>
-                        <span id='menu-page-icon' class='nav-icon'>◀</span>
+                    <label id='trigger-menu-pagex' for='switch-menu-page' class='ui-side-menu-trigger scheme-ctrl soft-box soft-box-right'>
+                        <span id='menu-page-icon' class='ui-trigger-icon'>◀</span>
                     </label>
                 </div>
-                <div id='menu-page' class='side-menu surface-menu box-right nav-item'>
+                <div id='menu-page' class='side-menu surface-menu soft-box soft-box-right nav-item'>
                     <div id='menu-page-box' class='box-menu'>
                         <div id='menu-page-menu'>
                             <a href='/pages/projects' title='The projects and homework from the FEWDR course I am taking' class='nav-link block-up pad-3rem soft-corner nowrap'>Projects</a>

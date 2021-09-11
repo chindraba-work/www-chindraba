@@ -35,6 +35,25 @@
 /*                       Reworked styles                         */
 /* ************************************************************* */
 
+/* Styles for creating boxes with softened, rounded, corners. A
+ * more pleasing view than hard corners.
+ */
+.soft-box {
+  border-style: solid;
+  border-color: var(--color-border);
+  border-width: 1px;
+}
+.soft-box-left {
+  border-left-width: 0;
+  border-top-right-radius: var(--radius-effect);
+  border-bottom-right-radius: var(--radius-effect);
+}
+.soft-box-right {
+  border-right-width: 0;
+  border-top-left-radius: var(--radius-effect);
+  border-bottom-left-radius: var(--radius-effect);
+}
+
 /* A UI switch is _always_ a hidden input */
 .ui-switch {
   display: none;
@@ -90,19 +109,72 @@
 */
 
 /* Styling for collapable sidebar menus */
-.ui-side-menu-left-container {
+.ui-side-menu-container {
   position: absolute;
   top: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
+/* Control placement on the left or right side.
+ * If the two menus happen to overlap, make the right-side have a
+ * higher stacking order than the left so that it is the one most
+ * accessable to the user.
+ */
+.ui-side-menu-left-container {
+  left: 0;
+  z-index: 1;
+}
 .ui-side-menu-right-container {
-  position: absolute;
-  top: 0;
   right: 0;
-  display: flex;
-  flex-direction: row;
+  z-index: 2;
+}
+/* Settings to show, and animate, the trigger for side menus */
+.ui-side-menu-trigger {
+  display: inline-flex;
+  flex-direction: column;
   justify-content: flex-start;
+  margin-top: 0.3125rem;
+  height: 2.0625rem;
+  padding: 0;
+  /* The animations are part of a collision avoidance system for them */
+  transition: margin-top var(--menu-timing) linear;
+  transform-origin: 50% 55%;
+}
+/* Style for the icons in triggers */
+.ui-trigger-icon {
+  display: inline-block;
+  font-size: 1.75rem;
+  font-family: var(--icon-fontFace);
+  text-align: center;
+  transform: rotate(0deg);
+  transition: transform var(--menu-timing) linear;
+}
+
+/*
+@media screen and (min-width: 48rem) {
+  #trigger-menu-jumpx {
+    display: none;
+  }
+}
+*/
+/*
+@media screen and (min-width: 57rem) {
+  #trigger-menu-pagex {
+    display: none;
+  }
+}
+*/
+/*   On very narrow pages the two handles overlap. Slide the right menu
+ *   handle down to avoid a collision when both are opened.
+ **/
+#switch-menu-jump:checked ~ #switch-menu-page:checked ~ #scheme-container #trigger-menu-pagex {
+  margin-top: 39px;
+}
+/*   Cancel anti-collision slide once the page is wide enough  */
+/*
+@media screen and (min-width: 22rem) {
+  #switch-menu-jump:checked ~ #switch-menu-page:checked ~ #scheme-container #trigger-menu-pagex {
+    margin-top: 5px;
+  }
 }

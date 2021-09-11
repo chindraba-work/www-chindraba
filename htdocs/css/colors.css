@@ -35,6 +35,18 @@
 /*                  Color scheme rework values                   */
 /* ************************************************************* */
 :root {
+    --default-dark-border: rgb(131,148,150);
     --default-dark-ctrlFg: rgb(245,245,245);
+    --default-dark-ctrlBg: rgb(41,61,70);
+    --default-dark-ctrlBx: rgba(0,0,0,0.4);
+    --color-border: var(--default-dark-border);
     --color-ctrlFg: var(--default-dark-ctrlFg);
+    --color-ctrlBg: var(--default-dark-ctrlBg);
+    --color-ctrlBx: var(--default-dark-ctrlBx);
+}
+
+.scheme-ctrl {
+    background-color: var(--color-ctrlBg);
+    color: var(--color-ctrlFg);
+    box-shadow: 5px 5px 24px 0 var(--color-ctrlBox)
 }

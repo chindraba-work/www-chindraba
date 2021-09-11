@@ -118,7 +118,7 @@
     height: auto;
     max-height: 85vh;
 }
-#switch-widescreen:checked ~ #scheme-container #trigger-menu-jump {
+#switch-widescreen:checked ~ #scheme-container #trigger-menu-jumpx {
     display: none;
 }
 
@@ -129,12 +129,12 @@
     height: auto;
     max-height: 85vh;
 }
-#switch-widescreen:checked ~ #scheme-container #trigger-menu-page {
+#switch-widescreen:checked ~ #scheme-container #trigger-menu-pagex {
     display: none;
 }
 
 /*  The anti-collision provision for jump menu and page menu triggers */
-#switch-widescreen:checked ~ #switch-menu-jump:checked ~ #switch-menu-page:checked ~ #scheme-container #trigger-menu-page {
+#switch-widescreen:checked ~ #switch-menu-jump:checked ~ #switch-menu-page:checked ~ #scheme-container #trigger-menu-pagex {
     margin-top: 5px;
 }
 
