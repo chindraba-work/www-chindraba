@@ -68,7 +68,7 @@
   display: grid;
   grid-gap: 0.1875rem;
   grid-template-rows: repeat(3,0.125rem);
-  padding: 0.5rem 0.5rem 0 56px;
+  padding: 0.5rem 0.5rem 0 calc(72px - 1rem);
 }
 .ui-burger-line {
   background-color: var(--color-ctrlFg);
@@ -84,13 +84,13 @@
  *  element ID selectors.
  */
 #switch-menu-site:checked ~ #scheme-container #menu-site-icon .ui-burger-line-top {
-  transform: translateX(2.5px) translateY(5px) rotate(-315deg);
+  transform: translateX(0.15625rem) translateY(0.3125rem) rotate(-315deg);
 }
 #switch-menu-site:checked ~ #scheme-container #menu-site-icon .ui-burger-line-mid {
   opacity: 0;
 }
 #switch-menu-site:checked ~ #scheme-container #menu-site-icon .ui-burger-line-low {
-  transform: translateX(2.5px) translateY(-5px) rotate(315deg);
+  transform: translateX(0.15625rem) translateY(-0.3125rem) rotate(315deg);
 }
 
 /*
